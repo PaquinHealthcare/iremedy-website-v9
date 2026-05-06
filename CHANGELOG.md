@@ -1,9 +1,9 @@
 # iRemedy Website v8 — Change Log
 
-**Project:** `iremedy-website-v8`
-**Live:** https://antp23.github.io/iremedy-website-v8/
-**Local:** `/Users/berniemac/projects/iremedy-website-v8/index.html`
-**Repo:** github.com/antp23/iremedy-website-v8 (gh-pages branch)
+**Project:** `iremedy-website-v9`
+**Live:** https://antp23.github.io/iremedy-website-v9/
+**Local:** `/Users/berniemac/projects/iremedy-website-v9/index.html`
+**Repo:** github.com/antp23/iremedy-website-v9 (gh-pages branch)
 
 Use these `CHG-XXX` numbers to reference specific states when picking up work across sessions (WhatsApp, web, etc.).
 
