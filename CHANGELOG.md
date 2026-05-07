@@ -11,13 +11,35 @@ Use these `CHG-XXX` numbers to reference specific states when picking up work ac
 
 ## Active State
 
-**Current:** CHG-042 — Photography, nav wordmark, headshot B&W, Anthony title, patent reconciliation
-**Date:** 2026-05-06
+**Current:** CHG-043 — Government page: photo opacity + text size enforcement
+**Date:** 2026-05-07
 
 ---
 
 ## Change History
 
+
+### CHG-043 — Government page: photo opacity + text size enforcement
+**Date:** 2026-05-07
+**Commit:** `45db8ab`
+- **FIX 1 — Photo:** pharmaceutical-shelf.jpg opacity 0.22 → 0.45, brightness override 0.4 — visible as atmospheric backdrop
+- **FIX 2 — Text sizes (Government page only):**
+  - Hero credential strip: 12px → 14px
+  - Exposure stat labels (4): 11.2px → 12px
+  - TradeSpy stat labels (4): 11.2px → 12px
+  - Consequence card titles (4): 12px → 16px bold
+  - Fraud card titles (6): 12px → 16px bold
+  - TradeSpy capability titles (6): 12px → 16px bold
+  - Cost comparison column headers: 11.2px → 14px
+  - Cost bar items (9): 12px → 14px
+  - Cost footer labels (2): 11.2px → 14px
+  - Insight callout label: 11.2px → 14px
+  - Portfolio column titles (2): 12px → 18px bold
+  - Proof block titles (3): 12px → 18px bold (serif)
+  - Manufacturer card names (3): 17.6px → 18px
+  - Capability card titles (6): 12px → 16px bold
+
+---
 ### CHG-042 — Photography + Homepage Cleanup + Fixes
 **Date:** 2026-05-06
 - **PART 1:** Added global CSS photo treatment classes: `.photo-duotone-hero`, `.photo-duotone-container`, `.photo-bw-hero`, `.headshot-bw`, `.nav-wordmark`
