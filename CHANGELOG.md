@@ -11,12 +11,31 @@ Use these `CHG-XXX` numbers to reference specific states when picking up work ac
 
 ## Active State
 
-**Current:** CHG-031 — Nav dropdown hover fix
+**Current:** CHG-042 — Photography, nav wordmark, headshot B&W, Anthony title, patent reconciliation
 **Date:** 2026-05-06
 
 ---
 
 ## Change History
+
+### CHG-042 — Photography + Homepage Cleanup + Fixes
+**Date:** 2026-05-06
+- **PART 1:** Added global CSS photo treatment classes: `.photo-duotone-hero`, `.photo-duotone-container`, `.photo-bw-hero`, `.headshot-bw`, `.nav-wordmark`
+- **PART 2 (Placements 1,2,4,5):** Images added to assets/images/ (warehouse-overhead.jpg, warehouse-dramatic.jpg, container-ship.jpg)
+  - Homepage hero: warehouse-dramatic.jpg as duotone hero background
+  - TradeSpy Doctrine section: container-ship.jpg as duotone hero background
+  - Manufacturers hero: warehouse-overhead.jpg as B&W hero background
+  - About hero: warehouse-dramatic.jpg as B&W hero background (object-position: center 40%)
+  - Placement 3 (Government Exposure stats): PENDING — awaiting government_exposure.jpg (pharmaceutical shelf)
+- **PART 3:** All leadership/board headshots → `headshot-bw` class (16 images)
+- **PART 4A:** Nav logo PNG → styled text wordmark `✚iRemedy` (serif, teal cross)
+- **PART 4B:** iRemedy cross SVG added above homepage hero headline (80×80px, teal)
+- **PART 4C:** Anthony Paquin title → "Chief AI Officer" everywhere (Manufacturers CTA, About, Contact, board section)
+- **PART 4:** Footer logo PNG → matching text wordmark
+- **PART 5:** Legacy pages already non-routable (page-legacy-* pattern not accessible via showPage or nav)
+- **PART 6:** TradeSpy "Built by Operators" patent count: "fifteen patents" → "10 granted U.S. patents"
+
+---
 
 ### CHG-031 — Nav dropdown hover fix
 **Date:** 2026-05-06
