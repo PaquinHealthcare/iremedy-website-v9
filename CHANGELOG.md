@@ -11,7 +11,7 @@ Use these `CHG-XXX` numbers to reference specific states when picking up work ac
 
 ## Active State
 
-**Current:** CHG-046 — About page: Jim Harding removal, photos, text sizes
+**Current:** CHG-048 — Newsroom: press release template + 5 internal pages
 **Date:** 2026-05-07
 
 ---
@@ -22,6 +22,26 @@ Use these `CHG-XXX` numbers to reference specific states when picking up work ac
 
 
 
+
+### CHG-048 — Newsroom: press release template + 5 internal pages
+**Date:** 2026-05-07
+**Commit:** `35c2ea8`
+- Press release page template: 720px reading layout, serif headline, boilerplate, media contact, back link
+- 5 internal PR pages: GLVUS Expansion (full content), Spectrum Medical, CathCare, FlexGRIP, UPS Healthcare
+- 5 newsroom archive links routed internally via showPage()
+- Remaining 10 PRs still link external (incremental build)
+
+---
+
+### CHG-047 — Newsroom page: text size fixes
+**Date:** 2026-05-07
+**Commit:** `000b1de`
+- pr-date: 12.8px → 13px; pr-title: 14.1px → 15px
+- Featured card links (3): 12px → 14px
+- Podcast description: 15px → 16px
+- Book titles (2): 17.6px → 18px; book year tags: 11.2px → 12px; Find on Amazon links: 12px → 14px
+
+---
 ### CHG-046 — About page: Jim Harding removal, photo upgrades, photo resizing, text sizes
 **Date:** 2026-05-07
 **Commit:** `8bf1f7b`
