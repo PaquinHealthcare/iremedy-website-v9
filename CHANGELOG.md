@@ -11,7 +11,7 @@ Use these `CHG-XXX` numbers to reference specific states when picking up work ac
 
 ## Active State
 
-**Current:** CHG-043 — Government page: photo opacity + text size enforcement
+**Current:** CHG-044 — TradeSpy page: text size enforcement
 **Date:** 2026-05-07
 
 ---
@@ -19,6 +19,27 @@ Use these `CHG-XXX` numbers to reference specific states when picking up work ac
 ## Change History
 
 
+
+### CHG-044 — TradeSpy page: text size enforcement
+**Date:** 2026-05-07
+**Commit:** `25f0efd`
+- **CSS class changes (ts-* classes — TradeSpy page only):**
+  - ts-hero-sub credential strip: 12.8px → 14px
+  - ts-stat-l stat labels: 8.3px → 12px
+  - ts-sec-title all section headlines: clamp min 25.6px → 28px
+  - ts-body all body paragraphs: 15.2px → 16px
+  - ts-badge visibility warning: 12px → 14px
+  - ts-callout body: 14.1px → 16px
+  - ts-callout-label: 12.8px → 14px
+  - ts-list li: 14.1px → 15px
+  - ts-rm-status roadmap badges: 12px → 13px
+  - ts-rm-item: 14.1px → 15px
+  - ts-cta-sub: 15.2px → 16px
+  - ts-cta-footer: 12.8px → 13px
+- **SVG pipeline diagram text:** all 5 labels bumped to font-size 13
+- **Inline:** 3 fraud capability card titles: 12.8px → 14px bold
+
+---
 ### CHG-043 — Government page: photo opacity + text size enforcement
 **Date:** 2026-05-07
 **Commit:** `45db8ab`
