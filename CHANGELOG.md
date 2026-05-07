@@ -11,7 +11,7 @@ Use these `CHG-XXX` numbers to reference specific states when picking up work ac
 
 ## Active State
 
-**Current:** CHG-044 — TradeSpy page: text size enforcement
+**Current:** CHG-045 — Platform page: text size enforcement
 **Date:** 2026-05-07
 
 ---
@@ -20,6 +20,17 @@ Use these `CHG-XXX` numbers to reference specific states when picking up work ac
 
 
 
+
+### CHG-045 — Platform page: text size enforcement
+**Date:** 2026-05-07
+**Commit:** `b0cda39`
+- Hero credential strip: 12px → 14px
+- All teal card titles (16 cards, Sec 02/04/05/06): 12px → 16px bold
+- Architecture Layer 01-04 prefix labels: 10.4px → 12px
+- Layer 03 Sources sub-label: 10.4px → 12px
+- Jim Harding Co-Inventor label: 11.2px → 14px
+
+---
 ### CHG-044 — TradeSpy page: text size enforcement
 **Date:** 2026-05-07
 **Commit:** `25f0efd`
