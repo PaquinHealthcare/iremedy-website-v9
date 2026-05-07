@@ -11,7 +11,7 @@ Use these `CHG-XXX` numbers to reference specific states when picking up work ac
 
 ## Active State
 
-**Current:** CHG-049 — Contact page: remove personal emails, full footer, text sizes
+**Current:** CHG-050 — Government & Platform: left margin alignment fix
 **Date:** 2026-05-07
 
 ---
@@ -24,6 +24,15 @@ Use these `CHG-XXX` numbers to reference specific states when picking up work ac
 
 
 
+
+### CHG-050 — Government & Platform: left margin alignment fix
+**Date:** 2026-05-07
+**Commit:** `f106cce`
+- Root cause: inner content wrappers using `max-width:1100px;margin:0 auto` were centering content, adding ~84px extra left offset at 1440px viewport vs other pages
+- Fix: changed to `max-width:1100px` (left-aligned) on all section wrappers — 7 on Government, 6 on Platform
+- Content now starts at the section's 6vw left padding, matching Manufacturers/Providers/Pharmacies/Homepage
+
+---
 ### CHG-049 — Contact page: remove personal emails, full footer, text sizes
 **Date:** 2026-05-07
 **Commit:** `bccfcc4`
