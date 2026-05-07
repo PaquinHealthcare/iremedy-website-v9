@@ -11,7 +11,7 @@ Use these `CHG-XXX` numbers to reference specific states when picking up work ac
 
 ## Active State
 
-**Current:** CHG-048 — Newsroom: press release template + 5 internal pages
+**Current:** CHG-049 — Contact page: remove personal emails, full footer, text sizes
 **Date:** 2026-05-07
 
 ---
@@ -23,6 +23,15 @@ Use these `CHG-XXX` numbers to reference specific states when picking up work ac
 
 
 
+
+### CHG-049 — Contact page: remove personal emails, full footer, text sizes
+**Date:** 2026-05-07
+**Commit:** `bccfcc4`
+- FIX 1: tony@iremedy.com and anthony@iremedy.com removed from leadership sidebar; names/titles kept
+- FIX 2: Minimal footer → full 4-column site footer (brand, certs, address, Platform/Markets/Company nav)
+- FIX 3: Form field labels (8): 11.2px → 12px; sidebar labels (3): 11.2px → 12px; response note: 11.2px → 13px
+
+---
 ### CHG-048 — Newsroom: press release template + 5 internal pages
 **Date:** 2026-05-07
 **Commit:** `35c2ea8`
