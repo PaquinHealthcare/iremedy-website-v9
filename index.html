@@ -603,6 +603,203 @@
       font-size: 1.1rem;
       line-height: 1;
     }
+
+    /* ===== MOBILE NAVIGATION ===== */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 32px;
+      height: 22px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 1001;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: var(--teal);
+      border-radius: 2px;
+      transition: all 0.25s ease;
+    }
+    .mobile-nav-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 14, 20, 0.97);
+      z-index: 2000;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 5rem 2rem 3rem;
+      overflow-y: auto;
+    }
+    .mobile-nav-overlay.open {
+      display: flex;
+    }
+    .mobile-nav-close {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.5rem;
+      background: none;
+      border: none;
+      color: rgba(242,237,228,0.9);
+      font-size: 1.75rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+    .mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      width: 100%;
+    }
+    .mobile-nav-links a,
+    .mobile-nav-links button {
+      display: block;
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      color: rgba(242,237,228,0.9);
+      font-size: 1.125rem;
+      font-family: inherit;
+      padding: 1rem 0;
+      cursor: pointer;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .mobile-nav-links a:hover,
+    .mobile-nav-links button:hover {
+      color: var(--teal);
+    }
+    .mobile-nav-engage {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.875rem 2rem;
+      background: var(--teal);
+      color: var(--bg) !important;
+      font-weight: 700;
+      font-size: 1rem;
+      text-align: center;
+      width: 100%;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    @media (max-width: 900px) {
+      .nav-hamburger { display: flex; }
+    }
+
+    /* ===== RESPONSIVE GRID CLASSES ===== */
+    .audience-routing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      max-width: 900px;
+      width: 100%;
+    }
+    .contact-form-grid {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 3rem;
+    }
+    .bio-grid {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 3rem;
+    }
+    .mfr-stat-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+    .ts-callout-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+    .pharmacy-cat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+    }
+
+    /* ===== INPUT FONT SIZE — PREVENT iOS ZOOM ===== */
+    input, textarea, select {
+      font-size: 1rem !important;
+    }
+
+    /* ===== 768px — Tablet Portrait ===== */
+    @media (max-width: 768px) {
+      .stats-strip { grid-template-columns: repeat(2, 1fr); }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .ts-hero-inner { grid-template-columns: 1fr !important; }
+      .ts-hero-flag { display: none; }
+      .ts-stats-row { grid-template-columns: repeat(2, 1fr) !important; }
+      .ts-two-col { grid-template-columns: 1fr !important; gap: 2rem !important; }
+      .ts-three-col { grid-template-columns: 1fr !important; }
+      .ts-four-col { grid-template-columns: repeat(2, 1fr) !important; }
+      .ldp-grid-3 { grid-template-columns: repeat(2, 1fr) !important; }
+      .ldp-grid-2 { grid-template-columns: repeat(2, 1fr) !important; }
+      .ldp-grid-6 { grid-template-columns: repeat(2, 1fr) !important; }
+      .p3-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+      .pg-hero { padding: 3rem 5vw 2rem !important; }
+      .audience-routing-grid { grid-template-columns: 1fr; }
+      .contact-form-grid { grid-template-columns: 1fr; }
+      .mfr-stat-strip { grid-template-columns: repeat(2, 1fr); }
+      .ts-callout-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .pharmacy-cat-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* ===== 480px — Large Mobile / Landscape Phone ===== */
+    @media (max-width: 480px) {
+      .stats-strip { grid-template-columns: 1fr 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+      .ts-stats-row { grid-template-columns: 1fr 1fr !important; }
+      .ts-four-col { grid-template-columns: 1fr 1fr !important; }
+      .ts-three-col { grid-template-columns: 1fr !important; }
+      .ldp-grid-3 { grid-template-columns: 1fr !important; }
+      .ldp-grid-2 { grid-template-columns: 1fr !important; }
+      .ldp-grid-6 { grid-template-columns: 1fr !important; }
+      .panel { padding: 0 4vw 5vh; }
+      .pg-hero { padding: 2.5rem 4vw 1.5rem !important; }
+      .mfr-stat-strip { grid-template-columns: 1fr 1fr; }
+      .pharmacy-cat-grid { grid-template-columns: 1fr; }
+      .btn, .cta-btn, .pg-cta, [class*="btn"], [class*="cta"] {
+        width: 100%;
+        text-align: center;
+        padding: 0.875rem 1.5rem;
+        min-height: 44px;
+        box-sizing: border-box;
+      }
+    }
+
+    /* ===== 375px — Standard Mobile ===== */
+    @media (max-width: 375px) {
+      .stats-strip { grid-template-columns: 1fr; }
+      .ts-stats-row { grid-template-columns: 1fr !important; }
+      .ts-four-col { grid-template-columns: 1fr !important; }
+      .bio-grid { grid-template-columns: 1fr; }
+      .panel { padding: 0 1rem 4vh; }
+      .pg-hero { padding: 2rem 1rem 1.5rem !important; }
+      .pg-body { padding: 2rem 1rem !important; }
+      .btn, .cta-btn, .pg-cta, [class*="btn"], [class*="cta"] {
+        width: 100%;
+        text-align: center;
+        padding: 0.875rem 1.5rem;
+        min-height: 44px;
+        box-sizing: border-box;
+      }
+    }
+
+    /* ===== 480px — bio-grid collapse ===== */
+    @media (max-width: 480px) {
+      .bio-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -611,6 +808,9 @@
 <nav>
   <div class="nav-inner">
     <a class="nav-wordmark" onclick="showPage('home')" style="margin-right:2rem;"><span class="wm-cross">✚</span>iRemedy</a>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
     <ul class="nav-links">
       <li class="nav-item"><button onclick="showPage('manufacturers')">Manufacturers</button></li>
       <li class="nav-item"><button onclick="showPage('providers')">Providers</button></li>
@@ -638,6 +838,23 @@
   </div>
 </nav>
 
+<!-- Mobile Nav Overlay -->
+<div class="mobile-nav-overlay" id="mobileNavOverlay">
+  <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">✕</button>
+  <nav class="mobile-nav-links">
+    <button onclick="mobileNav('manufacturers')">Manufacturers</button>
+    <button onclick="mobileNav('providers')">Providers</button>
+    <button onclick="mobileNav('pharmacies')">Pharmacies</button>
+    <button onclick="mobileNav('government')">Government</button>
+    <button onclick="mobileNav('platform')">Platform</button>
+    <button onclick="mobileNav('tradespy')">TradeSpy</button>
+    <button onclick="mobileNav('about')">About &amp; Leadership</button>
+    <button onclick="mobileNav('newsroom')">Newsroom</button>
+    <button onclick="mobileNav('contact')">Contact</button>
+    <button class="mobile-nav-engage" onclick="mobileNav('contact')">Get Started</button>
+  </nav>
+</div>
+
 <!-- ══ HOMEPAGE ══ -->
 <div id="home">
 
@@ -657,7 +874,7 @@
       <p style="font-family:var(--mono);font-size:0.875rem;letter-spacing:0.18em;color:rgba(242,237,228,0.5);text-transform:uppercase;margin-bottom:2.5rem;">50-state licensed · DEA authorized · 10 U.S. patents · UPS Healthcare logistics · Est. 2007</p>
 
       <!-- Audience routing cards -->
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:900px;margin-bottom:3rem;">
+      <div class="audience-routing-grid" style="margin-bottom:3rem;">
         <div style="background:rgba(242,237,228,0.06);border:1px solid rgba(242,237,228,0.15);padding:1.5rem;cursor:pointer;transition:background 0.2s;" onmouseenter="this.style.background='rgba(242,237,228,0.11)'" onmouseleave="this.style.background='rgba(242,237,228,0.06)'" onclick="showPage('manufacturers')">
           <div style="font-family:var(--mono);font-size:0.8rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--cerulean);margin-bottom:0.6rem;">Manufacturers</div>
           <p style="font-size:1rem;color:rgba(242,237,228,0.7);line-height:1.6;margin-bottom:1rem;font-weight:300;">Enter the U.S. market with licensing, logistics, technology, and compliance - handled.</p>
@@ -817,7 +1034,7 @@
   <!-- SECTION 03B - TRADESPY DARK CALLOUT -->
   <div style="background:var(--hero-bg);padding:6rem 6vw;position:relative;overflow:hidden;">
     <div class="grid-dk"></div>
-    <div style="position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;max-width:1400px;">
+    <div class="ts-callout-grid" style="position:relative;z-index:1;align-items:center;max-width:1400px;">
       <div>
         <div style="font-family:var(--mono);font-size:0.875rem;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--cerulean);margin-bottom:1.25rem;">// TradeSpy - Supply Chain Intelligence</div>
         <h2 style="font-family:var(--serif);font-size:clamp(2rem,4vw,3.5rem);font-weight:900;line-height:1.05;letter-spacing:-0.02em;color:rgba(242,237,228,0.95);margin-bottom:1.25rem;">The label says who markets it.<br><em style="font-style:italic;color:var(--teal);">TradeSpy says who makes it.</em></h2>
@@ -1851,7 +2068,7 @@
       <div style="font-family:var(--mono);font-size:0.8rem;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:rgba(242,237,228,0.35);margin-bottom:1.75rem;">// 04 - The Infrastructure</div>
       <h2 style="font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,3rem);font-weight:900;line-height:1.1;letter-spacing:-0.02em;color:var(--bg);max-width:700px;margin-bottom:1.5rem;">UPS Healthcare. The backbone you can't build yourself.</h2>
       <p style="font-size:1rem;line-height:1.8;font-weight:300;color:rgba(242,237,228,0.62);max-width:780px;margin-bottom:3rem;">iRemedy's logistics infrastructure is powered by UPS Healthcare - giving manufacturers access to enterprise-scale fulfillment without enterprise-scale spend. This is the same network used by the world's largest pharmaceutical companies, deployed at a scale that works for emerging manufacturers.</p>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid rgba(242,237,228,0.1);margin-bottom:2.5rem;">
+      <div class="mfr-stat-strip" style="border:1px solid rgba(242,237,228,0.1);margin-bottom:2.5rem;">
         <div style="padding:2rem 1.75rem;border-right:1px solid rgba(242,237,228,0.1);">
           <div style="font-family:var(--serif);font-size:clamp(2rem,3vw,2.8rem);font-weight:900;line-height:1;color:var(--teal);margin-bottom:0.5rem;">18M+</div>
           <div style="font-family:var(--mono);font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(242,237,228,0.5);line-height:1.6;">sq ft</div>
@@ -2252,7 +2469,7 @@
   <div id="pharm-catalog" style="background:var(--bg-2);padding:5rem 6vw;border-bottom:1px solid var(--rule);">
     <div class="eyebrow">// 03 - Product Categories</div>
     <h2 style="font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;line-height:1.1;letter-spacing:-0.02em;color:var(--ink);margin-bottom:3rem;">From GLP-1 APIs to finished pharmaceuticals. One credentialed source.</h2>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-bottom:2rem;">
+    <div class="pharmacy-cat-grid" style="background:var(--border);margin-bottom:2rem;">
       <!-- GLP-1 card - HIGH DEMAND accent -->
       <div style="background:var(--bg);padding:2rem;border-top:3px solid var(--teal);position:relative;">
         <div style="position:absolute;top:1.25rem;right:1.25rem;font-family:var(--mono);font-size:0.75rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;background:#E53E3E;color:#FFFFFF;padding:0.25rem 0.6rem;border-radius:3px;">HIGH DEMAND</div>
@@ -2880,7 +3097,7 @@
       <h2 class="sec-title" style="margin-bottom:3rem;">The people behind the infrastructure.</h2>
 
       <!-- Tony Paquin -->
-      <div style="display:grid;grid-template-columns:200px 1fr;gap:3rem;margin-bottom:4rem;align-items:start;max-width:960px;">
+      <div class="bio-grid" style="margin-bottom:4rem;align-items:start;max-width:960px;">
         <div>
           <div style="width:160px;height:160px;background:var(--ink);display:flex;align-items:center;justify-content:center;border:2px solid var(--rule);">
             <img class="headshot-bw" src="assets/tony-paquin.jpg" alt="Tony Paquin" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--ink-3);\'>TP</span>'">
@@ -2898,7 +3115,7 @@
       </div>
 
       <!-- Anthony Paquin -->
-      <div style="display:grid;grid-template-columns:200px 1fr;gap:3rem;margin-bottom:4rem;align-items:start;max-width:960px;">
+      <div class="bio-grid" style="margin-bottom:4rem;align-items:start;max-width:960px;">
         <div>
           <div style="width:160px;height:160px;background:var(--ink);display:flex;align-items:center;justify-content:center;border:2px solid var(--rule);">
             <img class="headshot-bw" src="assets/anthony-paquin.jpg" alt="Anthony Paquin" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--ink-3);\'>AP</span>'">
@@ -2914,7 +3131,7 @@
       </div>
 
       <!-- Amanda Somsy -->
-      <div style="display:grid;grid-template-columns:200px 1fr;gap:3rem;margin-bottom:4rem;align-items:start;max-width:960px;">
+      <div class="bio-grid" style="margin-bottom:4rem;align-items:start;max-width:960px;">
         <div>
           <div style="width:160px;height:160px;background:var(--ink);display:flex;align-items:center;justify-content:center;border:2px solid var(--rule);">
             <img class="headshot-bw" src="assets/amanda-somsy.jpg" alt="Amanda Somsy" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--ink-3);\'>AS</span>'">
@@ -2928,7 +3145,7 @@
       </div>
 
       <!-- Jim Harding -->
-      <div style="display:grid;grid-template-columns:200px 1fr;gap:3rem;margin-bottom:4rem;align-items:start;max-width:960px;">
+      <div class="bio-grid" style="margin-bottom:4rem;align-items:start;max-width:960px;">
         <div>
           <div style="width:160px;height:160px;background:var(--ink);display:flex;align-items:center;justify-content:center;border:2px solid var(--rule);">
             <span style="font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--ink-3);">JH</span>
@@ -3184,7 +3401,7 @@
 
   <!-- FORM + CONTACT INFO -->
   <section style="padding:5rem 6vw;background:var(--bg-1);">
-    <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 380px;gap:4rem;align-items:start;">
+    <div class="contact-form-grid" style="max-width:1100px;margin:0 auto;align-items:start;">
       <!-- Form -->
       <div>
         <form action="https://formspree.io/f/sales@iremedy.com" method="POST" style="display:flex;flex-direction:column;gap:1.25rem;">
@@ -3324,6 +3541,24 @@
     }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+</script>
+
+<script>
+// Mobile nav
+const navHamburger = document.getElementById('navHamburger');
+const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+const mobileNavClose = document.getElementById('mobileNavClose');
+if (navHamburger && mobileNavOverlay) {
+  navHamburger.addEventListener('click', () => mobileNavOverlay.classList.add('open'));
+  mobileNavClose.addEventListener('click', () => mobileNavOverlay.classList.remove('open'));
+  mobileNavOverlay.addEventListener('click', (e) => {
+    if (e.target === mobileNavOverlay) mobileNavOverlay.classList.remove('open');
+  });
+}
+function mobileNav(page) {
+  if (mobileNavOverlay) mobileNavOverlay.classList.remove('open');
+  showPage(page);
+}
 </script>
 
 <script>
