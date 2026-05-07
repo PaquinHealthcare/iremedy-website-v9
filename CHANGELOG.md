@@ -11,7 +11,7 @@ Use these `CHG-XXX` numbers to reference specific states when picking up work ac
 
 ## Active State
 
-**Current:** CHG-045 — Platform page: text size enforcement
+**Current:** CHG-046 — About page: Jim Harding removal, photos, text sizes
 **Date:** 2026-05-07
 
 ---
@@ -21,6 +21,17 @@ Use these `CHG-XXX` numbers to reference specific states when picking up work ac
 
 
 
+
+### CHG-046 — About page: Jim Harding removal, photo upgrades, photo resizing, text sizes
+**Date:** 2026-05-07
+**Commit:** `8bf1f7b`
+- **FIX 1:** Jim Harding bio-grid block removed entirely from leadership section
+- **FIX 2:** About hero photo: opacity 0.5, brightness(0.4), mix-blend-mode:normal
+- **FIX 3/4:** Board & Advisor photos: 64px→120px, border-radius 50%→8px; placeholder initials 1.25→2rem
+- **FIX 5:** Confirmed headshot-bw B&W class on all 16 headshots
+- **FIX 6 — Text sizes:** leadership bios 15→16px; CEO/CAO/CFO titles 12→13px; board/advisor names 17.6→18px; role labels 11.2→12px; timeline years 12.8→14px; CTA card titles 12→16px bold; CTA links 12.8→14px
+
+---
 ### CHG-045 — Platform page: text size enforcement
 **Date:** 2026-05-07
 **Commit:** `b0cda39`
