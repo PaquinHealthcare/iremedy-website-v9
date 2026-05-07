@@ -551,9 +551,8 @@
       width: 100%; height: 100%;
       object-fit: cover;
       object-position: center center;
-      filter: grayscale(100%) contrast(1.1) brightness(0.6);
-      mix-blend-mode: multiply;
-      opacity: 0.3;
+      filter: grayscale(100%) brightness(0.35);
+      opacity: 0.4;
       z-index: 0;
     }
     .photo-duotone-hero .hero-content {
@@ -588,7 +587,7 @@
     /* Nav text wordmark */
     .nav-wordmark {
       font-family: var(--serif);
-      font-size: 1.25rem;
+      font-size: 1.75rem;
       font-weight: 700;
       color: var(--ink);
       letter-spacing: -0.01em;
@@ -596,12 +595,6 @@
       cursor: pointer;
       display: flex;
       align-items: center;
-      gap: 0.35rem;
-    }
-    .nav-wordmark .wm-cross {
-      color: var(--teal);
-      font-size: 1.1rem;
-      line-height: 1;
     }
 
     /* ===== MOBILE NAVIGATION ===== */
@@ -692,6 +685,7 @@
     }
     @media (max-width: 900px) {
       .nav-hamburger { display: flex; }
+      .nav-wordmark { font-size: 1.5rem; }
     }
 
     /* ===== RESPONSIVE GRID CLASSES ===== */
@@ -753,6 +747,7 @@
       .mfr-stat-strip { grid-template-columns: repeat(2, 1fr); }
       .ts-callout-grid { grid-template-columns: 1fr; gap: 2rem; }
       .pharmacy-cat-grid { grid-template-columns: 1fr 1fr; }
+      .hero-cross-svg { width: 70px !important; height: 70px !important; }
     }
 
     /* ===== 480px — Large Mobile / Landscape Phone ===== */
@@ -800,6 +795,18 @@
     @media (max-width: 480px) {
       .bio-grid { grid-template-columns: 1fr; }
     }
+
+    /* ===== HOMEPAGE SECTION SPACING ===== */
+    #home .panel-2,
+    #home .panel-3 {
+      min-height: unset;
+      align-items: flex-start;
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    /* Routing card CTA hover */
+    .routing-cta-link:hover { color: #004C7F !important; }
   </style>
 </head>
 <body>
@@ -807,7 +814,7 @@
 <!-- ══ NAV ══ -->
 <nav>
   <div class="nav-inner">
-    <a class="nav-wordmark" onclick="showPage('home')" style="margin-right:2rem;"><span class="wm-cross">✚</span>iRemedy</a>
+    <a class="nav-wordmark" onclick="showPage('home')" style="margin-right:2rem;">iRemedy</a>
     <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
@@ -864,31 +871,31 @@
     <div class="grid-dk" style="position:relative;z-index:1;"></div>
     <div class="panel-content hero-content" style="max-width:90vw;">
       <div class="panel-eyebrow">// 01 - iRemedy Healthcare</div>
-      <div style="margin-bottom:1.75rem;">
-        <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <div style="margin-bottom:2rem;">
+        <svg class="hero-cross-svg" width="100" height="100" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <rect x="28" y="0" width="16" height="72" rx="2" fill="#0064A5"/>
           <rect x="0" y="28" width="72" height="16" rx="2" fill="#0064A5"/>
         </svg>
       </div>
       <h1 class="panel-headline" style="margin-bottom:2.5rem;">Healthcare distribution<br>and supply chain intelligence.<br><em>Direct from manufacturer.<br>Verified at the source.</em></h1>
-      <p style="font-family:var(--mono);font-size:0.875rem;letter-spacing:0.18em;color:rgba(242,237,228,0.5);text-transform:uppercase;margin-bottom:2.5rem;">50-state licensed · DEA authorized · 10 U.S. patents · UPS Healthcare logistics · Est. 2007</p>
+      <p style="font-family:var(--mono);font-size:0.875rem;letter-spacing:0.1em;color:#9CA3AF;text-transform:uppercase;margin-top:2rem;margin-bottom:2rem;">50-state licensed · DEA authorized · 10 U.S. patents · UPS Healthcare logistics · Est. 2007</p>
 
       <!-- Audience routing cards -->
       <div class="audience-routing-grid" style="margin-bottom:3rem;">
         <div style="background:rgba(242,237,228,0.06);border:1px solid rgba(242,237,228,0.15);padding:1.5rem;cursor:pointer;transition:background 0.2s;" onmouseenter="this.style.background='rgba(242,237,228,0.11)'" onmouseleave="this.style.background='rgba(242,237,228,0.06)'" onclick="showPage('manufacturers')">
           <div style="font-family:var(--mono);font-size:0.8rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--cerulean);margin-bottom:0.6rem;">Manufacturers</div>
           <p style="font-size:1rem;color:rgba(242,237,228,0.7);line-height:1.6;margin-bottom:1rem;font-weight:300;">Enter the U.S. market with licensing, logistics, technology, and compliance - handled.</p>
-          <div style="font-family:var(--mono);font-size:0.875rem;letter-spacing:0.1em;color:var(--cerulean);">See Manufacturer Services →</div>
+          <div class="routing-cta-link" style="font-family:var(--mono);font-size:0.875rem;letter-spacing:0.1em;color:#0064A5;">See Manufacturer Services →</div>
         </div>
         <div style="background:rgba(242,237,228,0.06);border:1px solid rgba(242,237,228,0.15);padding:1.5rem;cursor:pointer;transition:background 0.2s;" onmouseenter="this.style.background='rgba(242,237,228,0.11)'" onmouseleave="this.style.background='rgba(242,237,228,0.06)'" onclick="showPage('providers')">
           <div style="font-family:var(--mono);font-size:0.8rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--cerulean);margin-bottom:0.6rem;">Providers &amp; Pharmacies</div>
           <p style="font-size:1rem;color:rgba(242,237,228,0.7);line-height:1.6;margin-bottom:1rem;font-weight:300;">Buy direct from the manufacturer. Transparent pricing. No GPO required.</p>
-          <div style="font-family:var(--mono);font-size:0.875rem;letter-spacing:0.1em;color:var(--cerulean);">See Buyer Services →</div>
+          <div class="routing-cta-link" style="font-family:var(--mono);font-size:0.875rem;letter-spacing:0.1em;color:#0064A5;">See Buyer Services →</div>
         </div>
         <div style="background:rgba(242,237,228,0.06);border:1px solid rgba(242,237,228,0.15);padding:1.5rem;cursor:pointer;transition:background 0.2s;" onmouseenter="this.style.background='rgba(242,237,228,0.11)'" onmouseleave="this.style.background='rgba(242,237,228,0.06)'" onclick="showPage('government')">
           <div style="font-family:var(--mono);font-size:0.8rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--cerulean);margin-bottom:0.6rem;">Government &amp; Policy</div>
           <p style="font-size:1rem;color:rgba(242,237,228,0.7);line-height:1.6;margin-bottom:1rem;font-weight:300;">Supply chain intelligence and country-of-origin verification at national scale.</p>
-          <div style="font-family:var(--mono);font-size:0.875rem;letter-spacing:0.1em;color:var(--cerulean);">See Government Solutions →</div>
+          <div class="routing-cta-link" style="font-family:var(--mono);font-size:0.875rem;letter-spacing:0.1em;color:#0064A5;">See Government Solutions →</div>
         </div>
       </div>
 
@@ -1032,7 +1039,7 @@
   <div class="rule"></div>
 
   <!-- SECTION 03B - TRADESPY DARK CALLOUT -->
-  <div style="background:var(--hero-bg);padding:6rem 6vw;position:relative;overflow:hidden;">
+  <div style="background:var(--hero-bg);padding:4rem 6vw;position:relative;overflow:hidden;">
     <div class="grid-dk"></div>
     <div class="ts-callout-grid" style="position:relative;z-index:1;align-items:center;max-width:1400px;">
       <div>
