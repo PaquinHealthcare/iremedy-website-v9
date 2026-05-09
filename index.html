@@ -48,7 +48,7 @@
     .masthead-row {
       padding: 10px 6vw;
       border-bottom: 1px solid rgba(0,0,0,0.08);
-      display: flex; align-items: center;
+      display: flex; align-items: center; justify-content: space-between;
     }
     .masthead-logo { cursor: pointer; display: inline-flex; align-items: center; text-decoration: none; }
     .masthead-logo-img { height: 56px; width: auto; display: block; }
@@ -822,6 +822,7 @@
     <a class="masthead-logo" onclick="showPage('home')">
       <img class="masthead-logo-img" src="assets/iRemedy_Logo_wo_Slogan.png" alt="iRemedy">
     </a>
+    <button class="nav-engage" onclick="showPage('contact')">Get Started</button>
   </div>
   <!-- Row 2: Navigation -->
   <div class="nav-row">
@@ -837,7 +838,7 @@
           <li class="nav-item"><button onclick="showPage('government')">Government</button></li>
           <li class="nav-item"><button onclick="showPage('platform')">Platform</button></li>
           <li class="nav-item"><button onclick="showPage('tradespy')">TradeSpy</button></li>
-          <li class="nav-item"><button onclick="showPage('essential-medicines')">Essential Medicines</button></li>
+          <li class="nav-item"><button class="nav-engage" onclick="showPage('essential-medicines')">Essential Medicines</button></li>
           <li class="nav-item"><button onclick="showPage('about')">Company</button></li>
           <li class="nav-item"><button onclick="showPage('newsroom')">Newsroom</button></li>
           <li class="nav-item">
@@ -847,7 +848,7 @@
               <a onclick="showPage('contact')">TradeSpy</a>
             </div>
           </li>
-          <li><button class="nav-engage" onclick="showPage('contact')">Get Started</button></li>
+
         </ul>
       </div>
     </nav>
