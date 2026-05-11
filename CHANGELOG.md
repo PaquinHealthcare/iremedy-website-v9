@@ -11,12 +11,32 @@ Use these `CHG-XXX` numbers to reference specific states when picking up work ac
 
 ## Active State
 
-**Current:** CHG-064 — Essential Medicines: banner text update
+**Current:** CHG-065 — Peptide Intelligence Hub
 **Date:** 2026-05-11
 
 ---
 
 ## Change History
+
+---
+
+### CHG-065 — Peptide Intelligence Hub
+**Date:** 2026-05-11
+**Commit:** `197971d`
+- Added `id="page-peptides"` inner page to SPA
+- 6-section architecture: Hero, Natural Language Search, Evidence Grade Key, Peptide Library (accordion), iRemedy Sourcing Callout, Disclaimer
+- 15 full peptide profiles with mechanism, evidence summary, key studies, clinical use, and sourcing status
+- Evidence grading system: Grade A (FDA Approved), B (Strong Clinical), C (Emerging Clinical), D (Preclinical)
+- Client-side search: keyword match on name, aliases, category, mechanism, evidence, clinical use
+- Category filter bar: All | GLP-1 & Metabolic | Healing & Recovery | Immune | Growth Hormone | Cognitive | Longevity | Sexual Health
+- Quick-tap search chips: GLP-1 & weight loss, injury healing, immune support, growth hormone, longevity, FDA approved
+- Accordion expand/collapse for each peptide profile card
+- CSS additions: `.pf-btn`, `.pf-active`, `.peptide-card`, `.ev-grade-a/b/c/d`, `.cat-chip`, responsive rules
+- Nav additions: desktop nav (after Pharmacies), mobile overlay, both footer instances (home + contact page)
+- Peptides added to Markets column in both footer instances
+- iRemedy sourcing callout: 50 States Licensed, NABP Accredited, Full CoA Every Lot, UPS Healthcare Cold Chain
+- Disclaimer section: educational/compliance language, not medical advice, wholesale-only
+- Committed and pushed to both `origin` (antp23) and `paquin` (PaquinHealthcare) gh-pages remotes
 
 ### CHG-064 — Essential Medicines: banner classification text update
 **Date:** 2026-05-11
