@@ -813,6 +813,96 @@
     /* ── Press Release page ── */
     .pr-body { font-family: var(--sans); font-size: 1rem; line-height: 1.75; color: #333; margin-bottom: 1.25rem; }
     .pr-body strong { font-weight: 600; color: var(--ink); }
+  /* ══ PEPTIDE INTELLIGENCE HUB ══ */
+  .pf-btn {
+    font-family: var(--mono); font-size: 0.78rem; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    padding: 8px 16px; border: 1px solid var(--border); background: transparent;
+    color: var(--ink-2); cursor: pointer; transition: all 0.18s;
+    white-space: nowrap;
+  }
+  .pf-btn:hover { border-color: var(--teal); color: var(--teal); }
+  .pf-active { background: var(--teal) !important; color: #fff !important; border-color: var(--teal) !important; }
+  .peptide-card {
+    background: var(--bg-2); border: 1px solid var(--border);
+    padding: 0; margin-bottom: 1px; cursor: pointer;
+    transition: box-shadow 0.2s;
+  }
+  .peptide-card:hover { box-shadow: 0 4px 18px rgba(0,100,165,0.09); }
+  .peptide-card.expanded { cursor: default; }
+  .peptide-card-header {
+    display: grid; grid-template-columns: auto 1fr auto;
+    gap: 1.25rem; align-items: center; padding: 1.25rem 1.5rem;
+  }
+  .peptide-card-badges { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; flex-shrink: 0; }
+  .peptide-card-body { min-width: 0; }
+  .peptide-card-name { font-family: var(--serif); font-size: 1.2rem; font-weight: 700; color: var(--ink); line-height: 1.2; margin-bottom: 0.25rem; }
+  .peptide-card-summary { font-size: 0.875rem; color: var(--ink-3); font-weight: 300; line-height: 1.5; }
+  .peptide-card-toggle {
+    font-family: var(--mono); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--teal); background: none; border: 1px solid var(--teal); padding: 6px 14px; cursor: pointer;
+    white-space: nowrap; flex-shrink: 0; transition: all 0.15s;
+  }
+  .peptide-card-toggle:hover { background: var(--teal); color: #fff; }
+  .peptide-card-expanded {
+    border-top: 1px solid var(--border); padding: 2rem 1.5rem;
+    background: var(--bg); display: none;
+  }
+  .peptide-card.expanded .peptide-card-expanded { display: block; }
+  .pexp-section { margin-bottom: 1.5rem; }
+  .pexp-label {
+    font-family: var(--mono); font-size: 0.75rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal);
+    margin-bottom: 0.5rem;
+  }
+  .pexp-text { font-size: 0.9375rem; color: var(--ink-2); line-height: 1.75; font-weight: 300; }
+  .pexp-studies { list-style: none; padding: 0; margin: 0; }
+  .pexp-studies li {
+    font-size: 0.875rem; color: var(--ink-2); line-height: 1.6; font-weight: 300;
+    padding: 0.5rem 0; border-bottom: 1px solid var(--border-2);
+    display: flex; gap: 0.75rem;
+  }
+  .pexp-studies li:last-child { border-bottom: none; }
+  .pexp-studies li::before { content: '→'; color: var(--teal); font-family: var(--mono); font-size: 0.8rem; flex-shrink: 0; padding-top: 2px; }
+  .pexp-sourcing {
+    display: inline-block; font-family: var(--mono); font-size: 0.75rem; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase; padding: 5px 12px;
+    border-radius: 2px;
+  }
+  .sourcing-available { background: rgba(0,135,90,0.1); color: #00875A; border: 1px solid #00875A; }
+  .sourcing-research { background: rgba(217,119,6,0.1); color: #B45309; border: 1px solid #D97706; }
+  .ev-grade-a { font-family: var(--mono); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 3px 10px; border-radius: 2px; background: rgba(0,135,90,0.12); color: #00875A; border: 1px solid #00875A; white-space: nowrap; }
+  .ev-grade-b { font-family: var(--mono); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 3px 10px; border-radius: 2px; background: rgba(0,100,165,0.1); color: var(--teal); border: 1px solid var(--teal); white-space: nowrap; }
+  .ev-grade-c { font-family: var(--mono); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 3px 10px; border-radius: 2px; background: rgba(99,102,241,0.1); color: #4F46E5; border: 1px solid #6366F1; white-space: nowrap; }
+  .ev-grade-d { font-family: var(--mono); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 3px 10px; border-radius: 2px; background: rgba(217,119,6,0.1); color: #B45309; border: 1px solid #D97706; white-space: nowrap; }
+  .cat-chip { font-family: var(--mono); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 10px; border-radius: 2px; background: var(--bg-3); color: var(--ink-3); border: 1px solid var(--border); white-space: nowrap; }
+  .peptide-search-wrap { position: relative; margin-bottom: 1.5rem; }
+  .peptide-search-input {
+    width: 100%; padding: 1rem 1.25rem; font-family: var(--sans); font-size: 1rem;
+    border: 1px solid var(--border); background: var(--bg); color: var(--ink);
+    outline: none; transition: border-color 0.2s;
+  }
+  .peptide-search-input:focus { border-color: var(--teal); }
+  .peptide-search-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem; }
+  .search-chip {
+    font-family: var(--mono); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; padding: 6px 14px; border: 1px solid var(--border);
+    background: transparent; color: var(--ink-3); cursor: pointer; transition: all 0.15s;
+  }
+  .search-chip:hover { border-color: var(--teal); color: var(--teal); }
+  .peptide-filter-bar { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
+  .peptide-results-count { font-family: var(--mono); font-size: 0.8rem; color: var(--ink-3); letter-spacing: 0.08em; margin-bottom: 1.25rem; }
+  @media (max-width: 768px) {
+    .peptide-card-header { grid-template-columns: 1fr auto; }
+    .peptide-card-badges { flex-direction: row; flex-wrap: wrap; }
+    .peptide-grade-key-grid { grid-template-columns: 1fr 1fr !important; }
+    .peptide-cred-grid { grid-template-columns: 1fr 1fr !important; }
+    .peptide-filter-bar { gap: 0.375rem; }
+  }
+  @media (max-width: 480px) {
+    .peptide-grade-key-grid { grid-template-columns: 1fr !important; }
+    .peptide-cred-grid { grid-template-columns: 1fr !important; }
+  }
   </style>
 </head>
 <body>
@@ -837,6 +927,7 @@
           <li class="nav-item"><button onclick="showPage('manufacturers')">Manufacturers</button></li>
           <li class="nav-item"><button onclick="showPage('providers')">Providers</button></li>
           <li class="nav-item"><button onclick="showPage('pharmacies')">Pharmacies</button></li>
+          <li class="nav-item"><button onclick="showPage('peptides')">Peptides</button></li>
           <li class="nav-item"><button onclick="showPage('government')">Government</button></li>
           <li class="nav-item"><button onclick="showPage('platform')">Platform</button></li>
           <li class="nav-item"><button onclick="showPage('tradespy')">TradeSpy</button></li>
@@ -864,6 +955,7 @@
     <button onclick="mobileNav('manufacturers')">Manufacturers</button>
     <button onclick="mobileNav('providers')">Providers</button>
     <button onclick="mobileNav('pharmacies')">Pharmacies</button>
+    <button onclick="mobileNav('peptides')">Peptides</button>
     <button onclick="mobileNav('government')">Government</button>
     <button onclick="mobileNav('platform')">Platform</button>
     <button onclick="mobileNav('tradespy')">TradeSpy</button>
@@ -1231,6 +1323,7 @@
         <a onclick="showPage('manufacturers')">Manufacturers</a>
         <a onclick="showPage('providers')">Providers</a>
         <a onclick="showPage('pharmacies')">Pharmacies</a>
+        <a onclick="showPage('peptides')">Peptides</a>
         <a onclick="showPage('government')">Government</a>
       </div>
       <div class="f-col">
@@ -2696,6 +2789,132 @@
   <footer><div style="padding:1.75rem 6vw;border-top:1px solid var(--rule);display:flex;justify-content:space-between;font-family:var(--mono);font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-3);background:var(--bg-2)"><span>© 2026 iRemedy Healthcare Companies, Inc.</span><a onclick="showPage('home')" style="color:var(--teal);cursor:pointer;">← Home</a></div></footer>
 </div>
 
+<!-- PEPTIDE INTELLIGENCE HUB -->
+<div id="page-peptides" class="inner-page">
+
+  <!-- SECTION 01 — HERO -->
+  <div style="background:var(--hero-bg);padding:6rem 6vw 4.5rem;position:relative;overflow:hidden;">
+    <div class="grid-dk"></div>
+    <div style="position:relative;z-index:1;">
+      <div style="font-family:var(--mono);font-size:0.8rem;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:rgba(242,237,228,0.35);margin-bottom:1.75rem;">// Peptide Intelligence Hub</div>
+      <h1 style="font-family:var(--serif);font-size:clamp(2.5rem,5vw,4.5rem);font-weight:900;line-height:1.05;letter-spacing:-0.02em;color:var(--bg);max-width:940px;margin-bottom:1.25rem;">The evidence on peptides.<br><em style="font-style:italic;color:var(--teal);">Unfiltered. Cited. Sourced.</em></h1>
+      <p style="font-size:1rem;line-height:1.8;font-weight:300;color:rgba(242,237,228,0.65);max-width:700px;margin-bottom:2rem;">15 peptide profiles. Every claim backed by published, peer-reviewed research. Every source auditable. Built by the licensed distributor that actually supplies them — compliantly, with full chain of custody.</p>
+      <p style="font-family:var(--mono);font-size:0.8125rem;letter-spacing:0.14em;text-transform:uppercase;color:#9CA3AF;margin-bottom:2.5rem;">15 Peptide Profiles &nbsp;·&nbsp; 100+ Clinical Citations &nbsp;·&nbsp; Evidence-Graded &nbsp;·&nbsp; iRemedy Verified Sourcing</p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+        <button class="btn btn-teal" onclick="document.getElementById('peptide-library').scrollIntoView({behavior:'smooth'})">Explore the Library ↓</button>
+        <button class="btn btn-ghost-lt" onclick="showPage('contact')">Request Peptide Catalog →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 02 — NATURAL LANGUAGE SEARCH -->
+  <div style="background:var(--bg-2);padding:4rem 6vw;border-bottom:1px solid var(--rule);">
+    <div style="font-family:var(--mono);font-size:0.8rem;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--teal);margin-bottom:1.25rem;">// Ask Anything</div>
+    <h2 style="font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;line-height:1.1;letter-spacing:-0.02em;color:var(--ink);margin-bottom:1.5rem;">What do you want to know about peptides?</h2>
+    <div class="peptide-search-wrap">
+      <input
+        type="text"
+        id="peptideSearch"
+        class="peptide-search-input"
+        placeholder="e.g. &quot;What is BPC-157?&quot; · &quot;Which peptides help with weight loss?&quot; · &quot;What's the evidence on Thymosin Alpha-1?&quot;"
+        oninput="searchPeptides(this.value)"
+      />
+    </div>
+    <div class="peptide-search-chips">
+      <button class="search-chip" onclick="applyChip('GLP-1')">GLP-1 &amp; weight loss</button>
+      <button class="search-chip" onclick="applyChip('healing')">injury healing</button>
+      <button class="search-chip" onclick="applyChip('immune')">immune support</button>
+      <button class="search-chip" onclick="applyChip('growth hormone')">growth hormone</button>
+      <button class="search-chip" onclick="applyChip('longevity')">longevity</button>
+      <button class="search-chip" onclick="applyChip('FDA approved')">FDA approved</button>
+    </div>
+    <div id="searchResults" class="peptide-results-count" style="display:none;"></div>
+  </div>
+
+  <!-- SECTION 03 — EVIDENCE GRADE KEY -->
+  <div style="background:var(--bg);padding:4rem 6vw;border-bottom:1px solid var(--rule);">
+    <div style="font-family:var(--mono);font-size:0.8rem;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--teal);margin-bottom:1.25rem;">// Evidence Grade Key</div>
+    <h2 style="font-family:var(--serif);font-size:clamp(1.4rem,2.5vw,2rem);font-weight:900;line-height:1.1;letter-spacing:-0.02em;color:var(--ink);margin-bottom:2rem;">How we grade the evidence.</h2>
+    <div class="peptide-grade-key-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);">
+      <div style="background:var(--bg-2);padding:1.75rem;border-top:3px solid #00875A;">
+        <div class="ev-grade-a" style="margin-bottom:0.75rem;">Grade A — FDA Approved</div>
+        <div style="font-size:0.9rem;color:var(--ink-2);line-height:1.65;font-weight:300;">Approved for human use. Phase III trials. Established safety and efficacy profile.</div>
+      </div>
+      <div style="background:var(--bg-2);padding:1.75rem;border-top:3px solid var(--teal);">
+        <div class="ev-grade-b" style="margin-bottom:0.75rem;">Grade B — Strong Clinical</div>
+        <div style="font-size:0.9rem;color:var(--ink-2);line-height:1.65;font-weight:300;">Multiple peer-reviewed human trials. Consistent findings. Not FDA-approved for all indications.</div>
+      </div>
+      <div style="background:var(--bg-2);padding:1.75rem;border-top:3px solid #6366F1;">
+        <div class="ev-grade-c" style="margin-bottom:0.75rem;">Grade C — Emerging Clinical</div>
+        <div style="font-size:0.9rem;color:var(--ink-2);line-height:1.65;font-weight:300;">Early human data. Promising signals. More trials needed before broad clinical adoption.</div>
+      </div>
+      <div style="background:var(--bg-2);padding:1.75rem;border-top:3px solid #D97706;">
+        <div class="ev-grade-d" style="margin-bottom:0.75rem;">Grade D — Preclinical</div>
+        <div style="font-size:0.9rem;color:var(--ink-2);line-height:1.65;font-weight:300;">Animal and/or in vitro data only. Human trials absent or minimal as of 2024.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 04 — PEPTIDE LIBRARY -->
+  <div id="peptide-library" style="background:var(--bg-1,var(--bg-2));padding:5rem 6vw;border-bottom:1px solid var(--rule);">
+    <div style="font-family:var(--mono);font-size:0.8rem;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--teal);margin-bottom:1.25rem;">// 04 — Peptide Library</div>
+    <h2 style="font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;line-height:1.1;letter-spacing:-0.02em;color:var(--ink);margin-bottom:2rem;">15 profiles. Every claim sourced.</h2>
+    <div class="peptide-filter-bar" id="peptideFilters">
+      <button class="pf-btn pf-active" onclick="filterPeptides('all',this)">All</button>
+      <button class="pf-btn" onclick="filterPeptides('metabolic',this)">GLP-1 &amp; Metabolic</button>
+      <button class="pf-btn" onclick="filterPeptides('healing',this)">Healing &amp; Recovery</button>
+      <button class="pf-btn" onclick="filterPeptides('immune',this)">Immune</button>
+      <button class="pf-btn" onclick="filterPeptides('hormone',this)">Growth Hormone</button>
+      <button class="pf-btn" onclick="filterPeptides('cognitive',this)">Cognitive</button>
+      <button class="pf-btn" onclick="filterPeptides('longevity',this)">Longevity</button>
+      <button class="pf-btn" onclick="filterPeptides('sexual',this)">Sexual Health</button>
+    </div>
+    <div id="searchResults2" class="peptide-results-count" style="display:none;"></div>
+    <div id="peptideGrid"></div>
+  </div>
+
+  <!-- SECTION 05 — iREMEDY SOURCING CALLOUT -->
+  <div style="background:var(--hero-bg);padding:5rem 6vw;position:relative;overflow:hidden;">
+    <div class="grid-dk"></div>
+    <div style="position:relative;z-index:1;">
+      <div style="font-family:var(--mono);font-size:0.8rem;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:rgba(242,237,228,0.35);margin-bottom:1.75rem;">// 05 — iRemedy Sourcing</div>
+      <h2 style="font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,3rem);font-weight:900;line-height:1.1;letter-spacing:-0.02em;color:#FFFFFF;max-width:760px;margin-bottom:1.5rem;">Knowing the evidence is step one. Sourcing it compliantly is step two.</h2>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid rgba(242,237,228,0.1);margin-bottom:2.5rem;" class="peptide-cred-grid">
+        <div style="padding:1.75rem;border-right:1px solid rgba(242,237,228,0.1);">
+          <div style="font-family:var(--mono);font-size:0.875rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:0.5rem;">50 States Licensed</div>
+          <div style="font-size:0.875rem;color:#C8CDD3;line-height:1.6;">NABP-accredited wholesale distribution, coast to coast.</div>
+        </div>
+        <div style="padding:1.75rem;border-right:1px solid rgba(242,237,228,0.1);">
+          <div style="font-family:var(--mono);font-size:0.875rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:0.5rem;">NABP Accredited</div>
+          <div style="font-size:0.875rem;color:#C8CDD3;line-height:1.6;">National accreditation for pharmaceutical wholesale distribution standards.</div>
+        </div>
+        <div style="padding:1.75rem;border-right:1px solid rgba(242,237,228,0.1);">
+          <div style="font-family:var(--mono);font-size:0.875rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:0.5rem;">Full CoA Every Lot</div>
+          <div style="font-size:0.875rem;color:#C8CDD3;line-height:1.6;">Certificate of analysis and lot documentation on every shipment, no exceptions.</div>
+        </div>
+        <div style="padding:1.75rem;">
+          <div style="font-family:var(--mono);font-size:0.875rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:0.5rem;">UPS Healthcare Cold Chain</div>
+          <div style="font-size:0.875rem;color:#C8CDD3;line-height:1.6;">Pharmaceutical-grade temperature-controlled logistics, -20°C to ambient.</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+        <button class="btn btn-teal" onclick="showPage('pharmacies')">Pharmacy Sourcing →</button>
+        <button class="btn btn-ghost-lt" onclick="showPage('contact')">Request Peptide Catalog →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 06 — DISCLAIMER -->
+  <div style="background:var(--bg-3);padding:2.5rem 6vw;border-top:1px solid var(--rule);">
+    <p style="font-family:var(--mono);font-size:0.75rem;line-height:1.75;color:var(--ink-3);max-width:960px;">
+      <strong style="color:var(--ink-2);">Educational purposes only.</strong> The information presented in this Peptide Intelligence Hub is compiled from published, peer-reviewed scientific literature and is provided for educational and informational purposes only. It does not constitute medical advice, clinical guidance, or a recommendation to use any specific compound. Evidence grades are assigned by iRemedy based on the quality and quantity of available clinical literature as of the publication date and are subject to revision as new research emerges. Peptide sourcing and distribution is subject to applicable DEA, FDA, and state pharmacy board requirements. Compounding use requires a valid physician prescription under applicable 503A/503B regulations. iRemedy does not sell peptides directly to patients or consumers. All sourcing is wholesale-only to licensed healthcare facilities and compounding pharmacies.
+    </p>
+  </div>
+
+  <footer><div style="padding:1.75rem 6vw;border-top:1px solid var(--rule);display:flex;justify-content:space-between;font-family:var(--mono);font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-3);background:var(--bg-2)"><span>© 2026 iRemedy Healthcare Companies, Inc.</span><a onclick="showPage('home')" style="color:var(--teal);cursor:pointer;">← Home</a></div></footer>
+</div>
+
+
 <!-- GOVERNMENT -->
 <div id="page-government" class="inner-page">
 
@@ -3479,6 +3698,7 @@
         <a onclick="showPage('manufacturers')">Manufacturers</a>
         <a onclick="showPage('providers')">Providers</a>
         <a onclick="showPage('pharmacies')">Pharmacies</a>
+        <a onclick="showPage('peptides')">Peptides</a>
         <a onclick="showPage('government')">Government</a>
       </div>
       <div class="f-col">
@@ -4121,6 +4341,10 @@
       else document.getElementById('home').style.display = 'block';
     }
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Init peptide library on first visit
+    if (id === 'peptides' && typeof renderPeptides === 'function' && document.getElementById('peptideGrid') && document.getElementById('peptideGrid').innerHTML === '') {
+      renderPeptides(PEPTIDE_DATA);
+    }
   }
 </script>
 
@@ -4150,6 +4374,436 @@ function toggleFaq(el) {
   ans.style.display = open ? 'none' : 'block';
   arrow.textContent = open ? '+' : '\u2212';
 }
+</script>
+
+<script>
+/* ══ PEPTIDE INTELLIGENCE HUB JS ══ */
+const PEPTIDE_DATA = [
+  {
+    id: 'semaglutide',
+    name: 'Semaglutide',
+    aliases: ['Ozempic', 'Wegovy', 'GLP-1 agonist', 'GLP-1', 'weight loss', 'obesity', 'diabetes', 'FDA approved'],
+    category: 'metabolic',
+    grade: 'A',
+    summary: 'FDA-approved GLP-1 receptor agonist for type 2 diabetes and chronic weight management.',
+    mechanism: 'Mimics endogenous GLP-1 to stimulate insulin secretion, suppress glucagon, slow gastric emptying, and reduce appetite via hypothalamic signaling.',
+    evidence: 'FDA-approved 2017 (T2D), 2021 (obesity). SUSTAIN and STEP trials demonstrated 15–17% mean body weight reduction at 68 weeks.',
+    studies: [
+      'Wilding et al., NEJM 2021 (STEP 1) — 14.9% weight loss vs 2.4% placebo at 68 weeks',
+      'Marso et al., NEJM 2016 (SUSTAIN-6) — 26% cardiovascular event reduction',
+      'Davies et al., Lancet 2021 (STEP 5) — sustained weight loss sustained at 2 years'
+    ],
+    clinicalUse: 'T2D management, chronic weight management (BMI ≥30 or ≥27 with comorbidity), cardiovascular risk reduction.',
+    sourcing: 'Available — FDA-listed API, 50-state distribution, cold chain compliant',
+    sourcingClass: 'sourcing-available'
+  },
+  {
+    id: 'bpc157',
+    name: 'BPC-157',
+    aliases: ['Body Protection Compound', 'PL 14736', 'gut healing', 'tendon repair', 'BPC 157'],
+    category: 'healing',
+    grade: 'D',
+    summary: 'Synthetic pentadecapeptide with potent regenerative and cytoprotective effects — predominantly demonstrated in animal models.',
+    mechanism: 'Upregulates growth hormone receptor expression, promotes angiogenesis via VEGF pathway, modulates nitric oxide synthesis, and activates FAK-paxillin pathway for tendon/ligament repair.',
+    evidence: 'Extensive rodent data across gut mucosa healing, tendon repair, bone healing, and neuroprotection. No completed human RCTs published as of 2024. One human ulcerative colitis trial (topical) showed positive signals.',
+    studies: [
+      'Sikiric et al., J Physiol Pharmacol 2016 — comprehensive gut healing review across multiple organ systems',
+      'Chang et al., J Orthop Res 2011 — Achilles tendon repair acceleration in rats',
+      'Tudor et al., Brain Behav 2019 — CNS dopamine modulation and neuroprotective effects'
+    ],
+    clinicalUse: 'Compounding pharmacies prescribe for gut healing, tendon/ligament injury, and post-surgical recovery. Off-label. Requires physician prescription.',
+    sourcing: 'Available as compounding API — CoA, lot documentation, full COO disclosure',
+    sourcingClass: 'sourcing-available'
+  },
+  {
+    id: 'tb500',
+    name: 'Thymosin Beta-4 (TB-500)',
+    aliases: ['TB-500', 'TB500', 'Tβ4', 'tissue repair', 'wound healing', 'cardiac repair'],
+    category: 'healing',
+    grade: 'D',
+    summary: 'Endogenous actin-sequestering peptide with tissue repair, anti-inflammatory, and angiogenic properties in preclinical models.',
+    mechanism: 'Sequesters G-actin monomers to regulate cytoskeletal dynamics, promotes cell migration and survival, stimulates new blood vessel formation and stem cell differentiation.',
+    evidence: 'Strong preclinical data for cardiac repair, wound healing, and corneal repair. Phase II trial in epidermolysis bullosa showed wound healing benefit. Limited human data otherwise.',
+    studies: [
+      'Goldstein et al., Ann NY Acad Sci 2012 — cardiac repair review across multiple models',
+      'Sosne et al., Cornea 2010 — corneal wound healing improvement',
+      'Philp et al., Ann NY Acad Sci 2012 — cell migration and survival mechanism'
+    ],
+    clinicalUse: 'Off-label compounding use for injury recovery, wound healing, and cardiac support. Not FDA-approved for systemic use.',
+    sourcing: 'Available as compounding API',
+    sourcingClass: 'sourcing-available'
+  },
+  {
+    id: 'thymosin-a1',
+    name: 'Thymosin Alpha-1 (Tα1)',
+    aliases: ['Thymalfasin', 'Zadaxin', 'immune', 'hepatitis', 'sepsis', 'COVID-19', 'antiviral'],
+    category: 'immune',
+    grade: 'B',
+    summary: 'Endogenous thymic peptide with robust clinical evidence for immune modulation in viral infections, cancer adjunct therapy, and sepsis.',
+    mechanism: 'Activates dendritic cells and T-lymphocytes, enhances Th1 cytokine response (IL-2, IFN-γ), upregulates MHC class I expression, and suppresses immune exhaustion.',
+    evidence: 'FDA Orphan Drug designation. Approved in 35+ countries. Multiple RCTs in hepatitis B, hepatitis C, SARS-CoV-2, and sepsis. Meta-analyses confirm mortality reduction in sepsis.',
+    studies: [
+      'Zhang et al., Hepatology 2009 — 68% HBeAg seroconversion vs 22% control in hepatitis B',
+      'Shi et al., Clin Infect Dis 2020 — reduced mortality in severe COVID-19 cases',
+      'Wu et al., Intensive Care Med 2013 — 28-day mortality reduction in sepsis'
+    ],
+    clinicalUse: 'Hepatitis B/C adjunct, chemotherapy immune support, sepsis, post-viral immune recovery, COVID-19 adjunct therapy.',
+    sourcing: 'Available — imported with full FDA import documentation, COO verified',
+    sourcingClass: 'sourcing-available'
+  },
+  {
+    id: 'sermorelin',
+    name: 'Sermorelin',
+    aliases: ['GHRH(1-29)', 'GRF 1-29', 'growth hormone', 'GH deficiency', 'anti-aging', 'FDA approved'],
+    category: 'hormone',
+    grade: 'A',
+    summary: 'FDA-approved synthetic analog of growth hormone-releasing hormone (GHRH) used for GH deficiency diagnosis and treatment.',
+    mechanism: 'Binds pituitary GHRH receptors to stimulate endogenous GH secretion in a pulsatile, physiologic pattern — preserving hypothalamic-pituitary axis feedback.',
+    evidence: 'FDA-approved 1997 for pediatric GH deficiency (Geref). Extensive off-label use in adult GH deficiency and anti-aging. Significant evidence base for pulsatile GH restoration.',
+    studies: [
+      'Walker et al., J Clin Endocrinol Metab 1996 — GH secretion restoration and normalization',
+      'Corpas et al., J Clin Endocrinol Metab 1992 — adult GH deficiency treatment outcomes',
+      'Vittone et al., Metabolism 1997 — body composition improvement in GH-deficient adults'
+    ],
+    clinicalUse: 'GH deficiency (pediatric — FDA approved), adult GH deficiency (off-label), anti-aging/body composition (compounding).',
+    sourcing: 'Available — compounding API',
+    sourcingClass: 'sourcing-available'
+  },
+  {
+    id: 'cjc1295',
+    name: 'CJC-1295',
+    aliases: ['CJC-1295 DAC', 'Modified GRF(1-29)', 'growth hormone', 'GHRH analog', 'body composition'],
+    category: 'hormone',
+    grade: 'C',
+    summary: 'Long-acting GHRH analog engineered for extended half-life through drug affinity complex (DAC) technology.',
+    mechanism: 'Same GHRH receptor agonism as sermorelin but with covalent albumin binding (DAC) extending half-life to 6–8 days, producing sustained GH pulse amplification.',
+    evidence: 'Phase I/II human data demonstrating dose-dependent GH and IGF-1 elevation. No Phase III trials. Compounding use widespread in anti-aging medicine.',
+    studies: [
+      'Ionescu et al., J Clin Endocrinol Metab 2006 — sustained GH secretion and dose-response characterization',
+      'Teichman et al., J Clin Endocrinol Metab 2006 — pharmacokinetics and GH response profile'
+    ],
+    clinicalUse: 'GH optimization, body composition, anti-aging (compounding, off-label). Often combined with Ipamorelin.',
+    sourcing: 'Available as compounding API',
+    sourcingClass: 'sourcing-available'
+  },
+  {
+    id: 'ipamorelin',
+    name: 'Ipamorelin',
+    aliases: ['NNC 26-0161', 'growth hormone secretagogue', 'GHS', 'body composition', 'post-surgical'],
+    category: 'hormone',
+    grade: 'C',
+    summary: 'Selective growth hormone secretagogue (GHS) with minimal cortisol and prolactin stimulation — cleaner GH pulse than GHRP-2/6.',
+    mechanism: 'Binds ghrelin/GHS-R1a receptor on pituitary somatotrophs to stimulate GH release. High selectivity minimizes prolactin, cortisol, and ACTH side effects common with GHRP-2.',
+    evidence: 'Multiple Phase I/II trials confirming GH pulse stimulation. Demonstrated post-operative GH restoration and improved body composition in clinical settings.',
+    studies: [
+      'Raun et al., Eur J Endocrinol 1998 — GH selectivity vs GHRP-6 across multiple doses',
+      'Svensson et al., J Endocrinol 2000 — post-operative GH restoration in surgical patients',
+      'Bowers et al., Endocrine 1998 — growth hormone secretagogue mechanism review'
+    ],
+    clinicalUse: 'GH optimization, post-surgical recovery, body composition, anti-aging. Frequently paired with CJC-1295. Off-label compounding.',
+    sourcing: 'Available as compounding API',
+    sourcingClass: 'sourcing-available'
+  },
+  {
+    id: 'pt141',
+    name: 'PT-141 (Bremelanotide)',
+    aliases: ['Vyleesi', 'HSDD', 'sexual desire', 'hypoactive sexual desire disorder', 'melanocortin', 'FDA approved'],
+    category: 'sexual',
+    grade: 'A',
+    summary: 'FDA-approved melanocortin receptor agonist for hypoactive sexual desire disorder (HSDD) in premenopausal women.',
+    mechanism: 'Activates MC3R and MC4R receptors in the CNS hypothalamus to modulate sexual arousal pathways — unlike PDE5 inhibitors which act peripherally.',
+    evidence: 'FDA-approved 2019 (Vyleesi). Phase III RECONNECT trials demonstrated significant improvement in satisfying sexual events and sexual desire vs placebo.',
+    studies: [
+      'Clayton et al., J Sex Med 2016 — Phase IIb dose-finding and safety profile',
+      'Simon et al., J Sex Med 2014 — safety and efficacy in premenopausal women',
+      'Kingsberg et al., J Sex Med 2019 — RECONNECT trial results and HSDD outcomes'
+    ],
+    clinicalUse: 'FDA-approved for HSDD in premenopausal women. Off-label use in men for erectile dysfunction (emerging data).',
+    sourcing: 'Available — FDA-listed, full documentation',
+    sourcingClass: 'sourcing-available'
+  },
+  {
+    id: 'nad',
+    name: 'NAD+',
+    aliases: ['Nicotinamide Adenine Dinucleotide', 'NMN precursor', 'NR precursor', 'longevity', 'energy', 'sirtuin', 'anti-aging'],
+    category: 'longevity',
+    grade: 'C',
+    summary: 'Essential coenzyme in cellular energy metabolism with emerging evidence for longevity, neuroprotection, and metabolic health via sirtuin activation.',
+    mechanism: 'Central coenzyme in oxidative phosphorylation and ATP production. Activates sirtuins (SIRT1-7) and PARP enzymes involved in DNA repair, gene regulation, and cellular stress response. Declines ~50% from age 20 to 60.',
+    evidence: 'Preclinical: robust lifespan extension in multiple organisms. Human trials: IV NAD+ showing benefit in addiction, neurodegenerative disease, and fatigue. Oral precursors (NMN, NR) have Phase I/II human data on NAD+ repletion.',
+    studies: [
+      'Rajman et al., Cell Metab 2018 — comprehensive NAD+ aging biology review',
+      'Martens et al., Nature Aging 2023 — NMN supplementation effects in older adults',
+      'Braidy et al., Sci Rep 2019 — IV NAD+ effects in aging populations'
+    ],
+    clinicalUse: 'IV NAD+ infusion for addiction recovery, neurodegeneration adjunct, and energy/fatigue. Oral precursors for longevity. Compounding/supplement.',
+    sourcing: 'Available as pharmaceutical-grade API',
+    sourcingClass: 'sourcing-available'
+  },
+  {
+    id: 'epithalon',
+    name: 'Epithalon',
+    aliases: ['Epitalon', 'Epithalamin', 'Ala-Glu-Asp-Gly', 'telomerase', 'longevity', 'anti-aging', 'pineal'],
+    category: 'longevity',
+    grade: 'D',
+    summary: 'Tetrapeptide derived from the pineal gland (epithalamus) with telomerase activation and longevity effects in animal and limited human studies.',
+    mechanism: 'Stimulates telomerase activity to elongate telomeres, normalizes circadian melatonin secretion, exhibits antioxidant properties, and regulates gene expression epigenetically.',
+    evidence: 'Russian research base (Khavinson et al.) with human studies showing reduced mortality in elderly populations. Limited peer review in Western journals. Animal lifespan extension consistent across studies.',
+    studies: [
+      'Khavinson et al., Ann NY Acad Sci 2002 — longevity outcomes in elderly human cohort',
+      'Kossoy et al., Neoplasma 2003 — cancer incidence reduction in treated group',
+      'Anisimov et al., Bull Exp Biol Med 2003 — telomerase activation and telomere elongation'
+    ],
+    clinicalUse: 'Anti-aging, longevity protocols, sleep optimization. Primarily used in integrative medicine. Off-label. Limited clinical infrastructure in US.',
+    sourcing: 'Available as compounding API — COO documentation available',
+    sourcingClass: 'sourcing-available'
+  },
+  {
+    id: 'selank',
+    name: 'Selank',
+    aliases: ['TP-7', 'anxiolytic', 'nootropic', 'anxiety', 'BDNF', 'cognitive', 'stress'],
+    category: 'cognitive',
+    grade: 'C',
+    summary: 'Synthetic heptapeptide with anxiolytic and nootropic properties — approved in Russia, emerging data base in Western literature.',
+    mechanism: 'Modulates GABAergic transmission and BDNF expression, inhibits enkephalin-degrading enzymes to prolong endogenous opioid peptide activity, and stabilizes serotonin metabolism.',
+    evidence: 'Approved in Russia as anxiolytic/nootropic. Multiple Russian RCTs in generalized anxiety disorder and cognitive decline. Limited replication in Western peer-reviewed journals.',
+    studies: [
+      'Semenova et al., Bull Exp Biol Med 2010 — anxiety reduction RCT, significant vs control',
+      'Volkova et al., Bull Exp Biol Med 2016 — BDNF modulation and neuroprotective signaling',
+      'Zozulya et al., Bull Exp Biol Med 2001 — mechanism of action and receptor interactions'
+    ],
+    clinicalUse: 'Anxiety, cognitive enhancement, stress resilience, PTSD adjunct. Nasal/subcutaneous administration. Compounding use in integrative medicine.',
+    sourcing: 'Available as compounding API',
+    sourcingClass: 'sourcing-available'
+  },
+  {
+    id: 'aod9604',
+    name: 'AOD-9604',
+    aliases: ['Advanced Obesity Drug', 'hGH Fragment 176-191', 'fat loss', 'lipolysis', 'body composition', 'GRAS'],
+    category: 'metabolic',
+    grade: 'C',
+    summary: 'C-terminal fragment of human growth hormone with fat-metabolizing effects — without growth-promoting or IGF-1 raising properties.',
+    mechanism: 'Stimulates lipolysis and inhibits lipogenesis via same fat metabolism pathway as full GH molecule, but without binding GH receptors for anabolic effects. USFDA GRAS status for food use.',
+    evidence: 'Phase IIb/III trials in obesity conducted (Metabolic Pharmaceuticals). Efficacy vs placebo not significant enough for FDA approval as obesity drug. GRAS status obtained. Compounding use for body composition.',
+    studies: [
+      'Heffernan et al., J Endocrinol 2001 — fat metabolism mechanism and receptor selectivity',
+      'Ng et al., Obes Res 2000 — Phase II weight loss data',
+      'Stier et al., Horm Res 2006 — safety review and GRAS designation support'
+    ],
+    clinicalUse: 'Body composition, fat loss (compounding, off-label). GRAS designation supports safety profile.',
+    sourcing: 'Available as compounding API',
+    sourcingClass: 'sourcing-available'
+  },
+  {
+    id: 'motsc',
+    name: 'MOTS-c',
+    aliases: ['Mitochondrial ORF of the 12S rRNA Type-C', 'AMPK', 'mitochondria', 'longevity', 'insulin sensitivity', 'exercise mimetic'],
+    category: 'metabolic',
+    grade: 'D',
+    summary: 'Novel mitochondrial-derived peptide regulating metabolic homeostasis — one of the most exciting longevity peptides in current research.',
+    mechanism: 'Translocates from mitochondria to nucleus under metabolic stress, activates AMPK pathway, regulates folate cycle and de novo purine synthesis, improves insulin sensitivity.',
+    evidence: 'Predominantly preclinical. Mouse studies show lifespan extension, metabolic improvement, and exercise mimetic effects. First human Phase I trials underway (2023–2024). Serum levels decline with age.',
+    studies: [
+      'Lee et al., Cell Metab 2015 — discovery paper: AMPK activation and insulin resistance reversal',
+      'Kim et al., Nature Commun 2018 — mitochondria-to-nucleus stress signaling mechanism',
+      'Reynolds et al., Nature Aging 2021 — exercise response in older adults and MOTS-c levels'
+    ],
+    clinicalUse: 'Preclinical only. No approved use. Compounding use emerging in longevity medicine. Phase I safety data awaited.',
+    sourcing: 'Research-grade — availability subject to regulatory status at time of inquiry',
+    sourcingClass: 'sourcing-research'
+  },
+  {
+    id: 'll37',
+    name: 'LL-37',
+    aliases: ['Cathelicidin', 'hCAP18/LL-37', 'antimicrobial', 'wound healing', 'immune', 'rosacea', 'diabetic ulcer'],
+    category: 'immune',
+    grade: 'C',
+    summary: 'Human cathelicidin antimicrobial peptide with broad-spectrum antimicrobial, immunomodulatory, and wound healing properties.',
+    mechanism: 'Disrupts bacterial membranes via electrostatic interaction, neutralizes LPS to prevent septic shock, promotes wound healing via keratinocyte migration, and modulates TLR signaling to balance inflammation.',
+    evidence: 'Strong in vitro and animal antimicrobial data. Human wound healing trials positive. Phase II data in rosacea and diabetic foot ulcers. Topical use established; systemic human data limited.',
+    studies: [
+      'Mookherjee et al., J Leukoc Biol 2006 — immunomodulation and anti-inflammatory signaling',
+      'Ramos et al., J Invest Dermatol 2011 — wound healing Phase II outcomes',
+      'Schauber et al., J Clin Invest 2007 — skin barrier function and innate immunity'
+    ],
+    clinicalUse: 'Wound healing (topical), antimicrobial adjunct, rosacea (emerging), diabetic ulcers. Compounding for topical/injectable use.',
+    sourcing: 'Available as compounding API',
+    sourcingClass: 'sourcing-available'
+  },
+  {
+    id: 'hexarelin',
+    name: 'Hexarelin',
+    aliases: ['Examorelin', 'EP 23905', 'GHRP', 'growth hormone', 'cardioprotection', 'cardiac', 'CD36'],
+    category: 'hormone',
+    grade: 'C',
+    summary: 'Potent synthetic GHRP with cardioprotective properties beyond growth hormone secretion — one of the few peptides with direct cardiac receptor binding demonstrated in humans.',
+    mechanism: 'Binds GHS-R1a for GH release AND CD36 receptors in cardiac tissue for direct cardioprotection. Demonstrated anti-apoptotic effects in cardiomyocytes independent of GH axis.',
+    evidence: 'Phase I/II human trials confirming GH release and cardiac effects. EU Phase II data for cardiac failure. Not FDA-approved. Tachyphylaxis (desensitization) limits long-term use.',
+    studies: [
+      'Broglio et al., J Clin Endocrinol Metab 1999 — cardioprotection in heart failure patients',
+      'Mao et al., Endocrinology 2007 — CD36 cardiac receptor identification and binding',
+      'Tivesten et al., J Cardiovasc Pharmacol 2000 — cardiac function improvement'
+    ],
+    clinicalUse: 'GH optimization, cardiac protection (off-label), body composition. Typically used in cycles to manage tachyphylaxis. Compounding.',
+    sourcing: 'Available as compounding API',
+    sourcingClass: 'sourcing-available'
+  }
+];
+
+const GRADE_LABELS = { A: 'Grade A', B: 'Grade B', C: 'Grade C', D: 'Grade D' };
+const CAT_LABELS = { metabolic: 'GLP-1 & Metabolic', healing: 'Healing & Recovery', immune: 'Immune', hormone: 'Growth Hormone', cognitive: 'Cognitive', longevity: 'Longevity', sexual: 'Sexual Health' };
+
+let activeFilter = 'all';
+let searchQuery = '';
+
+function gradeClass(g) {
+  return { A: 'ev-grade-a', B: 'ev-grade-b', C: 'ev-grade-c', D: 'ev-grade-d' }[g] || 'ev-grade-d';
+}
+
+function renderPeptides(list) {
+  const grid = document.getElementById('peptideGrid');
+  if (!grid) return;
+  if (list.length === 0) {
+    grid.innerHTML = '<div style="padding:3rem;text-align:center;font-family:var(--mono);font-size:0.875rem;color:var(--ink-3);">No peptides match your search. Try a different term.</div>';
+    return;
+  }
+  grid.innerHTML = list.map(p => `
+    <div class="peptide-card" id="card-${p.id}">
+      <div class="peptide-card-header" onclick="toggleProfile('${p.id}')">
+        <div class="peptide-card-badges">
+          <span class="${gradeClass(p.grade)}">${GRADE_LABELS[p.grade]}</span>
+          <span class="cat-chip">${CAT_LABELS[p.category] || p.category}</span>
+        </div>
+        <div class="peptide-card-body">
+          <div class="peptide-card-name">${p.name}</div>
+          <div class="peptide-card-summary">${p.summary}</div>
+        </div>
+        <button class="peptide-card-toggle" id="toggle-${p.id}" onclick="event.stopPropagation();toggleProfile('${p.id}')">View Profile ↓</button>
+      </div>
+      <div class="peptide-card-expanded" id="exp-${p.id}">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:1.5rem;" class="pexp-grid">
+          <div>
+            <div class="pexp-section">
+              <div class="pexp-label">Mechanism of Action</div>
+              <div class="pexp-text">${p.mechanism}</div>
+            </div>
+            <div class="pexp-section">
+              <div class="pexp-label">Clinical Use</div>
+              <div class="pexp-text">${p.clinicalUse}</div>
+            </div>
+          </div>
+          <div>
+            <div class="pexp-section">
+              <div class="pexp-label">Evidence Summary</div>
+              <div class="pexp-text">${p.evidence}</div>
+            </div>
+            <div class="pexp-section">
+              <div class="pexp-label">Key Studies</div>
+              <ul class="pexp-studies">${p.studies.map(s => `<li>${s}</li>`).join('')}</ul>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:1rem;padding-top:1rem;border-top:1px solid var(--border-2);">
+          <div class="pexp-label" style="margin:0;">iRemedy Sourcing</div>
+          <span class="pexp-sourcing ${p.sourcingClass}">${p.sourcing}</span>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function filterPeptides(cat, btn) {
+  activeFilter = cat;
+  searchQuery = '';
+  const searchEl = document.getElementById('peptideSearch');
+  if (searchEl) searchEl.value = '';
+  document.querySelectorAll('.pf-btn').forEach(b => b.classList.remove('pf-active'));
+  if (btn) btn.classList.add('pf-active');
+  const filtered = cat === 'all' ? PEPTIDE_DATA : PEPTIDE_DATA.filter(p => p.category === cat);
+  renderPeptides(filtered);
+  updateCount(filtered.length, cat === 'all' ? '' : CAT_LABELS[cat] || cat);
+}
+
+function searchPeptides(q) {
+  searchQuery = q.toLowerCase().trim();
+  if (!searchQuery) {
+    filterPeptides(activeFilter, null);
+    document.querySelectorAll('.pf-btn').forEach((b,i) => { if (i === 0) b.classList.add('pf-active'); });
+    hideCount();
+    return;
+  }
+  document.querySelectorAll('.pf-btn').forEach(b => b.classList.remove('pf-active'));
+  const filtered = PEPTIDE_DATA.filter(p => {
+    const haystack = [p.name, p.summary, p.mechanism, p.evidence, p.clinicalUse, p.category, ...p.aliases].join(' ').toLowerCase();
+    return searchQuery.split(' ').every(word => haystack.includes(word));
+  });
+  renderPeptides(filtered);
+  // Update both result count elements
+  const msg = filtered.length === PEPTIDE_DATA.length
+    ? `Showing all ${filtered.length} profiles`
+    : `${filtered.length} profile${filtered.length !== 1 ? 's' : ''} match "${q}"`;
+  ['searchResults','searchResults2'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) { el.textContent = msg; el.style.display = 'block'; }
+  });
+}
+
+function applyChip(term) {
+  const searchEl = document.getElementById('peptideSearch');
+  if (searchEl) searchEl.value = term;
+  searchPeptides(term);
+  document.getElementById('peptide-library').scrollIntoView({ behavior: 'smooth' });
+}
+
+function updateCount(n, label) {
+  const msg = label ? `Showing ${n} profile${n !== 1 ? 's' : ''} in ${label}` : `Showing all ${n} profiles`;
+  ['searchResults','searchResults2'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) { el.textContent = msg; el.style.display = n < PEPTIDE_DATA.length ? 'block' : 'none'; }
+  });
+}
+
+function hideCount() {
+  ['searchResults','searchResults2'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.style.display = 'none';
+  });
+}
+
+function toggleProfile(id) {
+  const card = document.getElementById('card-' + id);
+  const exp = document.getElementById('exp-' + id);
+  const btn = document.getElementById('toggle-' + id);
+  if (!card || !exp) return;
+  const isOpen = card.classList.contains('expanded');
+  // Close all open cards first
+  document.querySelectorAll('.peptide-card.expanded').forEach(c => {
+    c.classList.remove('expanded');
+    const e = c.querySelector('.peptide-card-expanded');
+    const b = c.querySelector('.peptide-card-toggle');
+    if (e) e.style.display = 'none';
+    if (b) b.textContent = 'View Profile ↓';
+  });
+  if (!isOpen) {
+    card.classList.add('expanded');
+    exp.style.display = 'block';
+    if (btn) btn.textContent = 'Close ↑';
+  }
+}
+
+// Initialize peptide library when page-peptides becomes active
+const _origShowPage = typeof showPage === 'function' ? showPage : null;
+// We hook into showPage via a wrapper after DOM load
+document.addEventListener('DOMContentLoaded', function() {
+  renderPeptides(PEPTIDE_DATA);
+});
+
+// Also add responsive styles for pexp-grid
+(function() {
+  const style = document.createElement('style');
+  style.textContent = '@media (max-width:768px){.pexp-grid{grid-template-columns:1fr !important;}}';
+  document.head.appendChild(style);
+})();
 </script>
 </body>
 </html>
