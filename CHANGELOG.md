@@ -11,20 +11,108 @@ Use these `CHG-XXX` numbers to reference specific states when picking up work ac
 
 ## Active State
 
-**Current:** CHG-050 — Government & Platform: left margin alignment fix
-**Date:** 2026-05-07
+**Current:** CHG-064 — Essential Medicines: banner text update
+**Date:** 2026-05-11
 
 ---
 
 ## Change History
 
+### CHG-064 — Essential Medicines: banner classification text update
+**Date:** 2026-05-11
+- Banner text changed: "PRE-DECISIONAL · INTERNAL BRIEFING DRAFT" → "PRESENTED AS A PUBLIC SERVICE BY IREMEDY HEALTHCARE"
+- Edit made in essential-medicines.html (escaped JSON string inside `__bundler/template` script tag)
 
+---
+### CHG-063 — Company page: Amanda Somsy CFO full bio
+**Date:** 2026-05-11
+- Replaced "Bio to be provided" placeholder with full 3-paragraph bio
+- Covers: CFO/Board Member of iRemedy Direct, 13-year tenure, 9 consecutive audits, Reg A+, Celebration Health consulting
+- Education: MS Accounting (SNHU), BBA (Keene State), CMA®
+- Tag line: Finance & Treasury · Capital Strategy · SEC Reporting · CMA®
 
+---
+### CHG-062 — Company page: Anthony Paquin CAO full bio
+**Date:** 2026-05-11
+- Replaced short placeholder bio with full 4-paragraph bio
+- Covers: iRemedy.ai multi-agent platform, 25+ data sources, career history (2013→present), federal engagements, education (UCF + UNC Kenan-Flagler MBA)
+- Tag line updated: AI Strategy · Supply Chain Intelligence · Federal Engagements · Technology Architecture
 
+---
+### CHG-061 — TradeSpy CTA: button alignment, email removal, name update
+**Date:** 2026-05-11
+- Request Briefing + Login to Platform buttons shifted right (flex-end, padding-right:25%) for visual balance
+- Tony@iRemedy.com removed from CTA footer line
+- "iRemedy Healthcare Solutions" → "iRemedy Healthcare" (3 instances: eyebrow, body, CTA footer)
 
+---
+### CHG-060 — Platform section 3: subtitle text color white
+**Date:** 2026-05-11
+- "MetaCommerceRx is built as a four-layer architecture..." paragraph: color changed from var(--ink-2) to var(--cream) to match dark section title
 
+---
+### CHG-059 — Platform section 2: 4 tiles from 3-col to 2x2 grid
+**Date:** 2026-05-11
+- What MetaCommerceRx Does section: grid-template-columns changed from repeat(auto-fit,minmax(280px,1fr)) to repeat(2,1fr)
+- Tiles: AI-Powered Procurement, Compliance Automation, Federated Inventory Visibility, Automated Order Routing
 
+---
+### CHG-058 — Platform hero: remove "Co-invented with Jim Harding" credential
+**Date:** 2026-05-11
+- Removed from credential strip below hero headline
+- Remaining 4 bullets: 10 Granted U.S. Patents · 100% Custom Code · 1M+ Products Cataloged · Tens of Thousands of Orders Processed
 
+---
+### CHG-057 — Providers section 8: Mayo Clinic + DoD Seal logo size increase
+**Date:** 2026-05-11
+- Mayo Clinic and DoD Seal logos: 75px → 113px (50% increase)
+- PAHO logo remains at 75px
+
+---
+### CHG-056 — Manufacturers section 7: remove "Your company here" tile
+**Date:** 2026-05-11
+- Removed the promotional placeholder tile from the incubator grid
+- 6 manufacturer tiles remain: Spectrum Medical, GLVUS, FlexGRIP, CathCare, Dento, VisionRT
+
+---
+### CHG-055 — Providers section 8: logo update + testimonial quote
+**Date:** 2026-05-11
+- UPS Healthcare logo removed; grid changed from 4-col to 3-col
+- Remaining logos (Mayo Clinic, DoD Seal, PAHO) bumped to 75px
+- Testimonial quote filled in: "Their platform gave us visibility we didn't know we were missing..."
+- Name/title/organization attribution removed
+
+---
+### CHG-054 — Manufacturers section 7: remove Speranza, add Dento + VisionRT, plug testimonial
+**Date:** 2026-05-11
+- Speranza Therapeutics removed
+- Dento added: oral wellness technology, OralFitnessCheck™ salivary screening tool
+- VisionRT added: inventors and market leaders in Surface Guided Radiation Therapy
+- Incubator testimonial quote filled in: "iRemedy compressed what would have been an 18-month market entry..."
+- Name/attribution removed from testimonial
+
+---
+### CHG-053 — Manufacturers incubator section: remove two tiles
+**Date:** 2026-05-11
+- Removed "When your product ships through iRemedy" credibility bridge tile
+- Removed "Pricing: $5K-$15K/month depending on complexity" pricing tile
+- Bullet list now flows directly into "Learn More About the Incubator" CTA button
+
+---
+### CHG-052 — Homepage testimonial quotes: real copy, no attribution
+**Date:** 2026-05-11
+- Quote 1 (incubator): "iRemedy compressed what would have been an 18-month market entry into a quarter..."
+- Quote 2 (buyer/provider): "Their platform gave us visibility we didn't know we were missing..."
+- Name · Title · Company fields removed from both tiles
+
+---
+### CHG-051 — Site header: logo left, nav links centered
+**Date:** 2026-05-11
+- Logo: returned to far-left (flex space-between on masthead row)
+- Get Started button: far right, aligned above Essential Medicines nav button
+- Nav links row: justify-content changed to center
+
+---
 ### CHG-050 — Government & Platform: left margin alignment fix
 **Date:** 2026-05-07
 **Commit:** `f106cce`
