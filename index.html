@@ -911,6 +911,12 @@
   </style>
 </head>
 <body>
+<script>
+  // Prevent FOUC: hide home page immediately if deep-linking to an inner page
+  if (window.location.pathname !== '/' && window.location.pathname !== '') {
+    document.write('<style>#home{display:none}</style>');
+  }
+</script>
 
 <!-- ══ SITE HEADER ══ -->
 <header id="site-header">
