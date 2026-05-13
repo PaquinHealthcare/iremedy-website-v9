@@ -1711,8 +1711,9 @@
 <div id="page-essential-medicines" class="inner-page">
   <div style="padding-top:0;height:calc(100vh - 120px);display:flex;flex-direction:column;">
     <iframe
+      id="em-iframe"
       src="essential-medicines.html"
-      style="flex:1;width:100%;border:none;display:block;"
+      style="flex:1;width:100%;border:none;display:block;opacity:0;transition:opacity 0.4s ease;"
       title="Essential Medicines — Phase 1 Pilot Briefing"
       loading="lazy"
     ></iframe>
@@ -4462,6 +4463,23 @@
     } else {
       history.replaceState({ page: 'home' }, '', path === '/' ? '/' : path);
     }
+  })();
+
+  // Reveal Essential Medicines iframe once bundler finishes rendering
+  (function() {
+    var emIframe = document.getElementById('em-iframe');
+    if (!emIframe) return;
+    var revealed = false;
+    function reveal() {
+      if (revealed) return;
+      revealed = true;
+      emIframe.style.opacity = '1';
+    }
+    window.addEventListener('message', function(e) {
+      if (e.data === 'em-ready') reveal();
+    });
+    // Fallback: reveal after 6s in case postMessage fails
+    setTimeout(reveal, 6000);
   })();
 </script>
 

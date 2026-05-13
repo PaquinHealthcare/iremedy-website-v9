@@ -165,9 +165,12 @@ document.addEventListener('DOMContentLoaded', async function() {
     if (window.Babel && typeof window.Babel.transformScriptTags === 'function') {
       window.Babel.transformScriptTags();
     }
+    // Signal parent frame that content is ready
+    try { if (window.parent !== window) window.parent.postMessage('em-ready', '*'); } catch(e){}
   } catch (err) {
     setStatus('Error unpacking: ' + err.message);
     console.error('Bundle unpack error:', err);
+    try { if (window.parent !== window) window.parent.postMessage('em-ready', '*'); } catch(e){}
   }
 });
 
