@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://iremedy.com/sitemap.xml
+
+# Block legacy/archived pages
+Disallow: /legacy/
+Disallow: /solutions/direct
+Disallow: /solutions/technology
+Disallow: /solutions/logistics
+Disallow: /solutions/incubator
