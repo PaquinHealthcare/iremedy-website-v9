@@ -2684,13 +2684,14 @@
       <p style="font-family:var(--mono);font-size:0.875rem;letter-spacing:0.14em;text-transform:uppercase;color:#9CA3AF;margin-bottom:2.5rem;">50-State Licensed · NABP Accredited · DSCSA Compliant · FDA Green List API Sources · UPS Healthcare Cold Chain</p>
       <div style="display:flex;gap:1rem;flex-wrap:wrap;">
         <button class="btn btn-teal" onclick="showPage('contact')">Request Pricing →</button>
+        <button class="btn btn-ghost-lt" onclick="document.getElementById('pharm-products').scrollIntoView({behavior:'smooth'})">Products and Services ↓</button>
         <button class="btn btn-ghost-lt" onclick="document.getElementById('pharm-catalog').scrollIntoView({behavior:'smooth'})">See Our API Catalog ↓</button>
       </div>
     </div>
   </div>
 
   <!-- PRODUCT CATEGORY NAVIGATION CARDS -->
-  <div style="background:var(--bg);padding:3rem 6vw;border-bottom:1px solid var(--rule);">
+  <div id="pharm-products" style="background:var(--bg);padding:3rem 6vw;border-bottom:1px solid var(--rule);">
     <div class="eyebrow" style="margin-bottom:1.5rem;">// Products &amp; Services</div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;">
 
@@ -3913,6 +3914,68 @@
             <a href="https://youtube.com/playlist?list=PLgXPSZtg-v7fVhEmPEwO9cY2qq_3fnM3k&si=g4hD533gskwfonPK" target="_blank" class="btn btn-teal" style="text-decoration:none;">Listen on YouTube →</a>
             <a href="https://open.spotify.com/show/5rXUtk3AhdoO4CAoK5ETwr?si=pQsLcfHmSySD4B3Rd087ng&nd=1&dlsi=70a27f7de55a44f0" target="_blank" class="btn btn-ghost-lt" style="text-decoration:none;">Listen on Spotify →</a>
           </div>
+        </div>
+      </div>
+
+      <!-- PODCAST APPEARANCES -->
+      <div style="margin-bottom:4rem;">
+        <div class="eyebrow" style="margin-bottom:1rem;">// Podcast Appearances</div>
+        <h3 style="font-family:var(--serif);font-size:clamp(1.5rem,3vw,2rem);font-weight:700;color:var(--ink);margin-bottom:0.5rem;">Tony Paquin on the mic.</h3>
+        <p style="font-size:0.95rem;color:var(--ink-2);font-weight:300;line-height:1.6;margin-bottom:2rem;">Recent appearances on industry podcasts and shows.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px;">
+
+          <!-- Appearance 1 — Placeholder -->
+          <a href="#" target="_blank" rel="noopener noreferrer" style="background:var(--bg);border:0.5px solid var(--border);border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;transition:border-color 0.15s,box-shadow 0.15s;display:block;" onmouseenter="this.style.borderColor='rgba(28,31,36,0.28)';this.style.boxShadow='0 2px 8px rgba(0,0,0,0.06)'" onmouseleave="this.style.borderColor='';this.style.boxShadow=''">
+            <div style="aspect-ratio:16/9;background:#2A3444;display:flex;align-items:center;justify-content:center;">
+              <span style="font-family:var(--mono);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(242,237,228,0.4);">[Show artwork]</span>
+            </div>
+            <div style="padding:1rem;">
+              <div style="font-family:var(--sans);font-size:0.9375rem;font-weight:600;color:var(--ink);margin-bottom:0.25rem;line-height:1.3;">[Podcast Show Name]</div>
+              <div style="font-family:var(--sans);font-size:0.8125rem;color:var(--ink-2);font-weight:300;line-height:1.5;margin-bottom:0.35rem;">[Episode title or topic discussed]</div>
+              <div style="font-family:var(--mono);font-size:0.75rem;color:var(--ink-3);margin-bottom:0.75rem;">[Month Year]</div>
+              <div style="font-family:var(--mono);font-size:0.8125rem;letter-spacing:0.08em;color:var(--cerulean);">LISTEN →</div>
+            </div>
+          </a>
+
+          <!-- Appearance 2 — Placeholder -->
+          <a href="#" target="_blank" rel="noopener noreferrer" style="background:var(--bg);border:0.5px solid var(--border);border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;transition:border-color 0.15s,box-shadow 0.15s;display:block;" onmouseenter="this.style.borderColor='rgba(28,31,36,0.28)';this.style.boxShadow='0 2px 8px rgba(0,0,0,0.06)'" onmouseleave="this.style.borderColor='';this.style.boxShadow=''">
+            <div style="aspect-ratio:16/9;background:#2A3444;display:flex;align-items:center;justify-content:center;">
+              <span style="font-family:var(--mono);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(242,237,228,0.4);">[Show artwork]</span>
+            </div>
+            <div style="padding:1rem;">
+              <div style="font-family:var(--sans);font-size:0.9375rem;font-weight:600;color:var(--ink);margin-bottom:0.25rem;line-height:1.3;">[Podcast Show Name]</div>
+              <div style="font-family:var(--sans);font-size:0.8125rem;color:var(--ink-2);font-weight:300;line-height:1.5;margin-bottom:0.35rem;">[Episode title or topic discussed]</div>
+              <div style="font-family:var(--mono);font-size:0.75rem;color:var(--ink-3);margin-bottom:0.75rem;">[Month Year]</div>
+              <div style="font-family:var(--mono);font-size:0.8125rem;letter-spacing:0.08em;color:var(--cerulean);">LISTEN →</div>
+            </div>
+          </a>
+
+          <!-- Appearance 3 — Placeholder -->
+          <a href="#" target="_blank" rel="noopener noreferrer" style="background:var(--bg);border:0.5px solid var(--border);border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;transition:border-color 0.15s,box-shadow 0.15s;display:block;" onmouseenter="this.style.borderColor='rgba(28,31,36,0.28)';this.style.boxShadow='0 2px 8px rgba(0,0,0,0.06)'" onmouseleave="this.style.borderColor='';this.style.boxShadow=''">
+            <div style="aspect-ratio:16/9;background:#2A3444;display:flex;align-items:center;justify-content:center;">
+              <span style="font-family:var(--mono);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(242,237,228,0.4);">[Show artwork]</span>
+            </div>
+            <div style="padding:1rem;">
+              <div style="font-family:var(--sans);font-size:0.9375rem;font-weight:600;color:var(--ink);margin-bottom:0.25rem;line-height:1.3;">[Podcast Show Name]</div>
+              <div style="font-family:var(--sans);font-size:0.8125rem;color:var(--ink-2);font-weight:300;line-height:1.5;margin-bottom:0.35rem;">[Episode title or topic discussed]</div>
+              <div style="font-family:var(--mono);font-size:0.75rem;color:var(--ink-3);margin-bottom:0.75rem;">[Month Year]</div>
+              <div style="font-family:var(--mono);font-size:0.8125rem;letter-spacing:0.08em;color:var(--cerulean);">LISTEN →</div>
+            </div>
+          </a>
+
+          <!-- Appearance 4 — Placeholder -->
+          <a href="#" target="_blank" rel="noopener noreferrer" style="background:var(--bg);border:0.5px solid var(--border);border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;transition:border-color 0.15s,box-shadow 0.15s;display:block;" onmouseenter="this.style.borderColor='rgba(28,31,36,0.28)';this.style.boxShadow='0 2px 8px rgba(0,0,0,0.06)'" onmouseleave="this.style.borderColor='';this.style.boxShadow=''">
+            <div style="aspect-ratio:16/9;background:#2A3444;display:flex;align-items:center;justify-content:center;">
+              <span style="font-family:var(--mono);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(242,237,228,0.4);">[Show artwork]</span>
+            </div>
+            <div style="padding:1rem;">
+              <div style="font-family:var(--sans);font-size:0.9375rem;font-weight:600;color:var(--ink);margin-bottom:0.25rem;line-height:1.3;">[Podcast Show Name]</div>
+              <div style="font-family:var(--sans);font-size:0.8125rem;color:var(--ink-2);font-weight:300;line-height:1.5;margin-bottom:0.35rem;">[Episode title or topic discussed]</div>
+              <div style="font-family:var(--mono);font-size:0.75rem;color:var(--ink-3);margin-bottom:0.75rem;">[Month Year]</div>
+              <div style="font-family:var(--mono);font-size:0.8125rem;letter-spacing:0.08em;color:var(--cerulean);">LISTEN →</div>
+            </div>
+          </a>
+
         </div>
       </div>
 
