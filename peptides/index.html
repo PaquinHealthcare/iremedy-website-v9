@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peptide Academy — Evidence-Graded Profiles | iRemedy</title>
+  <meta name="description" content="38 peptide profiles. Every claim backed by peer-reviewed research. Evidence-graded A–D. Built by iRemedy — licensed pharmaceutical distributor with full chain of custody." />
+  <link rel="canonical" href="https://iremedy.com/peptides/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Peptide Academy — Evidence-Graded Profiles | iRemedy" />
+  <meta property="og:description" content="38 peptide profiles. Every claim backed by peer-reviewed research. Evidence-graded A–D. Built by iRemedy — licensed pharmaceutical distributor with full chain of custody." />
+  <meta property="og:url" content="https://iremedy.com/peptides/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema.org CollectionPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Peptide Academy — Evidence-Graded Profiles",
+    "description": "38 peptide profiles. Every claim backed by peer-reviewed research. Evidence-graded A–D. Built by iRemedy — licensed pharmaceutical distributor with full chain of custody.",
+    "url": "https://iremedy.com/peptides/"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #f2ede4;
+      --bg-2: #ede8df;
+      --bg-3: #e6e0d5;
+      --ink: #212E3E;
+      --ink-2: #3D4D5E;
+      --ink-3: #6b7280;
+      --teal: #0064A5;
+      --cerulean: #00ACE6;
+      --cream: #F2EDE4;
+      --teal-dim: rgba(0,100,165,0.09);
+      --teal-dk: #004E85;
+      --border: rgba(28,31,36,0.11);
+      --rule: rgba(28,31,36,0.14);
+      --serif: 'Playfair Display', Georgia, serif;
+      --mono: 'IBM Plex Mono', monospace;
+      --sans: 'Inter', sans-serif;
+      --hero-bg: #212E3E;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); background: var(--bg); color: var(--ink); -webkit-font-smoothing: antialiased; }
+
+    /* ── NAV ── */
+    .page-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(242,237,228,0.97);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      height: 60px;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 6vw;
+    }
+    .nav-logo {
+      font-family: var(--mono); font-size: 0.95rem; font-weight: 600;
+      letter-spacing: 0.06em; color: var(--ink); text-decoration: none;
+    }
+    .nav-logo span { color: var(--teal); }
+    .nav-back {
+      font-family: var(--mono); font-size: 0.8rem; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--teal); text-decoration: none;
+      transition: color 0.15s;
+    }
+    .nav-back:hover { color: var(--teal-dk); }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--hero-bg); padding: 110px 6vw 5rem;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background-image: linear-gradient(rgba(242,237,228,0.03) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(242,237,228,0.03) 1px, transparent 1px);
+      background-size: 80px 80px;
+    }
+    .hero-inner {
+      position: relative; z-index: 1;
+      max-width: 860px; margin: 0 auto; text-align: center;
+    }
+    .hero-eyebrow {
+      font-family: var(--mono); font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.28em; text-transform: uppercase;
+      color: rgba(0,100,165,0.6); margin-bottom: 1.75rem;
+    }
+    .hero-h1 {
+      font-family: var(--serif); font-size: clamp(2.4rem, 5vw, 3.75rem);
+      font-weight: 900; line-height: 1.08; color: #fff;
+      letter-spacing: -0.02em; margin-bottom: 1rem;
+    }
+    .hero-h1 em {
+      font-style: italic; color: var(--cerulean);
+    }
+    .hero-sub {
+      font-size: 1.05rem; line-height: 1.75; font-weight: 300;
+      color: rgba(242,237,228,0.72); max-width: 680px;
+      margin: 0 auto 2.25rem;
+    }
+    .hero-stats {
+      display: flex; flex-wrap: wrap; gap: 0 2rem;
+      justify-content: center; align-items: center;
+      margin-bottom: 2rem;
+    }
+    .hero-stats span {
+      font-family: var(--mono); font-size: 0.75rem; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: rgba(0,172,230,0.85);
+    }
+    .hero-stats span + span::before {
+      content: '·'; margin-right: 2rem;
+      color: rgba(242,237,228,0.2);
+    }
+    @media (max-width: 600px) {
+      .hero-stats span + span::before { display: none; }
+      .hero-stats { gap: 0.5rem 1.5rem; }
+    }
+    .hero-cta {
+      display: inline-block; margin-top: 0.5rem;
+      font-family: var(--mono); font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      padding: 12px 28px; background: var(--teal); color: #fff;
+      text-decoration: none; transition: background 0.2s;
+    }
+    .hero-cta:hover { background: var(--teal-dk); }
+
+    /* ── GRADE KEY ── */
+    .grade-section {
+      background: var(--bg-2); padding: 4rem 6vw;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-label {
+      font-family: var(--mono); font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--teal); margin-bottom: 1.5rem; display: block;
+    }
+    .grade-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      max-width: 960px; margin: 0 auto;
+    }
+    .grade-card {
+      background: var(--bg); border: 1px solid var(--border); border-radius: 3px;
+      padding: 1.5rem 1.25rem; border-top-width: 3px;
+    }
+    .grade-card.gc-a { border-top-color: #00875A; }
+    .grade-card.gc-b { border-top-color: #0064A5; }
+    .grade-card.gc-c { border-top-color: #6366F1; }
+    .grade-card.gc-d { border-top-color: #D97706; }
+    .grade-label {
+      font-family: var(--mono); font-size: 0.875rem; font-weight: 600;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .gc-a .grade-label { color: #00530E; }
+    .gc-b .grade-label { color: #003d7a; }
+    .gc-c .grade-label { color: #3730a3; }
+    .gc-d .grade-label { color: #92400E; }
+    .grade-title {
+      font-family: var(--sans); font-size: 0.9rem; font-weight: 600;
+      color: var(--ink); margin-bottom: 0.5rem;
+    }
+    .grade-desc {
+      font-size: 0.875rem; line-height: 1.6; color: var(--ink-3); font-weight: 300;
+    }
+
+    /* ── SEARCH + FILTER ── */
+    .filter-section {
+      padding: 3.5rem 6vw 2rem;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 60px; z-index: 100;
+      background: rgba(242,237,228,0.97);
+      backdrop-filter: blur(10px);
+    }
+    .search-wrap {
+      max-width: 600px; margin: 0 auto 1.25rem;
+      position: relative;
+    }
+    .search-wrap input {
+      width: 100%;
+      font-family: var(--sans); font-size: 0.95rem; font-weight: 300;
+      color: var(--ink);
+      background: var(--bg-2); border: 1px solid var(--border);
+      padding: 0.75rem 1rem 0.75rem 2.75rem;
+      outline: none; border-radius: 2px;
+      transition: border-color 0.15s;
+    }
+    .search-wrap input:focus { border-color: var(--teal); }
+    .search-wrap input::placeholder { color: var(--ink-3); }
+    .search-icon {
+      position: absolute; left: 0.85rem; top: 50%; transform: translateY(-50%);
+      color: var(--ink-3); font-size: 1rem; pointer-events: none;
+    }
+    .filter-chips {
+      display: flex; flex-wrap: wrap; gap: 0.5rem;
+      justify-content: center; margin-bottom: 0.75rem;
+    }
+    .filter-chip {
+      font-family: var(--mono); font-size: 0.8125rem; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 5px 13px; border: 1px solid var(--border);
+      background: transparent; color: var(--ink-3);
+      cursor: pointer; transition: all 0.15s; border-radius: 2px;
+    }
+    .filter-chip:hover { border-color: var(--teal); color: var(--teal); }
+    .filter-chip.active {
+      background: var(--teal); color: #fff; border-color: var(--teal);
+    }
+    .result-count {
+      text-align: center;
+      font-family: var(--mono); font-size: 0.72rem; font-weight: 400;
+      letter-spacing: 0.1em; color: var(--ink-3);
+    }
+
+    /* ── LIBRARY GRID ── */
+    .library-section {
+      padding: 3rem 6vw 5rem;
+      max-width: 1200px; margin: 0 auto;
+    }
+    .library-header {
+      display: flex; align-items: baseline; justify-content: space-between;
+      margin-bottom: 1.75rem; gap: 1rem; flex-wrap: wrap;
+    }
+    .library-h2 {
+      font-family: var(--serif); font-size: 1.6rem; font-weight: 700;
+      color: var(--ink); letter-spacing: -0.01em;
+    }
+    #peptide-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .no-results {
+      grid-column: 1 / -1;
+      text-align: center; padding: 3rem 1rem;
+      font-family: var(--mono); font-size: 0.85rem; color: var(--ink-3);
+      letter-spacing: 0.1em;
+    }
+
+    /* Peptide Card */
+    .peptide-card {
+      background: var(--bg-2);
+      padding: 1.5rem;
+      display: flex; flex-direction: column;
+      text-decoration: none; color: inherit;
+      transition: background 0.15s;
+      cursor: pointer;
+      min-height: 180px;
+    }
+    .peptide-card:hover {
+      background: var(--bg);
+    }
+    .card-top {
+      display: flex; align-items: flex-start; justify-content: space-between;
+      gap: 0.75rem; margin-bottom: 0.85rem;
+    }
+    .card-badges {
+      display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center;
+    }
+    .card-arrow {
+      color: var(--teal); font-size: 1rem; flex-shrink: 0;
+      line-height: 1; align-self: flex-start; margin-top: 2px;
+      opacity: 0.45; transition: opacity 0.15s, transform 0.15s;
+    }
+    .peptide-card:hover .card-arrow {
+      opacity: 1; transform: translateX(3px);
+    }
+    .card-name {
+      font-family: var(--serif); font-size: 1.1rem; font-weight: 700;
+      color: var(--ink); line-height: 1.25; margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+    .card-summary {
+      font-size: 0.875rem; line-height: 1.65; color: var(--ink-3);
+      font-weight: 300; margin-bottom: 0; flex: 1;
+    }
+    .card-footer {
+      margin-top: 1.1rem; padding-top: 0.9rem;
+      border-top: 1px solid var(--border);
+    }
+    .card-sourcing {
+      font-family: var(--mono); font-size: 0.75rem; font-weight: 500;
+      letter-spacing: 0.09em; text-transform: uppercase;
+      padding: 3px 8px; border-radius: 2px; white-space: nowrap;
+      display: inline-block;
+    }
+
+    /* Evidence grade badges */
+    .ev-grade {
+      font-family: var(--mono); font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 2px 7px; border-radius: 2px; white-space: nowrap;
+    }
+    .ev-grade-a { background: rgba(0,135,90,0.10); color: #00530E; border: 1px solid rgba(0,135,90,0.25); }
+    .ev-grade-b { background: rgba(0,100,165,0.10); color: #003d7a; border: 1px solid rgba(0,100,165,0.25); }
+    .ev-grade-c { background: rgba(99,102,241,0.10); color: #3730a3; border: 1px solid rgba(99,102,241,0.25); }
+    .ev-grade-d { background: rgba(217,119,6,0.10); color: #92400E; border: 1px solid rgba(217,119,6,0.25); }
+
+    /* Category chip */
+    .cat-chip {
+      font-family: var(--mono); font-size: 0.68rem; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--ink-3); border: 1px solid var(--border);
+      padding: 2px 7px; border-radius: 2px; white-space: nowrap;
+    }
+
+    /* Sourcing pills */
+    .sourcing-available {
+      background: rgba(0,135,90,0.10); color: #00530E;
+      border: 1px solid rgba(0,135,90,0.25);
+    }
+    .sourcing-research {
+      background: rgba(217,119,6,0.10); color: #92400E;
+      border: 1px solid rgba(217,119,6,0.25);
+    }
+
+    /* ── AEO INTRO ── */
+    .aeo-section {
+      background: var(--bg-2);
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 6vw;
+    }
+    .aeo-inner {
+      max-width: 860px; margin: 0 auto;
+    }
+    .aeo-breadcrumb {
+      font-family: var(--mono); font-size: 0.72rem; font-weight: 500;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--ink-3); margin-bottom: 0.75rem;
+    }
+    .aeo-breadcrumb a { color: var(--teal); text-decoration: none; }
+    .aeo-breadcrumb a:hover { text-decoration: underline; }
+    .aeo-text {
+      font-size: 0.95rem; line-height: 1.8; color: var(--ink-2); font-weight: 300;
+      max-width: 800px;
+    }
+
+    /* ── CTA FOOTER ── */
+    .cta-footer {
+      background: var(--hero-bg); padding: 5rem 6vw;
+      position: relative; overflow: hidden;
+    }
+    .cta-footer::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background-image: linear-gradient(rgba(242,237,228,0.02) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(242,237,228,0.02) 1px, transparent 1px);
+      background-size: 80px 80px;
+    }
+    .cta-footer-inner {
+      position: relative; z-index: 1;
+      max-width: 700px; margin: 0 auto; text-align: center;
+    }
+    .cta-footer h2 {
+      font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.75rem);
+      font-weight: 900; color: #fff; line-height: 1.1;
+      letter-spacing: -0.01em; margin-bottom: 1.25rem;
+    }
+    .cta-footer p {
+      font-size: 1rem; line-height: 1.75; font-weight: 300;
+      color: rgba(242,237,228,0.7); margin-bottom: 2rem;
+    }
+    .cta-footer-btns {
+      display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+    }
+    .btn-primary {
+      font-family: var(--mono); font-size: 0.875rem; font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      padding: 12px 24px; background: var(--teal); color: #fff;
+      border: none; cursor: pointer; text-decoration: none;
+      display: inline-block; transition: background 0.2s;
+    }
+    .btn-primary:hover { background: var(--teal-dk); }
+    .btn-ghost-lt {
+      font-family: var(--mono); font-size: 0.875rem; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      padding: 12px 24px; border: 1px solid rgba(242,237,228,0.25);
+      background: transparent; color: rgba(242,237,228,0.65);
+      cursor: pointer; transition: all 0.2s; text-decoration: none; display: inline-block;
+    }
+    .btn-ghost-lt:hover { border-color: rgba(242,237,228,0.6); color: #fff; }
+
+    /* CREDENTIAL BLOCKS */
+    .credential-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin: 2rem 0 2.5rem;
+    }
+    .credential-block {
+      text-align: left;
+    }
+    .credential-title {
+      font-family: var(--mono); font-size: 0.875rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: rgba(242,237,228,0.9); margin-bottom: 0.5rem;
+    }
+    .credential-desc {
+      font-size: 0.8125rem; line-height: 1.65; color: rgba(242,237,228,0.55);
+      font-weight: 300;
+    }
+    @media (max-width: 900px) {
+      .credential-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 500px) {
+      .credential-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── PAGE FOOTER ── */
+    .page-footer {
+      border-top: 1px solid var(--border); padding: 2rem 6vw;
+      text-align: center;
+      font-family: var(--mono); font-size: 0.75rem;
+      letter-spacing: 0.1em; line-height: 1.9;
+      color: var(--ink-3);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1100px) {
+      #peptide-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 900px) {
+      .grade-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 700px) {
+      #peptide-grid { grid-template-columns: 1fr; }
+      .filter-section { padding: 2rem 5vw 1.25rem; position: relative; top: auto; }
+      .library-section { padding: 2rem 5vw 3rem; }
+      .grade-section { padding: 3rem 5vw; }
+      .hero { padding: 88px 5vw 3.5rem; }
+    }
+    @media (max-width: 480px) {
+      .grade-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="page-nav">
+    <a href="../index.html" class="nav-logo">iRemedy<span>.</span></a>
+    <a href="../index.html" class="nav-back">← iRemedy.com</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">// Peptide Academy</div>
+      <h1 class="hero-h1">The evidence on peptides.<br><em>Unfiltered. Cited. Sourced.</em></h1>
+      <p class="hero-sub">38 peptide profiles. Every claim backed by published, peer-reviewed research. Every source auditable. Built by the licensed distributor that actually supplies them — compliantly, with full chain of custody.</p>
+      <div class="hero-stats">
+        <span>38 Peptide Profiles</span>
+        <span>100+ Clinical Citations</span>
+        <span>Evidence-Graded A–D</span>
+        <span>iRemedy Verified Sourcing</span>
+      </div>
+      <a href="#library" class="hero-cta">Explore the Library ↓</a>
+    </div>
+  </section>
+
+  <!-- AEO INTRO / BREADCRUMB -->
+  <section class="aeo-section">
+    <div class="aeo-inner">
+      <div class="aeo-breadcrumb">
+        <a href="../index.html">iRemedy</a> › Peptide Academy
+      </div>
+      <p class="aeo-text">
+        iRemedy is a licensed pharmaceutical distributor supplying compounded peptides to healthcare professionals across all 50 states. Our Peptide Academy provides evidence-graded clinical profiles — each rigorously sourced, transparently cited, and written to serve prescribers and procurement professionals who require accuracy over hype. Every peptide we supply comes with complete chain of custody documentation, COA, and country-of-origin disclosure.
+      </p>
+    </div>
+  </section>
+
+  <!-- EVIDENCE GRADE KEY -->
+  <section class="grade-section">
+    <span class="section-label" style="text-align:center; display:block;">// Evidence Grade Key</span>
+    <div class="grade-grid">
+      <div class="grade-card gc-a">
+        <div class="grade-label">Grade A</div>
+        <div class="grade-title">FDA Approved</div>
+        <p class="grade-desc">Regulatory-approved indication with substantial Phase III RCT evidence. Highest confidence tier. Includes A+ for multi-trial concordance and landmark outcomes data.</p>
+      </div>
+      <div class="grade-card gc-b">
+        <div class="grade-label">Grade B</div>
+        <div class="grade-title">Strong Clinical</div>
+        <p class="grade-desc">Human clinical trial data — Phase I/II completed, positive signals, methodology sound. Not yet FDA-approved or awaiting confirmatory trial. B+ denotes robust Phase II evidence.</p>
+      </div>
+      <div class="grade-card gc-c">
+        <div class="grade-label">Grade C</div>
+        <div class="grade-title">Emerging Clinical</div>
+        <p class="grade-desc">Early-phase human data or strong translational evidence from animal models. Mechanism plausible; clinical generalizability remains limited. C+ indicates early-phase human trials exist.</p>
+      </div>
+      <div class="grade-card gc-d">
+        <div class="grade-label">Grade D</div>
+        <div class="grade-title">Preclinical</div>
+        <p class="grade-desc">Animal models or in vitro data only. No completed human trials. Mechanism of interest, but clinical applicability unproven. D+ indicates novel mechanistic plausibility.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEARCH + FILTER (sticky) -->
+  <section class="filter-section" id="library-filter">
+    <span class="section-label" style="text-align:center; display:block; margin-bottom:1rem;">// Search the Library</span>
+    <div class="search-wrap">
+      <span class="search-icon">⌕</span>
+      <input
+        type="search"
+        id="peptide-search"
+        placeholder="Search peptides, conditions, mechanisms..."
+        autocomplete="off"
+        oninput="searchPeptides(this.value)"
+      />
+    </div>
+    <div class="filter-chips" id="filter-chips">
+      <button class="filter-chip active" data-cat="all" onclick="filterPeptides('all')">All</button>
+      <button class="filter-chip" data-cat="metabolic" onclick="filterPeptides('metabolic')">GLP-1 &amp; Metabolic</button>
+      <button class="filter-chip" data-cat="healing" onclick="filterPeptides('healing')">Healing &amp; Regenerative</button>
+      <button class="filter-chip" data-cat="immune" onclick="filterPeptides('immune')">Immune</button>
+      <button class="filter-chip" data-cat="hormone" onclick="filterPeptides('hormone')">GH &amp; Endocrine</button>
+      <button class="filter-chip" data-cat="cognitive" onclick="filterPeptides('cognitive')">Cognitive &amp; Neuro</button>
+      <button class="filter-chip" data-cat="longevity" onclick="filterPeptides('longevity')">Longevity</button>
+      <button class="filter-chip" data-cat="sexual" onclick="filterPeptides('sexual')">Sexual Health</button>
+    </div>
+    <div class="result-count" id="result-count">Showing 38 peptides</div>
+  </section>
+
+  <!-- PEPTIDE GRID -->
+  <section class="library-section" id="library">
+    <div id="peptide-grid"></div>
+  </section>
+
+  <!-- CTA FOOTER -->
+  <section class="cta-footer">
+    <div class="cta-footer-inner" style="max-width:900px;">
+      <h2>Knowing the evidence is step one.<br><em style="font-style:italic;color:var(--cerulean);">Sourcing it compliantly is step two.</em></h2>
+      <p>iRemedy is the licensed infrastructure layer between evidence and access — supplying compounded peptides with complete documentation, national reach, and regulatory accountability.</p>
+      <div class="credential-grid">
+        <div class="credential-block">
+          <div class="credential-title">50-State Licensed</div>
+          <p class="credential-desc">Wholesale pharmaceutical distribution across all 50 states. Full DEA authorization for controlled substances.</p>
+        </div>
+        <div class="credential-block">
+          <div class="credential-title">NABP Accredited</div>
+          <p class="credential-desc">National Association of Boards of Pharmacy accreditation. Compliance with the highest pharmacy industry standards.</p>
+        </div>
+        <div class="credential-block">
+          <div class="credential-title">Full Chain of Custody</div>
+          <p class="credential-desc">Every shipment includes CoA, DSCSA serialization, country-of-origin disclosure, and UPS Healthcare cold chain documentation.</p>
+        </div>
+        <div class="credential-block">
+          <div class="credential-title">Wholesale Only</div>
+          <p class="credential-desc">Licensed healthcare facilities and compounding pharmacies only. Not direct-to-consumer. Compliant by design.</p>
+        </div>
+      </div>
+      <div class="cta-footer-btns">
+        <a href="../index.html#contact" class="btn-primary">Request Peptide Catalog →</a>
+        <a href="../index.html" class="btn-ghost-lt">Learn About iRemedy →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE FOOTER -->
+  <footer class="page-footer">
+    <div>© 2025 iRemedy Healthcare Companies, Inc. · Stuart, FL · All rights reserved</div>
+    <div>For licensed healthcare professionals only. Not for retail consumer use.</div>
+  </footer>
+
+  <script>
+    /* ─── DATA ─── */
+    const PEPTIDE_DATA = [
+      { id: 'semaglutide', name: 'Semaglutide', category: 'metabolic', grade: 'A+', summary: 'FDA-approved GLP-1 receptor agonist. STEP 1: 14.9% weight loss; SELECT: 20% MACE reduction.', sourcing: 'Available — FDA-listed API, 50-state distribution, cold chain compliant', sourcingClass: 'sourcing-available', aliases: ['Ozempic','Wegovy','GLP-1','weight loss','diabetes'] },
+      { id: 'tirzepatide', name: 'Tirzepatide', category: 'metabolic', grade: 'A+', summary: 'First-in-class dual GIP/GLP-1 agonist. SURMOUNT-1: 22.5% weight loss; superior to semaglutide head-to-head.', sourcing: 'Available — FDA-listed API, 50-state distribution, cold chain compliant', sourcingClass: 'sourcing-available', aliases: ['Zepbound','Mounjaro','GIP','dual agonist','weight loss'] },
+      { id: 'liraglutide', name: 'Liraglutide', category: 'metabolic', grade: 'A+', summary: 'First-generation GLP-1 RA benchmark. LEADER Trial: HR 0.87 for MACE (n=9,340). SCALE: 4-6 kg weight loss.', sourcing: 'Available — FDA-listed API, 50-state distribution', sourcingClass: 'sourcing-available', aliases: ['Victoza','Saxenda','GLP-1','weight loss','cardiovascular'] },
+      { id: 'octreotide', name: 'Octreotide', category: 'hormone', grade: 'A+', summary: 'Gold-standard somatostatin analog, 35+ years clinical use. CHIASMA OPTIMAL: 58.2% IGF-1 normalization.', sourcing: 'Available — FDA-listed API, 50-state distribution', sourcingClass: 'sourcing-available', aliases: ['Sandostatin','Mycapssa','somatostatin','acromegaly','carcinoid'] },
+      { id: 'insulin-analogs', name: 'Insulin Analogs', category: 'hormone', grade: 'A+', summary: 'The evidence ceiling. ORIGIN (n=12,537): glargine CV-neutral. DEVOTE (n=7,637): degludec 40% less severe hypoglycemia.', sourcing: 'Available — FDA-listed API, 50-state distribution', sourcingClass: 'sourcing-available', aliases: ['glargine','degludec','lispro','diabetes','insulin'] },
+      { id: 'orforglipron', name: 'Orforglipron', category: 'metabolic', grade: 'A+', summary: 'First oral small-molecule GLP-1 receptor agonist. FDA-approved April 2026. No food/water restrictions.', sourcing: 'Small-molecule — compounding API availability subject to evolving regulatory guidance', sourcingClass: 'sourcing-research', aliases: ['Foundayo','oral GLP-1','weight loss','obesity','Eli Lilly'] },
+      { id: 'tesamorelin', name: 'Tesamorelin', category: 'hormone', grade: 'A', summary: 'Synthetic GHRH analog, FDA-approved for HIV lipodystrophy. -18% VAT; -37% hepatic fat.', sourcing: 'Available as compounding API', sourcingClass: 'sourcing-available', aliases: ['Egrifta','GHRH analog','visceral fat','HIV lipodystrophy'] },
+      { id: 'exenatide', name: 'Exenatide', category: 'metabolic', grade: 'A', summary: 'First-generation GLP-1 RA. EXSCEL (n=14,752): MACE HR 0.91, noninferior. HF signal in reduced EF.', sourcing: 'Available — FDA-listed API', sourcingClass: 'sourcing-available', aliases: ['Byetta','Bydureon','GLP-1','exendin-4','EXSCEL'] },
+      { id: 'pegvisomant', name: 'Pegvisomant', category: 'hormone', grade: 'A', summary: 'Only GH receptor antagonist in clinical use. Phase III: 89% IGF-1 normalization. ACROSTUDY (n=2,221): 75.4% at 10 years.', sourcing: 'Available — FDA-listed API, physician-dispensed', sourcingClass: 'sourcing-available', aliases: ['Somavert','GH receptor antagonist','acromegaly','IGF-1'] },
+      { id: 'pt141', name: 'PT-141 (Bremelanotide)', category: 'sexual', grade: 'A', summary: 'FDA-approved melanocortin receptor agonist for HSDD. Selective MC3R/MC4R (CNS) vs peripheral PDE5 mechanism.', sourcing: 'Available — FDA-listed, full documentation', sourcingClass: 'sourcing-available', aliases: ['Vyleesi','HSDD','sexual desire','melanocortin'] },
+      { id: 'thymosin-a1', name: 'Thymosin Alpha-1', category: 'immune', grade: 'A-', summary: '28-amino acid thymic peptide enhancing T-cell maturation. 1,000+ patients in hepatitis RCTs; vaccine adjuvant data.', sourcing: 'Available — imported with full FDA import documentation, COO verified', sourcingClass: 'sourcing-available', aliases: ['Thymalfasin','Zadaxin','immune','hepatitis','antiviral'] },
+      { id: 'oxytocin', name: 'Oxytocin', category: 'cognitive', grade: 'A-', summary: '9-amino acid cyclic neuropeptide. NEJM 2021 ASD trial negative (n=290). MGH obesity RCT ongoing.', sourcing: 'Available — FDA-listed (obstetric). Compounding API available', sourcingClass: 'sourcing-available', aliases: ['Pitocin','neuropeptide','social bonding','ASD','obesity'] },
+      { id: 'retatrutide', name: 'Retatrutide', category: 'metabolic', grade: 'B+', summary: 'First-in-class triple GLP-1/GIP/glucagon agonist. Phase II: 24.2% weight loss — highest ever recorded for any anti-obesity agent.', sourcing: 'Investigational — not available for compounding', sourcingClass: 'sourcing-research', aliases: ['triple agonist','GLP-1','GIP','glucagon','weight loss'] },
+      { id: 'sermorelin', name: 'Sermorelin', category: 'hormone', grade: 'B+', summary: 'GHRH(1-29) analog, FDA-approved reference standard for compounding. Two positive cognition RCTs. Preserves somatostatin feedback loop.', sourcing: 'Available — compounding API', sourcingClass: 'sourcing-available', aliases: ['GHRH','growth hormone','GH deficiency','anti-aging'] },
+      { id: 'survodutide', name: 'Survodutide', category: 'metabolic', grade: 'B+', summary: 'Dual GCG/GLP-1 receptor agonist. Phase II: up to 18.7% weight loss. MASH improvement published in NEJM 2024.', sourcing: 'Investigational — not available for compounding', sourcingClass: 'sourcing-research', aliases: ['dual GCG/GLP-1','glucagon analog','MASH','NAFLD','obesity'] },
+      { id: 'mk677', name: 'MK-677 (Ibutamoren)', category: 'hormone', grade: 'B', summary: 'Orally active non-peptide ghrelin receptor agonist. 2-year RCT: restored GH/IGF-1; +1.1kg FFM; raises fasting glucose.', sourcing: 'Available as compounding API (small-molecule, not a peptide)', sourcingClass: 'sourcing-available', aliases: ['Ibutamoren','ghrelin mimetic','oral GH secretagogue','IGF-1'] },
+      { id: 'semax', name: 'Semax', category: 'cognitive', grade: 'B', summary: 'Synthetic heptapeptide ACTH(4-10) analog. Standard stroke treatment in Russia 25+ years. fMRI validation. Upregulates BDNF.', sourcing: 'Available as compounding API', sourcingClass: 'sourcing-available', aliases: ['ACTH analog','nootropic','neuroprotection','stroke','BDNF'] },
+      { id: 'thymosin-b4', name: 'Thymosin Beta-4', category: 'healing', grade: 'B-', summary: 'Regenerative peptide anchor. 6 Phase II trials. Dry eye: 35% symptom reduction. Nature 2007 cardiac regeneration landmark.', sourcing: 'Available as compounding API (distinct from TB-500 fragment)', sourcingClass: 'sourcing-available', aliases: ['Tb4','RegeneRx','dry eye','wound healing','cardiac'] },
+      { id: 'ghk-cu', name: 'GHK-Cu (Copper Peptide)', category: 'healing', grade: 'B-', summary: 'Naturally occurring copper-binding tripeptide. Influences 31.2% of human genes. Strong topical wound healing data. Injectable use FDA-prohibited since 2023.', sourcing: 'Topical cosmetic API available. Injectable compounding FDA-prohibited as of 2023.', sourcingClass: 'sourcing-research', aliases: ['copper peptide','skin health','wound healing','hair restoration','anti-aging'] },
+      { id: 'cjc1295', name: 'CJC-1295', category: 'hormone', grade: 'B-', summary: 'Long-acting GHRH analog with DAC technology. GH 2-10x increase for 6+ days. CRITICAL: Phase II halted after participant death.', sourcing: 'Available as compounding API — clinical caution warranted given Phase II discontinuation history', sourcingClass: 'sourcing-available', aliases: ['Modified GRF','growth hormone','GHRH analog','body composition'] },
+      { id: 'ipamorelin', name: 'Ipamorelin', category: 'hormone', grade: 'B-', summary: 'Selective GHS-R1a agonist. No cortisol/prolactin effect. GI Phase II endpoint failed. Most commonly prescribed GH secretagogue in US compounding.', sourcing: 'Available as compounding API', sourcingClass: 'sourcing-available', aliases: ['GH secretagogue','body composition','post-surgical','selective GHRP'] },
+      { id: 'selank', name: 'Selank', category: 'cognitive', grade: 'B-', summary: 'Synthetic tuftsin analog. Anxiolytic comparable to benzodiazepine without dependence risk. fMRI evidence. Approved in Russia.', sourcing: 'Available as compounding API', sourcingClass: 'sourcing-available', aliases: ['TP-7','anxiolytic','nootropic','anxiety','BDNF'] },
+      { id: 'ghrp2', name: 'GHRP-2', category: 'hormone', grade: 'B-', summary: 'Most potent GHRP per unit dose. GH plateau 36.4 mcg/L. Increases food intake 35.9% (n=7). GH secretagogue pharmacology reference standard.', sourcing: 'Available as compounding API — limited therapeutic rationale', sourcingClass: 'sourcing-available', aliases: ['GH secretagogue','ghrelin mimetic','GHS-R1a','WADA banned'] },
+      { id: 'ghrp6', name: 'GHRP-6', category: 'hormone', grade: 'B-', summary: 'Founding compound of the GH secretagogue class. Discovery led to GHS-R1a cloning (Science 1996) and ghrelin identification (Nature 1999).', sourcing: 'Available as compounding API — limited therapeutic rationale in US', sourcingClass: 'sourcing-available', aliases: ['GH secretagogue','GHS-R1a','ghrelin','stroke Cuba'] },
+      { id: 'bpc157', name: 'BPC-157', category: 'healing', grade: 'C+', summary: 'Stable gastric pentadecapeptide. 100+ preclinical studies; Phase II UC data; research concentrated at single group (University of Zagreb).', sourcing: 'Available as compounding API — COA, lot documentation, full COO disclosure', sourcingClass: 'sourcing-available', aliases: ['Body Protection Compound','gut healing','tendon repair','IBD','angiogenesis'] },
+      { id: 'epithalon', name: 'Epithalon', category: 'longevity', grade: 'C+', summary: 'Synthetic tetrapeptide based on bovine pineal extract. Telomerase activation. 4.1x mortality reduction (cohort). First independent replication 2025.', sourcing: 'Available as compounding API — COO documentation available', sourcingClass: 'sourcing-available', aliases: ['Epitalon','AEDG','telomerase','longevity','anti-aging'] },
+      { id: 'hexarelin', name: 'Hexarelin', category: 'hormone', grade: 'C', summary: 'Potent GHRP with cardioprotective properties via CD36 cardiac receptor — one of few peptides with direct cardiac receptor binding demonstrated in humans.', sourcing: 'Available as compounding API', sourcingClass: 'sourcing-available', aliases: ['Examorelin','GHRP','growth hormone','cardioprotection','CD36'] },
+      { id: 'aod9604', name: 'AOD-9604', category: 'metabolic', grade: 'C', summary: 'GH fragment 176-191. Phase II positive; Phase IIb FAILED primary endpoint at 24 weeks. Clinical development terminated 2007.', sourcing: 'Available as compounding API', sourcingClass: 'sourcing-available', aliases: ['hGH Fragment','fat loss','lipolysis','body composition','GRAS'] },
+      { id: 'nad', name: 'NAD+', category: 'longevity', grade: 'C', summary: 'Essential coenzyme in cellular energy metabolism. Sirtuin activation, DNA repair. Preclinical lifespan extension robust; human oral/IV trials positive but limited.', sourcing: 'Available as pharmaceutical-grade API', sourcingClass: 'sourcing-available', aliases: ['Nicotinamide Adenine Dinucleotide','NMN','NR','longevity','energy','sirtuin'] },
+      { id: 'll37', name: 'LL-37', category: 'immune', grade: 'C', summary: 'Only human cathelicidin antimicrobial peptide. Endogenous peptide well-studied; exogenous administration lacks clinical trial data.', sourcing: 'Available as compounding API', sourcingClass: 'sourcing-available', aliases: ['Cathelicidin','hCAP18','antimicrobial','wound healing','rosacea'] },
+      { id: 'tb500', name: 'TB-500', category: 'healing', grade: 'C', summary: 'Synthetic fragment of Thymosin Beta-4. Phase II topical wound healing data; systemic injection lacks human evidence.', sourcing: 'Available as compounding API', sourcingClass: 'sourcing-available', aliases: ['tissue repair','wound healing','actin','injury recovery'] },
+      { id: 'dsip', name: 'DSIP', category: 'cognitive', grade: 'C', summary: 'Naturally occurring nonapeptide modulating sleep architecture. Small 1980s-90s studies showed improved sleep quality. No modern RCTs.', sourcing: 'Available as compounding API', sourcingClass: 'sourcing-available', aliases: ['Delta Sleep-Inducing Peptide','sleep peptide','sleep quality','circadian','cortisol'] },
+      { id: 'melanotan2', name: 'Melanotan II', category: 'sexual', grade: 'C', summary: 'Non-selective melanocortin receptor agonist (MC1R-MC5R). Tanning confirmed; melanoma promotion concern. Non-selective receptor activation is key safety issue.', sourcing: 'Compounding availability limited given FDA/TGA safety warnings', sourcingClass: 'sourcing-research', aliases: ['MT-II','tanning peptide','melanocortin','melanogenesis','sexual function'] },
+      { id: 'motsc', name: 'MOTS-c', category: 'longevity', grade: 'C', summary: 'Mitochondrial-derived peptide discovered 2015. AMPK activation; insulin resistance reversal (mouse). No human therapeutic trials.', sourcing: 'Research-grade — availability subject to regulatory status', sourcingClass: 'sourcing-research', aliases: ['mitochondrial peptide','AMPK','longevity','insulin sensitivity','exercise mimetic'] },
+      { id: 'cartalax', name: 'Cartalax (AED Peptide)', category: 'healing', grade: 'C', summary: 'Tripeptide bioregulator (Ala-Glu-Asp) from Khavinson group. One small unregistered human study (n=29 knee OA); multiple preclinical studies.', sourcing: 'Limited availability; evidence base does not support compounding recommendation at this time', sourcingClass: 'sourcing-research', aliases: ['Kartalax','AED peptide','bioregulator','cartilage','osteoarthritis'] },
+      { id: 'kpv', name: 'KPV', category: 'immune', grade: 'D+', summary: 'C-terminal tripeptide of alpha-MSH. ZERO human trials. NF-kB inhibition in IBD animal models only.', sourcing: 'Research use only — no clinical compounding recommendation at this time', sourcingClass: 'sourcing-research', aliases: ['Lys-Pro-Val','alpha-MSH fragment','NF-kB','IBD','anti-inflammatory'] },
+      { id: 'dihexa', name: 'Dihexa', category: 'cognitive', grade: 'D+', summary: 'Angiotensin IV analog. ZERO human trials. HGF/c-Met cancer risk unresolved. Abandoned by original developers.', sourcing: 'Research use only — not suitable for compounding given safety profile', sourcingClass: 'sourcing-research', aliases: ['angiotensin IV analog','HGF','c-Met','nootropic','synaptogenesis'] },
+      { id: 'foxo4dri', name: 'FOXO4-DRI', category: 'longevity', grade: 'D', summary: 'D-retro-inverso senolytic peptide. Multiple independent preclinical studies. No Phase II/III. Analog CL04183 targeting Phase I (2026+).', sourcing: 'Research use only — not suitable for compounding', sourcingClass: 'sourcing-research', aliases: ['senolytic','senescent cells','FOXO4','p53','aging','longevity'] }
+    ];
+
+    /* ─── LABELS ─── */
+    const GRADE_LABELS = {
+      'A+': 'Grade A+', 'A': 'Grade A', 'A-': 'Grade A−',
+      'B+': 'Grade B+', 'B': 'Grade B', 'B-': 'Grade B−',
+      'C+': 'Grade C+', 'C': 'Grade C', 'C-': 'Grade C−',
+      'D+': 'Grade D+', 'D': 'Grade D'
+    };
+
+    const CAT_LABELS = {
+      'metabolic': 'GLP-1 & Metabolic',
+      'hormone':   'GH & Endocrine',
+      'healing':   'Healing & Regenerative',
+      'immune':    'Immune',
+      'cognitive': 'Cognitive & Neuro',
+      'longevity': 'Longevity',
+      'sexual':    'Sexual Health'
+    };
+
+    /* ─── GRADE CLASS ─── */
+    function gradeClass(grade) {
+      if (!grade) return 'ev-grade-d';
+      const g = grade.charAt(0).toUpperCase();
+      if (g === 'A') return 'ev-grade-a';
+      if (g === 'B') return 'ev-grade-b';
+      if (g === 'C') return 'ev-grade-c';
+      return 'ev-grade-d';
+    }
+
+    /* ─── STATE ─── */
+    let activeCategory = 'all';
+    let activeQuery = '';
+
+    /* ─── RENDER ─── */
+    function renderPeptides(items) {
+      const grid = document.getElementById('peptide-grid');
+      const countEl = document.getElementById('result-count');
+
+      if (items.length === 0) {
+        grid.innerHTML = '<div class="no-results">No peptides match your search.</div>';
+        countEl.textContent = 'No results';
+        return;
+      }
+
+      countEl.textContent = `Showing ${items.length} of ${PEPTIDE_DATA.length} peptides`;
+
+      grid.innerHTML = items.map(p => {
+        const gradeLabel = GRADE_LABELS[p.grade] || ('Grade ' + p.grade);
+        const catLabel   = CAT_LABELS[p.category] || p.category;
+        const gClass     = gradeClass(p.grade);
+        return `
+<a class="peptide-card" href="${p.id}.html" aria-label="${p.name}">
+  <div class="card-top">
+    <div class="card-badges">
+      <span class="ev-grade ${gClass}">${gradeLabel}</span>
+      <span class="cat-chip">${catLabel}</span>
+    </div>
+    <span class="card-arrow">→</span>
+  </div>
+  <div class="card-name">${p.name}</div>
+  <p class="card-summary">${p.summary}</p>
+  <div class="card-footer">
+    <span class="card-sourcing ${p.sourcingClass}">${p.sourcingClass === 'sourcing-available' ? '✓ iRemedy Available' : '⚠ Research / Limited'}</span>
+  </div>
+</a>`;
+      }).join('');
+    }
+
+    /* ─── FILTER ─── */
+    function filterPeptides(cat) {
+      activeCategory = cat;
+      activeQuery = document.getElementById('peptide-search').value;
+
+      // Update chip states
+      document.querySelectorAll('.filter-chip').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.cat === cat);
+      });
+
+      applyFilters();
+    }
+
+    /* ─── SEARCH ─── */
+    function searchPeptides(query) {
+      activeQuery = query;
+      applyFilters();
+    }
+
+    /* ─── APPLY ─── */
+    function applyFilters() {
+      let results = PEPTIDE_DATA;
+
+      if (activeCategory !== 'all') {
+        results = results.filter(p => p.category === activeCategory);
+      }
+
+      if (activeQuery && activeQuery.trim().length > 0) {
+        const q = activeQuery.trim().toLowerCase();
+        results = results.filter(p => {
+          return (
+            p.name.toLowerCase().includes(q) ||
+            p.summary.toLowerCase().includes(q) ||
+            (p.aliases && p.aliases.some(a => a.toLowerCase().includes(q)))
+          );
+        });
+      }
+
+      renderPeptides(results);
+    }
+
+    /* ─── INIT ─── */
+    renderPeptides(PEPTIDE_DATA);
+  </script>
+
+</body>
+</html>

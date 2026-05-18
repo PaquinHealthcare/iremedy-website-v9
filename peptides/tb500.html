@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TB-500 — Peptide Intelligence Hub | iRemedy</title>
+  <meta name="description" content="Synthetic fragment of Thymosin Beta-4. Phase II topical wound healing data; systemic injection lacks human evidence." />
+  <link rel="canonical" href="https://iremedy.com/peptides/tb500.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f2ede4;
+      --bg-2: #ede8df;
+      --bg-3: #e6e0d5;
+      --ink: #212E3E;
+      --ink-2: #3D4D5E;
+      --ink-3: #6b7280;
+      --teal: #0064A5;
+      --cerulean: #00ACE6;
+      --cream: #F2EDE4;
+      --teal-dim: rgba(0,100,165,0.09);
+      --teal-dk: #004E85;
+      --gold: #8a6a10;
+      --red: #c8160a;
+      --border: rgba(28,31,36,0.11);
+      --rule: rgba(28,31,36,0.14);
+      --serif: 'Playfair Display', Georgia, serif;
+      --mono: 'IBM Plex Mono', monospace;
+      --sans: 'Inter', sans-serif;
+      --hero-bg: #212E3E;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); background: var(--bg); color: var(--ink); -webkit-font-smoothing: antialiased; }
+
+    /* NAV */
+    .page-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(242,237,228,0.97);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      height: 60px;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 6vw;
+    }
+    .nav-logo {
+      font-family: var(--mono); font-size: 0.95rem; font-weight: 600;
+      letter-spacing: 0.06em; color: var(--ink); text-decoration: none;
+    }
+    .nav-logo span { color: var(--teal); }
+    .nav-back {
+      font-family: var(--mono); font-size: 0.8rem; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--teal); text-decoration: none;
+      transition: color 0.15s;
+    }
+    .nav-back:hover { color: var(--teal-dk); }
+
+    /* HERO */
+    .hero {
+      background: var(--hero-bg); padding: 100px 6vw 5rem;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background-image: linear-gradient(rgba(242,237,228,0.03) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(242,237,228,0.03) 1px, transparent 1px);
+      background-size: 80px 80px;
+    }
+    .hero-inner { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; text-align: center; }
+    .hero-breadcrumb {
+      font-family: var(--mono); font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.28em; text-transform: uppercase;
+      color: rgba(0,100,165,0.6); margin-bottom: 1.75rem;
+    }
+    .hero-grade {
+      display: inline-block; margin: 0 auto 1.5rem;
+      background: #6366F1; color: #fff;
+      font-family: var(--mono); font-size: 1rem; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      padding: 0.4rem 1.25rem; border-radius: 2px;
+    }
+    .hero-name {
+      font-family: var(--serif); font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 900; line-height: 1.05; color: #fff;
+      letter-spacing: -0.02em; margin-bottom: 1rem;
+    }
+    .hero-fda {
+      font-family: var(--mono); font-size: 0.875rem; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: rgba(0,172,230,0.85); margin-bottom: 1.5rem;
+    }
+    .hero-summary {
+      font-size: 1.05rem; line-height: 1.75; font-weight: 300;
+      color: rgba(242,237,228,0.72); max-width: 700px; margin: 0 auto 2rem;
+    }
+    .hero-category {
+      display: inline-block;
+      font-family: var(--mono); font-size: 0.75rem; font-weight: 500;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: rgba(0,172,230,0.9); border: 1px solid rgba(0,172,230,0.3);
+      padding: 0.3rem 0.85rem;
+    }
+    .hero-actions {
+      margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+    }
+    .btn-ghost-lt {
+      font-family: var(--mono); font-size: 0.78rem; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      padding: 9px 18px; border: 1px solid rgba(242,237,228,0.25);
+      background: transparent; color: rgba(242,237,228,0.65);
+      cursor: pointer; transition: all 0.2s; text-decoration: none; display: inline-block;
+    }
+    .btn-ghost-lt:hover { border-color: rgba(242,237,228,0.6); color: #fff; }
+
+    /* MAIN CONTENT */
+    .main-content {
+      padding: 4rem 6vw;
+      max-width: 1200px; margin: 0 auto;
+      text-align: left;
+    }
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+    @media (max-width: 768px) {
+      .content-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .main-content { padding: 2rem 5vw; }
+      .hero { padding: 80px 5vw 3.5rem; }
+    }
+
+    /* CARD */
+    .card {
+      background: var(--bg-2); border-radius: 4px; padding: 1.75rem;
+      border-bottom: 1px solid var(--border); text-align: left;
+    }
+    .section-label {
+      font-family: var(--mono); font-size: 0.8125rem; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--teal); margin-bottom: 0.75rem;
+      display: block; text-align: left;
+    }
+    .section-body {
+      font-size: 1rem; line-height: 1.7; color: var(--ink-2); font-weight: 300; text-align: left;
+    }
+
+    /* STUDIES */
+    .studies-list { list-style: none; padding: 0; margin: 0; }
+
+    /* EMERGING RESEARCH */
+    .emerging-section {
+      background: var(--teal-dim); border-left: 3px solid var(--teal);
+      padding: 2rem 2.25rem; margin-bottom: 3rem; border-radius: 0 4px 4px 0;
+      text-align: left;
+    }
+    .emerging-section .section-label { margin-bottom: 0.65rem; text-align: left; }
+    .emerging-section .section-body { color: var(--ink-2); text-align: left; }
+
+    /* SOURCING BANNER */
+    .sourcing-banner {
+      background: var(--hero-bg); padding: 2.5rem 2.75rem;
+      display: flex; align-items: flex-start; gap: 1.5rem;
+      margin-bottom: 3rem; flex-wrap: wrap;
+    }
+    .sourcing-badge {
+      display: inline-block; flex-shrink: 0;
+      font-family: var(--mono); font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      background: #00875A; color: #fff;
+      padding: 0.35rem 0.85rem; border-radius: 2px;
+    }
+    .sourcing-text {
+      font-size: 0.9375rem; line-height: 1.7; color: rgba(242,237,228,0.78);
+      font-weight: 300; flex: 1; text-align: left;
+    }
+    .sourcing-text strong { color: rgba(242,237,228,0.95); font-weight: 500; }
+
+    /* CTAs */
+    .cta-row {
+      display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3.5rem;
+    }
+    .btn-primary {
+      font-family: var(--mono); font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      padding: 12px 24px; background: var(--teal); color: #fff;
+      border: none; cursor: pointer; text-decoration: none;
+      display: inline-block; transition: background 0.2s;
+    }
+    .btn-primary:hover { background: var(--teal-dk); }
+    .btn-ghost {
+      font-family: var(--mono); font-size: 0.8rem; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      padding: 12px 24px; background: transparent;
+      color: var(--ink-2); border: 1px solid var(--border);
+      cursor: pointer; text-decoration: none;
+      display: inline-block; transition: all 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--ink); color: var(--ink); }
+
+    /* PRINT/SHARE BUTTONS */
+    .utility-row {
+      display: flex; justify-content: flex-end; gap: 0.75rem;
+      margin-bottom: 2.5rem;
+    }
+    .util-btn {
+      font-family: var(--mono); font-size: 0.72rem; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 7px 14px; background: transparent;
+      color: var(--ink-3); border: 1px solid var(--border);
+      cursor: pointer; transition: all 0.15s;
+    }
+    .util-btn:hover { border-color: var(--teal); color: var(--teal); }
+
+    /* FOOTER */
+    .page-footer {
+      border-top: 1px solid var(--border); padding: 2rem 6vw;
+      text-align: center;
+      font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.1em;
+      color: var(--ink-3);
+    }
+
+    @media print {
+      .page-nav, .hero-actions, .utility-row, .cta-row { display: none; }
+      body { background: #fff; }
+      .hero { background: #222; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body data-peptide-id="tb500">
+
+  <!-- NAV -->
+  <nav class="page-nav">
+    <a href="../index.html" class="nav-logo">i<span>Remedy</span></a>
+    <a href="../index.html#peptides" class="nav-back">← Peptide Library</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-breadcrumb">// Peptide Intelligence Hub</div>
+      <div class="hero-grade">Grade C</div>
+      <h1 class="hero-name">TB-500</h1>
+      <div class="hero-fda">Not approved; Phase II trials were TOPICAL only</div>
+      <p class="hero-summary">Synthetic fragment of Thymosin Beta-4. Phase II topical wound healing data; systemic injection lacks human evidence.</p>
+      <span class="hero-category">Healing / Regenerative</span>
+      <div class="hero-actions">
+        <button class="btn-ghost-lt" onclick="window.print()">⎙ Print</button>
+        <button class="btn-ghost-lt" onclick="navigator.clipboard.writeText(window.location.href).then(()=>alert('Link copied!'))">⧉ Share</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <!-- Utility Row -->
+    <div class="utility-row">
+      <button class="util-btn" onclick="window.print()">⎙ Print</button>
+      <button class="util-btn" onclick="navigator.clipboard.writeText(window.location.href).then(()=>alert('Link copied!'))">⧉ Share</button>
+    </div>
+
+    <!-- Two-Column Grid -->
+    <div class="content-grid">
+      <!-- Left Column -->
+      <div>
+        <div class="card" style="margin-bottom:1.5rem;">
+          <span class="section-label">Mechanism of Action</span>
+          <p class="section-body">Binds G-actin monomers. Promotes angiogenesis, reduces inflammation at injury sites, activates satellite cells for muscle repair.</p>
+        </div>
+
+        <div class="card" style="margin-bottom:1.5rem;">
+          <span class="section-label">Clinical Use</span>
+          <p class="section-body">Off-label compounding use for injury recovery, wound healing, cardiac support. Clinical trial evidence is for topical use only.</p>
+        </div>
+
+        <div class="card" style="margin-bottom:1.5rem;">
+          <span class="section-label">Contraindications</span>
+          <p class="section-body">Organ transplant recipients. Active autoimmune diseases. Active malignancy.</p>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div>
+        <div class="card" style="margin-bottom:1.5rem;">
+          <span class="section-label">Evidence Summary</span>
+          <p class="section-body">Phase II trials were TOPICAL (corneal drops, wound dressings) — NOT systemic injection as commonly used in compounding. RegeneRx clinical program stalled.</p>
+        </div>
+
+        <div class="card" style="margin-bottom:1.5rem;">
+          <span class="section-label">Key Studies</span>
+          <ul class="studies-list">
+<li style="font-size:0.9375rem;line-height:1.6;color:#3D4D5E;margin-bottom:0.5rem;list-style:none;padding-left:1.5rem;position:relative;"><span style="position:absolute;left:0;color:#0064A5;font-family:'IBM Plex Mono',monospace;font-size:0.75rem;">1.</span>Goldstein et al., Ann NY Acad Sci 2012 — cardiac repair review across multiple models (preclinical)</li>
+<li style="font-size:0.9375rem;line-height:1.6;color:#3D4D5E;margin-bottom:0.5rem;list-style:none;padding-left:1.5rem;position:relative;"><span style="position:absolute;left:0;color:#0064A5;font-family:'IBM Plex Mono',monospace;font-size:0.75rem;">2.</span>Sosne et al., Cornea 2010 — corneal wound healing improvement (topical Phase II)</li>
+<li style="font-size:0.9375rem;line-height:1.6;color:#3D4D5E;margin-bottom:0.5rem;list-style:none;padding-left:1.5rem;position:relative;"><span style="position:absolute;left:0;color:#0064A5;font-family:'IBM Plex Mono',monospace;font-size:0.75rem;">3.</span>Philp et al., Ann NY Acad Sci 2012 — cell migration and survival mechanism</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-bottom:1.5rem;">
+          <span class="section-label">Evidence Gaps</span>
+          <p class="section-body">Phase II trials were TOPICAL, NOT systemic injection as used in compounding practice. RegeneRx clinical program stalled/abandoned.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Emerging Research (full width) -->
+    <div class="emerging-section">
+      <span class="section-label">Emerging Research</span>
+      <p class="section-body">Cardiac regeneration research continues. Neurological repair (TBI, stroke) interest growing. Combination with BPC-157 popular in clinical practice.</p>
+    </div>
+
+    <!-- iRemedy Sourcing Banner -->
+    <div class="sourcing-banner">
+      <div>
+        <div style="font-family:var(--mono);font-size:0.8125rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(0,172,230,0.65);margin-bottom:0.5rem;text-align:left;">iRemedy Sourcing Status</div>
+        <span class="sourcing-badge">AVAILABLE</span>
+        <div style="margin-top:0.65rem;font-family:var(--mono);font-size:0.9375rem;color:rgba(242,237,228,0.6);">Available as compounding API</div>
+      </div>
+      <p class="sourcing-text">
+        <strong>iRemedy is a 50-state licensed, NABP-accredited wholesale distributor.</strong>
+        Peptides supplied with full CoA, DSCSA serialization, and UPS Healthcare cold chain logistics.
+        Wholesale to licensed healthcare facilities and compounding pharmacies only.
+      </p>
+    </div>
+
+    <!-- CTAs -->
+    <div style="display:flex;gap:0.75rem;flex-wrap:wrap;align-items:center;margin-bottom:1.25rem;">
+      <a href="../index.html#peptides" class="btn-ghost">← Back to Peptide Library</a>
+      <a href="survodutide.html" class="btn-ghost">← Previous: Survodutide</a>
+      <a href="tesamorelin.html" class="btn-ghost">Next: Tesamorelin →</a>
+    </div>
+    <div class="cta-row">
+      <a href="../index.html" class="btn-primary">Request Peptide Catalog →</a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="page-footer">
+    © 2026 iRemedy Healthcare Companies, Inc. · Educational purposes only. Not medical advice.
+  </footer>
+
+  <script src="../assets/peptide-live.js"></script>
+</body>
+</html>
