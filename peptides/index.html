@@ -249,6 +249,54 @@
     }
     .hero-cta:hover { background: var(--teal-dk); }
 
+    /* ── AI CHAT ── */
+    .peptide-chat-section {
+      background: var(--bg-2); padding: 4rem 6vw;
+      border-bottom: 1px solid var(--rule, var(--border));
+    }
+    .peptide-chat-row { display: flex; gap: 0; margin-bottom: 1.5rem; }
+    .peptide-search-input {
+      flex: 1; padding: 1rem 1.25rem; font-family: var(--sans); font-size: 1rem;
+      border: 1px solid var(--border); border-right: none; background: var(--bg); color: var(--ink);
+      outline: none; transition: border-color 0.2s;
+    }
+    .peptide-search-input:focus { border-color: var(--teal); }
+    .peptide-ask-btn {
+      font-family: var(--mono); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; padding: 0 1.5rem; background: var(--teal); color: #fff;
+      border: none; cursor: pointer; white-space: nowrap; transition: background 0.2s; flex-shrink: 0;
+    }
+    .peptide-ask-btn:hover { background: var(--teal-dk); }
+    .peptide-ask-btn:disabled { background: var(--ink-3); cursor: not-allowed; }
+    .peptide-search-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.25rem; }
+    .search-chip {
+      font-family: var(--mono); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; padding: 6px 14px; border: 1px solid var(--border);
+      background: transparent; color: var(--ink-3); cursor: pointer; transition: all 0.15s;
+    }
+    .search-chip:hover { border-color: var(--teal); color: var(--teal); }
+    .peptide-ai-response {
+      display: none; background: var(--bg); border: 1px solid var(--border);
+      border-left: 3px solid var(--teal); padding: 1.75rem 2rem;
+      font-size: 1rem; line-height: 1.75; color: var(--ink-2); font-weight: 300;
+      margin-bottom: 1rem; animation: fadeInUp 0.3s ease;
+    }
+    .peptide-ai-response.visible { display: block; }
+    .peptide-ai-response strong { font-weight: 600; color: var(--ink); }
+    .peptide-ai-response ul { padding-left: 1.25rem; margin: 0.5rem 0; }
+    .peptide-ai-response li { margin-bottom: 0.35rem; }
+    .peptide-ai-meta {
+      display: none; font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--ink-3); margin-bottom: 1rem;
+    }
+    .peptide-ai-meta.visible { display: flex; align-items: center; gap: 1rem; }
+    .ai-typing-dot {
+      display: inline-block; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--teal); animation: blink 1s infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:0.2} 50%{opacity:1} }
+    @keyframes fadeInUp { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:none} }
+
     /* ── GRADE KEY ── */
     .grade-section {
       background: var(--bg-2); padding: 4rem 6vw;
@@ -939,6 +987,27 @@
     </div>
   </section>
 
+  <!-- AI CHAT -->
+  <div class="peptide-chat-section">
+    <div style="font-family:var(--mono);font-size:0.8rem;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--teal);margin-bottom:1.25rem;">// Ask Anything</div>
+    <h2 style="font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;line-height:1.1;letter-spacing:-0.02em;color:var(--ink);margin-bottom:0.75rem;">What do you want to know about peptides?</h2>
+    <p style="font-size:0.9rem;color:var(--ink-3);font-family:var(--mono);letter-spacing:0.06em;margin-bottom:1.75rem;">Powered by iRemedy clinical reference data &amp; GPT-4o</p>
+    <div class="peptide-chat-row">
+      <input type="text" id="peptideSearch" class="peptide-search-input" placeholder='e.g. "Which peptides have the best evidence for weight loss?" · "What is BPC-157?" · "Compare Sermorelin vs CJC-1295"' onkeydown="if(event.key==='Enter')askPeptideAI()" />
+      <button class="peptide-ask-btn" id="peptideAskBtn" onclick="askPeptideAI()">Ask ↵</button>
+    </div>
+    <div class="peptide-search-chips">
+      <button class="search-chip" onclick="askChip('Which peptides have the strongest evidence for weight loss?')">GLP-1 &amp; weight loss</button>
+      <button class="search-chip" onclick="askChip('What peptides help with injury healing and tissue repair?')">injury healing</button>
+      <button class="search-chip" onclick="askChip('Which peptides support immune function?')">immune support</button>
+      <button class="search-chip" onclick="askChip('What are the best growth hormone secretagogues?')">growth hormone</button>
+      <button class="search-chip" onclick="askChip('What peptides are used for longevity and anti-aging?')">longevity</button>
+      <button class="search-chip" onclick="askChip('Which peptides in the iRemedy catalog are FDA-approved?')">FDA approved</button>
+    </div>
+    <div class="peptide-ai-meta" id="peptideAiMeta"></div>
+    <div class="peptide-ai-response" id="peptideAiResponse"></div>
+  </div>
+
   <!-- AEO INTRO / BREADCRUMB -->
   <section class="aeo-section">
     <div class="aeo-inner">
@@ -1198,6 +1267,76 @@
 
     /* ─── INIT ─── */
     renderPeptides(PEPTIDE_DATA);
+
+    /* ─── AI CHAT ─── */
+    const PEPTIDE_CHAT_WORKER_URL = 'https://iremedy-peptide-chat.anthony-5b5.workers.dev';
+
+    function askChip(question) {
+      const el = document.getElementById('peptideSearch');
+      if (el) el.value = question;
+      askPeptideAI();
+    }
+
+    async function askPeptideAI() {
+      const inputEl  = document.getElementById('peptideSearch');
+      const btnEl    = document.getElementById('peptideAskBtn');
+      const metaEl   = document.getElementById('peptideAiMeta');
+      const respEl   = document.getElementById('peptideAiResponse');
+      const query    = (inputEl?.value || '').trim();
+      if (!query) return;
+
+      if (!PEPTIDE_CHAT_WORKER_URL || PEPTIDE_CHAT_WORKER_URL === 'YOUR_WORKER_URL_HERE') {
+        searchPeptides(query);
+        document.getElementById('library').scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+
+      btnEl.disabled = true;
+      btnEl.textContent = '...';
+      metaEl.innerHTML = '<span class="ai-typing-dot"></span> Thinking...';
+      metaEl.classList.add('visible');
+      respEl.innerHTML = '';
+      respEl.classList.remove('visible');
+
+      try {
+        const res = await fetch(PEPTIDE_CHAT_WORKER_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ query })
+        });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const data = await res.json();
+        const answer = data.answer || data.error || 'No response.';
+        respEl.classList.add('visible');
+        respEl.innerHTML = renderAIMarkdown(answer);
+        metaEl.innerHTML = '\u2713 iRemedy Peptide Intelligence \u00a0\u00b7\u00a0 GPT-4o-mini \u00a0\u00b7\u00a0 38 profiles';
+      } catch (err) {
+        respEl.innerHTML = '<em style="color:var(--ink-3)">Unable to reach the AI assistant. Showing keyword results instead.</em>';
+        respEl.classList.add('visible');
+        metaEl.innerHTML = '\u26a0 Offline mode';
+        searchPeptides(query);
+        document.getElementById('library').scrollIntoView({ behavior: 'smooth' });
+      } finally {
+        btnEl.disabled = false;
+        btnEl.textContent = 'Ask \u21b5';
+      }
+    }
+
+    function renderAIMarkdown(text) {
+      return text
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/__(.*?)__/g, '<strong>$1</strong>')
+        .replace(/\bGrade ([A-D][+\-]?)\b/g, '<strong>Grade $1</strong>')
+        .replace(/(?:^|\n)[\-\*] (.+)/g, '<li>$1</li>')
+        .replace(/(<li>.*<\/li>)/gs, '<ul>$1</ul>')
+        .replace(/\n{2,}/g, '</p><p>')
+        .replace(/\n/g, '<br>')
+        .replace(/^/, '<p>')
+        .replace(/$/, '</p>')
+        .replace(/<p><\/p>/g, '')
+        .replace(/<p>(<ul>)/g, '$1')
+        .replace(/<\/ul>(<\/p>)/g, '</ul>');
+    }
   </script>
 
 </body>
