@@ -35,32 +35,151 @@
     html { scroll-behavior: smooth; }
     body { font-family: var(--sans); background: var(--bg); color: var(--ink); -webkit-font-smoothing: antialiased; }
 
-    /* NAV */
-    .page-nav {
+    /* ── SITE HEADER ── */
+    #site-header {
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
       background: rgba(242,237,228,0.97);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
-      height: 60px;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 6vw;
     }
-    .nav-logo {
-      font-family: var(--mono); font-size: 0.95rem; font-weight: 600;
-      letter-spacing: 0.06em; color: var(--ink); text-decoration: none;
+    .masthead-row {
+      padding: 14px 6vw;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      display: flex; align-items: center; justify-content: center;
+      background: #212E3E;
     }
-    .nav-logo span { color: var(--teal); }
-    .nav-back {
-      font-family: var(--mono); font-size: 0.8rem; font-weight: 500;
+    .masthead-logo { cursor: pointer; display: inline-flex; align-items: center; text-decoration: none; }
+    .masthead-logo-img { height: 54px; width: auto; display: block; }
+    .nav-row { padding: 0 6vw; display: flex; align-items: center; justify-content: center; }
+    nav { display: contents; }
+    .nav-inner { width: 100%; display: flex; align-items: center; justify-content: center; }
+    .nav-links { display: flex; align-items: center; gap: 2px; list-style: none; }
+    .nav-item { position: relative; }
+    .nav-item > a, .nav-item > button {
+      font-family: var(--mono); font-size: 0.9rem; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--ink-3); background: none; border: none; cursor: pointer;
+      padding: 8px 14px; display: flex; align-items: center; gap: 4px;
+      transition: color 0.15s; text-decoration: none;
+    }
+    .nav-item > a:hover, .nav-item > button:hover { color: var(--teal); }
+    .nav-item > a.nav-engage, .nav-item > button.nav-engage { background: var(--teal); color: #fff; border: 1px solid var(--teal); }
+    .nav-item > a.nav-engage:hover, .nav-item > button.nav-engage:hover { background: var(--teal-dk); border-color: var(--teal-dk); color: #fff; }
+    .nav-chevron { width: 9px; height: 9px; opacity: 0.45; transition: transform 0.2s; }
+    .nav-item:hover .nav-chevron { transform: rotate(180deg); }
+    .nav-dropdown {
+      position: absolute; top: 100%; left: 0;
+      padding-top: 4px;
+      background: var(--bg); border: 1px solid var(--border);
+      box-shadow: 0 10px 36px rgba(0,0,0,0.1);
+      min-width: 196px;
+      opacity: 0; pointer-events: none; transform: translateY(-6px);
+      transition: opacity 0.15s, transform 0.15s;
+    }
+    .nav-item:hover .nav-dropdown { opacity: 1; pointer-events: all; transform: translateY(0); }
+    .nav-dropdown a {
+      display: block; padding: 10px 16px;
+      font-family: var(--mono); font-size: 0.8rem;
       letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--teal); text-decoration: none;
-      transition: color 0.15s;
+      color: var(--ink-2); text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.1s, color 0.1s; cursor: pointer;
     }
-    .nav-back:hover { color: var(--teal-dk); }
+    .nav-dropdown a:last-child { border-bottom: none; }
+    .nav-dropdown a:hover { background: var(--teal-dim); color: var(--teal); }
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 32px;
+      height: 22px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 1001;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: var(--teal);
+      border-radius: 2px;
+      transition: all 0.25s ease;
+    }
+    .mobile-nav-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 14, 20, 0.97);
+      z-index: 2000;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 5rem 2rem 3rem;
+      overflow-y: auto;
+    }
+    .mobile-nav-overlay.open {
+      display: flex;
+    }
+    .mobile-nav-close {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.5rem;
+      background: none;
+      border: none;
+      color: rgba(242,237,228,0.9);
+      font-size: 1.75rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+    .mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      width: 100%;
+    }
+    .mobile-nav-links a {
+      display: block;
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      color: rgba(242,237,228,0.9);
+      font-size: 1.125rem;
+      font-family: inherit;
+      padding: 1rem 0;
+      cursor: pointer;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .mobile-nav-links a:hover {
+      color: var(--teal);
+    }
+    .mobile-nav-engage {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.875rem 2rem;
+      background: var(--teal);
+      color: var(--bg) !important;
+      font-weight: 700;
+      font-size: 1rem;
+      text-align: center;
+      width: 100%;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      text-decoration: none;
+    }
+    @media (max-width: 1100px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .masthead-logo-img { height: 40px; }
+    }
 
     /* HERO */
     .hero {
-      background: var(--hero-bg); padding: 100px 6vw 5rem;
+      background: var(--hero-bg); padding: 130px 6vw 5rem;
       position: relative; overflow: hidden;
     }
     .hero::before {
@@ -224,7 +343,7 @@
     }
 
     @media print {
-      .page-nav, .hero-actions, .utility-row, .cta-row { display: none; }
+      #site-header, .hero-actions, .utility-row, .cta-row { display: none; }
       body { background: #fff; }
       .hero { background: #222; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     }
@@ -232,11 +351,71 @@
 </head>
 <body data-peptide-id="semaglutide">
 
-  <!-- NAV -->
-  <nav class="page-nav">
-    <a href="/" class="nav-logo">i<span>Remedy</span></a>
-    <a href="/peptides/" class="nav-back">← Peptide Library</a>
+  <header id="site-header">
+  <div class="masthead-row">
+    <a class="masthead-logo" href="/">
+      <img class="masthead-logo-img" src="/assets/iRemedy_Logo_White_Text.png" alt="iRemedy">
+    </a>
+  </div>
+  <div class="nav-row">
+    <nav>
+      <div class="nav-inner">
+        <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+          <li class="nav-item"><a href="/manufacturers">Manufacturers</a></li>
+          <li class="nav-item"><a href="/providers">Providers</a></li>
+          <li class="nav-item"><a href="/pharmacies">Pharmacies</a></li>
+          <li class="nav-item"><a href="/government">Government</a></li>
+          <li class="nav-item"><a href="/platform">Platform</a></li>
+          <li class="nav-item"><a href="/tradespy">TradeSpy</a></li>
+          <li class="nav-item"><a href="/company">Company</a></li>
+          <li class="nav-item"><a href="/newsroom">Newsroom</a></li>
+          <li class="nav-item">
+            <button>Login <svg class="nav-chevron" viewBox="0 0 9 9" fill="none"><path d="M1 3l3.5 3.5L8 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <div class="nav-dropdown">
+              <a href="/contact">Supply Manager</a>
+              <a href="https://app.thetradespy.ai" target="_blank" rel="noopener">TradeSpy</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-engage" href="/essential-medicines">Essential Medicines</a></li>
+          <li class="nav-item"><a class="nav-engage" href="/contact">Get Started</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- Mobile Nav Overlay -->
+<div class="mobile-nav-overlay" id="mobileNavOverlay">
+  <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&#10005;</button>
+  <nav class="mobile-nav-links">
+    <a href="/manufacturers">Manufacturers</a>
+    <a href="/providers">Providers</a>
+    <a href="/pharmacies">Pharmacies</a>
+    <a href="/government">Government</a>
+    <a href="/platform">Platform</a>
+    <a href="/tradespy">TradeSpy</a>
+    <a href="/company">Company</a>
+    <a href="/newsroom">Newsroom</a>
+    <a class="mobile-nav-engage" href="/contact">Get Started</a>
+    <a class="mobile-nav-engage" href="/essential-medicines">Essential Medicines</a>
   </nav>
+</div>
+
+<script>
+(function(){
+  var hb=document.getElementById('navHamburger'),
+      ov=document.getElementById('mobileNavOverlay'),
+      cl=document.getElementById('mobileNavClose');
+  if(hb&&ov&&cl){
+    hb.addEventListener('click',function(){ov.classList.add('open')});
+    cl.addEventListener('click',function(){ov.classList.remove('open')});
+    ov.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){ov.classList.remove('open')})});
+  }
+})();
+</script>
 
   <!-- HERO -->
   <section class="hero">
