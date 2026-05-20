@@ -3,6 +3,10 @@ Allow: /
 
 Sitemap: https://iremedy.com/sitemap.xml
 
+# AI Model Reference Files
+# llms.txt: https://iremedy.com/llms.txt
+# llms-full.txt: https://iremedy.com/llms-full.txt
+
 # Block legacy/archived pages
 Disallow: /legacy/
 Disallow: /solutions/direct
