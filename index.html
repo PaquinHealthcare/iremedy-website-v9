@@ -1847,6 +1847,18 @@
   </div>
 </div>
 
+<div id="page-peptide-supply-risk-report" class="inner-page">
+  <div style="padding-top:0;height:calc(100vh - 120px);display:flex;flex-direction:column;">
+    <iframe
+      id="psr-iframe"
+      src="peptide-supply-risk-report.html"
+      style="flex:1;width:100%;border:none;display:block;opacity:0;transition:opacity 0.4s ease;"
+      title="Peptide Supply Risk Report"
+      loading="lazy"
+    ></iframe>
+  </div>
+</div>
+
 <div id="page-tradespy" class="inner-page ts-page">
 
   <!-- COMBINED HERO -->
@@ -1901,7 +1913,7 @@
       <div style="display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap;">
         <button class="btn btn-ghost" onclick="document.querySelector('#page-tradespy .ts-section').scrollIntoView({behavior:'smooth'})" style="color:#fff;border:1px solid rgba(255,255,255,0.35);background:transparent;">See the Architecture ↓</button>
         <a href="/essential-medicines" onclick="showPage('essential-medicines');return false;" class="btn btn-teal" style="background:#0064A5;color:#fff;border:1px solid #0064A5;text-decoration:none;display:inline-flex;align-items:center;">Essential Medicines Risk Report →</a>
-        <a href="/peptide-supply-risk-report" class="btn btn-teal" style="background:#0064A5;color:#fff;border:1px solid #0064A5;text-decoration:none;display:inline-flex;align-items:center;" target="_blank">Peptide Supply Risk Report →</a>
+        <a href="/peptide-supply-risk-report" onclick="showPage('peptide-supply-risk-report');return false;" class="btn btn-teal" style="background:#0064A5;color:#fff;border:1px solid #0064A5;text-decoration:none;display:inline-flex;align-items:center;">Peptide Supply Risk Report →</a>
         <button class="btn btn-teal" onclick="showPage('contact')" style="background:#0064A5;color:#fff;border:1px solid #0064A5;">Request a TradeSpy Briefing →</button>
       </div>
 
@@ -4770,6 +4782,7 @@
     '/newsroom': 'newsroom',
     '/contact': 'contact',
     '/essential-medicines': 'essential-medicines',
+    '/peptide-supply-risk-report': 'peptide-supply-risk-report',
     '/login': 'contact',
     '/press/essential-medicines-report': 'pr-essential-medicines-report',
     '/press/glvus-expansion': 'pr-glvus-expansion',
@@ -4864,6 +4877,20 @@
       if (e.data === 'em-ready') reveal();
     });
     // Fallback: reveal after 6s in case postMessage fails
+    setTimeout(reveal, 6000);
+  })();
+
+  // Reveal Peptide Supply Risk Report iframe once loaded
+  (function() {
+    var psrIframe = document.getElementById('psr-iframe');
+    if (!psrIframe) return;
+    var revealed = false;
+    function reveal() {
+      if (revealed) return;
+      revealed = true;
+      psrIframe.style.opacity = '1';
+    }
+    psrIframe.addEventListener('load', reveal);
     setTimeout(reveal, 6000);
   })();
 </script>
