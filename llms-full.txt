@@ -1,0 +1,40 @@
+# iRemedy Healthcare Companies, Inc. — Full Reference
+
+## About
+iRemedy Healthcare Companies is a technology-enabled healthcare distributor providing direct pharmaceutical and medical product distribution, AI-powered procurement intelligence, and supply chain country-of-origin verification. Founded in 2013 in Stuart, Florida. Licensed in all 50 U.S. states. DEA authorized. NABP accredited. DSCSA compliant. Logistics powered by UPS Healthcare.
+
+## Key People
+- Tony Paquin, CEO & Founder — Serial entrepreneur, testified before U.S. Senate on pharmaceutical supply chain vulnerabilities, led Operation Warp Speed delivery of 500M+ needles and syringes, participant in White House OMB supply chain resiliency working group, author of "The End of Us" (2023) and "The Retail Healthcare Revolution" (2007), co-inventor on 10 granted U.S. patents.
+- Anthony Paquin, Chief AI Officer — Leads commercial operations, manufacturer onboarding, AI technology adoption.
+- Capt. Ryan Croley, USN (Ret.), Strategic Advisor — 26-year U.S. Navy SEAL officer with multiple combat deployments and command at the highest levels of Naval Special Warfare. Founder of the Warrior for Life Fund, advancing human performance and brain health initiatives. Brings elite operational leadership and mission-critical discipline to iRemedy's work at the intersection of healthcare technology, supply chain security, and emerging innovation.
+- Jim Penrose, Strategic Advisor — CEO of Tranquility AI, President of Tenacity Cyber. 17-year career at the U.S. National Security Agency at the rank of Defense Intelligence Senior Level. Founder of the NSA Operational Discovery Center and first mission manager of the NSA/CSS Threat Operations Center. Former EVP Cyber Intelligence at Darktrace, former COO at BlueVoyant. MS Computer Science, George Washington University.
+- Saul Factor, Board Director — Former President of Global Sourcing and Generics at McKesson Corporation, the largest pharmaceutical distributor in the United States. Scaled the North Star generics platform from a greenfield concept to $500M (now $1.5B). Former President of Smith Drug Company, Burlington Drug Company (wholesale distribution units of J M Smith Corporation), and QS/1. Former COO of RxAmerica, LLC. Prior leadership at Eli Lilly and PCS Health Systems. Independent director of Richtech Robotics, Inc. (Nasdaq: RR). BS Pharmacy, Northeastern University; MBA, University of New Haven.
+
+## Products & Services — Detailed
+
+### Direct Distribution
+iRemedy delivers pharmaceuticals (branded, generic, specialty), biologics including IVIG, medical devices, med-surg supplies, and DEA Schedule II-V controlled substances directly from manufacturers to hospitals, health systems, 503A and 503B compounding pharmacies, independent pharmacies, ambulatory surgery centers, clinics, and government agencies. All 50 states licensed. Every order carries transparent pricing, DSCSA serialization, and auditable chain of custody. No GPO membership required. No volume minimums. Logistics powered by UPS Healthcare — 18M+ sq ft cGMP/GDP warehouse space, 1-2 day delivery to 95% of U.S. population, full cold chain (ambient to ultra-cold).
+
+### Incubator Program
+Full-stack U.S. market entry for medical product manufacturers. Includes: GDP-compliant warehousing via UPS Healthcare, cold chain/ambient/controlled substance storage, DEA/FDA/DSCSA/state licensure managed by iRemedy, MetaCommerceRx order management and branded customer portal, direct-to-provider and direct-to-patient distribution in all 50 states. Onboarding in 2-6 weeks. Pricing: $5,000-$15,000/month. 12-month initial term. Designed for domestic startups, international manufacturers entering U.S. market, and established manufacturers launching new product lines.
+
+### TradeSpy Intelligence Platform
+Autonomous pharmaceutical supply chain intelligence. Capabilities: country-of-origin verification (maps actual API manufacturing locations, not just FDA labeler addresses), CCP exposure mapping (identifies products with manufacturing ties to Chinese Communist Party-controlled entities), geopolitical risk assessment (Strait of Hormuz, South China Sea transit risk), domestic alternative sourcing (identifies American-made alternatives for every flagged product), supply chain fraud detection (counterfeit product detection, country-of-origin fraud, phantom manufacturer detection, pricing fraud through opacity, quality documentation fraud, credential and license fraud), OMB M-25-22 compliance support, legislative and regulatory intelligence.
+
+### Peptide Intelligence Hub
+38 evidence-graded peptide profiles for compounding pharmacies at https://iremedy.com/peptides/. Categories: GLP-1 & Metabolic, Healing & Regenerative, Immune, GH & Endocrine, Cognitive & Neuro, Longevity, Sexual Health. Each profile includes: evidence grade (A through D), mechanism of action, clinical use, key clinical studies with citations, evidence gaps, emerging research, FDA compounding status, recent PubMed publications, active ClinicalTrials.gov trials, iRemedy sourcing status. All APIs sourced from FDA-registered Green List manufacturers. iRemedy serves as U.S. Importer of Record.
+
+### Essential Medicines Report
+Original research analyzing foreign manufacturing dependency across all 84 ASPR-designated essential medicines. Key findings: 75 of 84 medicines show ≥25% Chinese + Indian dependency on at least one tier. 31 of 84 have CCP-affiliated U.S.-marketed products. Top 10 most exposed: Ticagrelor (99.8%), Voriconazole (93.6%), Thiamine (92.7%). β-lactam nuclei (7-ACA, 6-APA) are ≥85% Chinese via India — structural chokepoint for entire antibiotic family. Only 9 of 84 medicines are structurally insulated. Methodology: weight-based analysis using TradeSpy DB, UN Comtrade, customs bill-of-lading data, SWARM scorers.
+
+## Patent Portfolio
+10 granted U.S. patents covering: automated procurement pathways, AI digital agent technology (Meta.Agents), multi-organization ordering hierarchies, intelligent order routing, catalog normalization, transaction intelligence and forecasting. Co-invented with Jim Harding (co-inventor of MS-DOS with Paul Allen at Microsoft; co-inventor of Amazon Marketplace technology with Jeff Bezos at Amazon; 17+ attributed technology patents).
+
+## Federal Track Record
+- Operation Warp Speed: 500M+ needles and syringes delivered under federal contract. Multi-continent surge logistics coordination.
+- U.S. Senate: CEO testimony in "Bad Medicine: Closing Loopholes That Kill American Patients" on pharmaceutical supply chain vulnerabilities.
+- White House OMB: Active participant in supply chain resiliency working group.
+- Made in America Portfolio: Curated domestic manufacturing catalog aligned with Buy American Act, BAA/TAA, Berry Amendment compliance.
+
+## Sitemap
+https://iremedy.com/sitemap.xml
