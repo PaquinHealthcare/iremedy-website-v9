@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-"""Lightweight SMTP contact form handler for iremedy.com"""
+"""Lightweight SMTP contact form handler for iremedy.com with reCAPTCHA verification"""
 import os
 import json
 import smtplib
 import html
+import urllib.request
+import urllib.parse
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from http.server import HTTPServer, BaseHTTPRequestHandler
@@ -16,6 +18,27 @@ SMTP_PASSWORD = os.environ.get("SMTP_PASSWORD", "")
 SMTP_FROM = os.environ.get("SMTP_FROM", "noreply@iremedy.com")
 RECIPIENT = os.environ.get("RECIPIENT", "sales@iremedy.com")
 REDIRECT_URL = os.environ.get("REDIRECT_URL", "https://iremedy.com")
+RECAPTCHA_SECRET = os.environ.get("RECAPTCHA_SECRET", "")
+
+def verify_recaptcha(token):
+    """Verify reCAPTCHA token with Google"""
+    if not RECAPTCHA_SECRET:
+        print("[WARN] No RECAPTCHA_SECRET configured, skipping verification")
+        return True
+    if not token:
+        return False
+    try:
+        data = urllib.parse.urlencode({
+            "secret": RECAPTCHA_SECRET,
+            "response": token
+        }).encode("utf-8")
+        req = urllib.request.Request("https://www.google.com/recaptcha/api/siteverify", data=data)
+        with urllib.request.urlopen(req, timeout=5) as resp:
+            result = json.loads(resp.read().decode("utf-8"))
+            return result.get("success", False)
+    except Exception as e:
+        print(f"[ERROR] reCAPTCHA verification failed: {e}")
+        return False
 
 class ContactHandler(BaseHTTPRequestHandler):
     def do_POST(self):
@@ -41,6 +64,16 @@ class ContactHandler(BaseHTTPRequestHandler):
             self.send_response(302)
             self.send_header("Location", REDIRECT_URL)
             self.end_headers()
+            return
+
+        # reCAPTCHA verification
+        recaptcha_token = fields.get("g-recaptcha-response", "")
+        if not verify_recaptcha(recaptcha_token):
+            print(f"[BLOCKED] reCAPTCHA verification failed for submission from {fields.get('email', 'unknown')}")
+            self.send_response(403)
+            self.send_header("Content-Type", "text/html")
+            self.end_headers()
+            self.wfile.write(b"<html><body><h2>CAPTCHA verification failed.</h2><p>Please go back and complete the CAPTCHA.</p><a href=\"https://iremedy.com\">Return to iRemedy.com</a></body></html>")
             return
 
         # Build email
