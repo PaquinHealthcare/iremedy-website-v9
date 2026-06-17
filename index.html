@@ -10,7 +10,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
 <!-- End Google Tag Manager -->
   <meta charset="UTF-8" />
   <script>if(location.pathname!=="/"&&location.pathname!=="")document.documentElement.classList.add("deep-link");</script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="iRemedy Healthcare Companies, Inc.">
   <title>Healthcare Distribution &amp; Supply Chain Intelligence | iRemedy Healthcare</title>
   <meta name="description" content="iRemedy delivers pharmaceuticals, biologics, and medical devices direct from manufacturers to hospitals, pharmacies, and government agencies. 50-state licensed, DSCSA compliant, powered by UPS Healthcare.">
@@ -179,7 +179,6 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
       background: rgba(242,237,228,0.97);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
-      padding-top: env(safe-area-inset-top, 0px);
     }
     .masthead-row {
       padding: 14px 6vw;
@@ -189,7 +188,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
     }
     .masthead-logo { cursor: pointer; display: inline-flex; align-items: center; text-decoration: none; }
     .masthead-logo-img { height: 54px; width: auto; display: block; }
-    .nav-row { padding: 6px 6vw; display: flex; align-items: center; justify-content: center; }
+    .nav-row { padding: 0 6vw; display: flex; align-items: center; justify-content: center; }
     nav { display: contents; }
     .nav-inner { width: 100%; display: flex; align-items: center; justify-content: center; }
     .nav-logo { font-family: var(--mono); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.06em; color: var(--ink); cursor: pointer; text-decoration: none; }
@@ -272,7 +271,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
     }
 
     /* panel 1 - hero dark */
-    .panel-1 { background: var(--hero-bg); padding-top: calc(140px + env(safe-area-inset-top, 0px)); }
+    .panel-1 { background: var(--hero-bg); padding-top: 120px; }
 
     /* panel 2 - platform split */
     .panel-2 { background: var(--bg); align-items: center; }
@@ -397,7 +396,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
 
     /* ══ INNER PAGES ══ */
     html.deep-link #home { display: none !important; }
-    .inner-page { display: none; padding-top: calc(140px + env(safe-area-inset-top, 0px)); }
+    .inner-page { display: none; padding-top: 120px; }
     .inner-page.active { display: block; }
 
     .pg-hero { padding: 5.5rem 6vw 3.5rem; border-bottom: 1px solid var(--rule); background: var(--bg); }
@@ -1851,7 +1850,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- TRADESPY -->
 <div id="page-essential-medicines" class="inner-page">
-  <div style="padding-top:0;height:calc(100vh - 140px - env(safe-area-inset-top, 0px));display:flex;flex-direction:column;">
+  <div style="padding-top:0;height:calc(100vh - 120px);display:flex;flex-direction:column;">
     <iframe
       id="em-iframe"
       src="essential-medicines.html"
@@ -1863,7 +1862,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <div id="page-peptide-supply-risk-report" class="inner-page">
-  <div style="padding-top:0;height:calc(100vh - 140px - env(safe-area-inset-top, 0px));display:flex;flex-direction:column;">
+  <div style="padding-top:0;height:calc(100vh - 120px);display:flex;flex-direction:column;">
     <iframe
       id="psr-iframe"
       src="peptide-supply-risk-report.html"
@@ -4925,37 +4924,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     setTimeout(reveal, 6000);
   })();
 
-  // Inject mobile-friendly CSS into report iframes (same-origin)
-  (function() {
-    var mobileCSS = '@media(max-width:768px){' +
-      'body{padding:1rem !important;}' +
-      'h1,h2,.report-title,[class*="title"]{font-size:clamp(1.4rem,5vw,2.2rem) !important;line-height:1.2 !important;word-break:break-word !important;}' +
-      '.cover-grid,.header-grid,[class*="cover"]{grid-template-columns:1fr !important;gap:1rem !important;}' +
-      '.meta-block,.doc-meta,[class*="meta"]{font-size:0.75rem !important;text-align:left !important;}' +
-      'table{font-size:0.8rem !important;display:block !important;overflow-x:auto !important;}' +
-      'pre,code{white-space:pre-wrap !important;word-break:break-all !important;}' +
-    '}';
-    function injectCSS(iframe) {
-      try {
-        var doc = iframe.contentDocument || iframe.contentWindow.document;
-        if (!doc || !doc.head) return;
-        var style = doc.createElement('style');
-        style.textContent = mobileCSS;
-        doc.head.appendChild(style);
-      } catch(e) {}
-    }
-    ['em-iframe','psr-iframe'].forEach(function(id) {
-      var f = document.getElementById(id);
-      if (!f) return;
-      f.addEventListener('load', function() { setTimeout(function(){ injectCSS(f); }, 500); });
-    });
-    window.addEventListener('message', function(e) {
-      if (e.data === 'em-ready') {
-        var f = document.getElementById('em-iframe');
-        if (f) setTimeout(function(){ injectCSS(f); }, 200);
-      }
-    });
-  })();
 </script>
 
 <script>
