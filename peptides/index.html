@@ -54,6 +54,14 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
     html { scroll-behavior: smooth; }
     body { font-family: var(--sans); background: var(--bg); color: var(--ink); -webkit-font-smoothing: antialiased; }
 
+
+    /* Peptide Directory (static crawl links) */
+    .peptide-directory { padding: 2rem 6vw 3rem; background: var(--bg-2); border-top: 1px solid var(--border); }
+    .directory-heading { font-family: var(--mono); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 1rem; }
+    .directory-list { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 0.4rem 1.5rem; }
+    .directory-list li a { font-size: 0.875rem; color: var(--teal); text-decoration: none; padding: 3px 0; display: inline-block; }
+    .directory-list li a:hover { text-decoration: underline; }
+
     /* ── SITE HEADER ── */
     #site-header {
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
@@ -1128,6 +1136,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div id="peptide-grid"></div>
   </section>
 
+
+  <!-- Static peptide directory for search engine crawlers -->
+  <nav class="peptide-directory" aria-label="Peptide Directory">
+    <h3 class="directory-heading">All Peptide Profiles</h3>
+    <ul class="directory-list">
+      <li><a href="/peptides/aod9604">AOD-9604</a></li>
+      <li><a href="/peptides/bpc157">BPC-157</a></li>
+      <li><a href="/peptides/cartalax">Cartalax</a></li>
+      <li><a href="/peptides/cjc1295">CJC-1295</a></li>
+      <li><a href="/peptides/dihexa">Dihexa</a></li>
+      <li><a href="/peptides/dsip">DSIP</a></li>
+      <li><a href="/peptides/epithalon">Epithalon</a></li>
+      <li><a href="/peptides/exenatide">Exenatide</a></li>
+      <li><a href="/peptides/foxo4dri">FOXO4-DRI</a></li>
+      <li><a href="/peptides/ghk-cu">GHK-Cu</a></li>
+      <li><a href="/peptides/ghrp2">GHRP-2</a></li>
+      <li><a href="/peptides/ghrp6">GHRP-6</a></li>
+      <li><a href="/peptides/hexarelin">Hexarelin</a></li>
+      <li><a href="/peptides/insulin-analogs">Insulin Analogs</a></li>
+      <li><a href="/peptides/ipamorelin">Ipamorelin</a></li>
+      <li><a href="/peptides/kpv">KPV</a></li>
+      <li><a href="/peptides/liraglutide">Liraglutide</a></li>
+      <li><a href="/peptides/ll37">LL-37</a></li>
+      <li><a href="/peptides/melanotan2">Melanotan II</a></li>
+      <li><a href="/peptides/mk677">MK-677</a></li>
+      <li><a href="/peptides/motsc">MOTS-c</a></li>
+      <li><a href="/peptides/nad">NAD+</a></li>
+      <li><a href="/peptides/octreotide">Octreotide</a></li>
+      <li><a href="/peptides/orforglipron">Orforglipron</a></li>
+      <li><a href="/peptides/oxytocin">Oxytocin</a></li>
+      <li><a href="/peptides/pegvisomant">Pegvisomant</a></li>
+      <li><a href="/peptides/pt141">PT-141</a></li>
+      <li><a href="/peptides/retatrutide">Retatrutide</a></li>
+      <li><a href="/peptides/selank">Selank</a></li>
+      <li><a href="/peptides/semaglutide">Semaglutide</a></li>
+      <li><a href="/peptides/semax">Semax</a></li>
+      <li><a href="/peptides/sermorelin">Sermorelin</a></li>
+      <li><a href="/peptides/survodutide">Survodutide</a></li>
+      <li><a href="/peptides/tb500">TB-500</a></li>
+      <li><a href="/peptides/tesamorelin">Tesamorelin</a></li>
+      <li><a href="/peptides/thymosin-a1">Thymosin Alpha-1</a></li>
+      <li><a href="/peptides/thymosin-b4">Thymosin Beta-4</a></li>
+      <li><a href="/peptides/tirzepatide">Tirzepatide</a></li>
+    </ul>
+  </nav>
+
   <!-- CTA FOOTER -->
   <section class="cta-footer">
     <div class="cta-footer-inner" style="max-width:900px;">
@@ -1162,6 +1216,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <footer class="page-footer">
     <div>© 2025 iRemedy Healthcare Companies, Inc. · Stuart, FL · All rights reserved</div>
     <div>For licensed healthcare professionals only. Not for retail consumer use.</div>
+    <div style="margin-top:0.5rem;font-size:0.75rem;"><a href="/ai-policy" style="color:var(--teal);text-decoration:none;">AI Use Policy</a></div>
   </footer>
 
   <script>
