@@ -188,7 +188,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
     }
     .masthead-logo { cursor: pointer; display: inline-flex; align-items: center; text-decoration: none; }
     .masthead-logo-img { height: 54px; width: auto; display: block; }
-    .nav-row { padding: 0 6vw; display: flex; align-items: center; justify-content: center; }
+    .nav-row { padding: 8px 6vw; display: flex; align-items: center; justify-content: center; }
     nav { display: contents; }
     .nav-inner { width: 100%; display: flex; align-items: center; justify-content: center; }
     .nav-logo { font-family: var(--mono); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.06em; color: var(--ink); cursor: pointer; text-decoration: none; }
@@ -271,7 +271,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
     }
 
     /* panel 1 - hero dark */
-    .panel-1 { background: var(--hero-bg); padding-top: 120px; }
+    .panel-1 { background: var(--hero-bg); padding-top: 150px; }
 
     /* panel 2 - platform split */
     .panel-2 { background: var(--bg); align-items: center; }
@@ -396,7 +396,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
 
     /* ══ INNER PAGES ══ */
     html.deep-link #home { display: none !important; }
-    .inner-page { display: none; padding-top: 120px; }
+    .inner-page { display: none; padding-top: 150px; }
     .inner-page.active { display: block; }
 
     .pg-hero { padding: 5.5rem 6vw 3.5rem; border-bottom: 1px solid var(--rule); background: var(--bg); }
@@ -482,6 +482,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
     @media (max-width: 1100px) {
       .nav-links { display: none; }
       .panel { padding: 0 5vw 6vh; }
+      .panel-1 { padding-top: 150px; align-items: flex-start; }
       .p2-grid { grid-template-columns: 1fr; gap: 3rem; }
       .stats-strip { grid-template-columns: 1fr 1fr; }
       .stat-block:first-child { padding-left: 5vw; }
@@ -904,6 +905,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
       .ldp-grid-2 { grid-template-columns: 1fr !important; }
       .ldp-grid-6 { grid-template-columns: 1fr !important; }
       .panel { padding: 0 4vw 5vh; }
+      .panel-1 { padding-top: 150px; }
       .pg-hero { padding: 2.5rem 4vw 1.5rem !important; }
       .mfr-stat-strip { grid-template-columns: 1fr 1fr; }
       .pharmacy-cat-grid { grid-template-columns: 1fr; }
@@ -926,6 +928,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
       .ts-four-col { grid-template-columns: 1fr !important; }
       .bio-grid { grid-template-columns: 1fr; }
       .panel { padding: 0 1rem 4vh; }
+      .panel-1 { padding-top: 150px; }
       .pg-hero { padding: 2rem 1rem 1.5rem !important; }
       .pg-body { padding: 2rem 1rem !important; }
       .btn, .cta-btn, .pg-cta, [class*="btn"], [class*="cta"] {
@@ -1483,7 +1486,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="footer-bottom">
       <span>© 2026 iRemedy Healthcare Companies, Inc. All rights reserved.</span>
-      <span>Terms · Privacy · DSCSA · Licenses</span>
     </div>
   </footer>
 
@@ -1851,7 +1853,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- TRADESPY -->
 <div id="page-essential-medicines" class="inner-page">
-  <div style="padding-top:0;height:calc(100vh - 120px);display:flex;flex-direction:column;">
+  <div style="padding-top:0;height:calc(100vh - 150px);display:flex;flex-direction:column;">
     <iframe
       id="em-iframe"
       src="essential-medicines.html"
@@ -1863,7 +1865,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <div id="page-peptide-supply-risk-report" class="inner-page">
-  <div style="padding-top:0;height:calc(100vh - 120px);display:flex;flex-direction:column;">
+  <div style="padding-top:0;height:calc(100vh - 150px);display:flex;flex-direction:column;">
     <iframe
       id="psr-iframe"
       src="peptide-supply-risk-report.html"
@@ -3899,7 +3901,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="footer-bottom">
       <span>© 2026 iRemedy Healthcare Companies, Inc. All rights reserved.</span>
-      <span>Terms · Privacy · DSCSA · Licenses</span>
     </div>
   </footer>
 </div>
@@ -4925,6 +4926,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     psrIframe.addEventListener('load', reveal);
     setTimeout(reveal, 6000);
   })();
+
 </script>
 
 <script>
