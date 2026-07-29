@@ -17,8 +17,8 @@ iRemedy Healthcare Companies is a technology-enabled healthcare distributor prov
 - Made in America Portfolio: Curated catalog of verified American-made medical products available through a single distribution relationship.
 
 ## Technology Platforms
-- MetaCommerceRx: AI-powered healthcare procurement platform. Catalog normalization, compliance automation, intelligent order routing, credential verification. Protected by 10 granted U.S. patents. Co-invented with Jim Harding (co-inventor of MS-DOS and Amazon Marketplace technology).
-- TradeSpy (TheTradeSpy.ai): Autonomous pharmaceutical supply chain intelligence platform. Continuously verifies country of origin for 129,140+ NDCs. Maps CCP supply chain exposure. Identifies geopolitical transit risk (Strait of Hormuz, South China Sea). Detects supply chain fraud. Surfaces domestic American-made alternatives.
+- MetaCommerce: AI-powered healthcare procurement platform. Catalog normalization, compliance automation, intelligent order routing, credential verification. Protected by 10 granted U.S. patents. Co-invented with Jim Harding (co-inventor of MS-DOS and Amazon Marketplace technology).
+- TheTradeSpy.ai (TheTradeSpy.ai): Autonomous pharmaceutical supply chain intelligence platform. Continuously verifies country of origin for 129,140+ NDCs. Maps CCP supply chain exposure. Identifies geopolitical transit risk (Strait of Hormuz, South China Sea). Detects supply chain fraud. Surfaces domestic American-made alternatives.
 
 ## Key Content
 - Peptide Intelligence Hub (https://iremedy.com/peptides/): 38 evidence-graded peptide profiles for compounding pharmacies. Every claim backed by peer-reviewed research. Evidence grades A through D.
