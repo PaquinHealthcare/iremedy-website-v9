@@ -1,7 +1,7 @@
 # iRemedy Healthcare Companies, Inc.
 
 ## About
-iRemedy Healthcare Companies is a technology-enabled healthcare distributor providing direct pharmaceutical and medical product distribution, AI-powered procurement intelligence, and supply chain country-of-origin verification. Founded in 2013 in Stuart, Florida. Licensed in all 50 U.S. states. DEA authorized. NABP accredited. DSCSA compliant. Logistics powered by UPS Healthcare.
+iRemedy Healthcare Companies is a technology-enabled healthcare distributor providing direct pharmaceutical and medical product distribution, AI-powered procurement intelligence, and supply chain country-of-origin verification. Founded in 2013 in Stuart, Florida. Licensed in all 50 U.S. states. DSCSA compliant. Logistics powered by UPS Healthcare.
 
 ## Key People
 - Tony Paquin, CEO & Founder — Serial entrepreneur, testified before U.S. Senate on pharmaceutical supply chain vulnerabilities, led Operation Warp Speed delivery of 500M+ needles and syringes, participant in White House OMB supply chain resiliency working group, author of "The End of Us" (2023) and "The Retail Healthcare Revolution" (2007), co-inventor on 10 granted U.S. patents.

@@ -1,7 +1,7 @@
 # iRemedy Healthcare Companies, Inc. — Full Reference
 
 ## About
-iRemedy Healthcare Companies is a technology-enabled healthcare distributor providing direct pharmaceutical and medical product distribution, AI-powered procurement intelligence, and supply chain country-of-origin verification. Founded in 2013 in Stuart, Florida. Licensed in all 50 U.S. states. DEA authorized. NABP accredited. DSCSA compliant. Logistics powered by UPS Healthcare.
+iRemedy Healthcare Companies is a technology-enabled healthcare distributor providing direct pharmaceutical and medical product distribution, AI-powered procurement intelligence, and supply chain country-of-origin verification. Founded in 2013 in Stuart, Florida. Licensed in all 50 U.S. states. DSCSA compliant. Logistics powered by UPS Healthcare.
 
 ## Key People
 - Tony Paquin, CEO & Founder — Serial entrepreneur, testified before U.S. Senate on pharmaceutical supply chain vulnerabilities, led Operation Warp Speed delivery of 500M+ needles and syringes, participant in White House OMB supply chain resiliency working group, author of "The End of Us" (2023) and "The Retail Healthcare Revolution" (2007), co-inventor on 10 granted U.S. patents.
@@ -13,7 +13,7 @@ iRemedy Healthcare Companies is a technology-enabled healthcare distributor prov
 ## Products & Services — Detailed
 
 ### Direct Distribution
-iRemedy delivers pharmaceuticals (branded, generic, specialty), biologics including IVIG, medical devices, and med-surg supplies directly from manufacturers to hospitals, health systems, 503A and 503B compounding pharmacies, independent pharmacies, ambulatory surgery centers, clinics, and government agencies. 50-state wholesale drug distribution licensure. NABP-accredited. DSCSA-compliant. Every order carries transparent pricing, DSCSA serialization, and auditable chain of custody. No GPO membership required. No volume minimums. Logistics powered by UPS Healthcare — 18M+ sq ft cGMP/GDP warehouse space, 1-2 day delivery to 95% of U.S. population, full cold chain (ambient to ultra-cold).
+iRemedy delivers pharmaceuticals (branded, generic, specialty), biologics including IVIG, medical devices, and med-surg supplies directly from manufacturers to hospitals, health systems, 503A and 503B compounding pharmacies, independent pharmacies, ambulatory surgery centers, clinics, and government agencies. 50-state wholesale drug distribution licensure. DSCSA-compliant. Every order carries transparent pricing, DSCSA serialization, and auditable chain of custody. No GPO membership required. No volume minimums. Logistics powered by UPS Healthcare — 18M+ sq ft cGMP/GDP warehouse space, 1-2 day delivery to 95% of U.S. population, full cold chain (ambient to ultra-cold).
 
 ### Incubator Program
 Full-stack U.S. market entry for medical product manufacturers. Includes: GDP-compliant warehousing via UPS Healthcare, cold chain and ambient storage, FDA/DSCSA/state licensure managed by iRemedy, MetaCommerce order management and branded customer portal, direct-to-provider and direct-to-patient distribution in all 50 states. Onboarding in 2-6 weeks. Pricing: $5,000-$15,000/month. 12-month initial term. Designed for domestic startups, international manufacturers entering U.S. market, and established manufacturers launching new product lines.
