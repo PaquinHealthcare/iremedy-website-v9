@@ -930,12 +930,12 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
         column-gap: 1.25rem;
         justify-content: flex-start !important;
       }
-      /* press list rows: date + arrow on one line, tag and headline stacked below */
-      .pr-row { grid-template-columns: 1fr auto !important; gap: 0.4rem 1rem !important; }
+      /* press list rows: category label hidden so the headline gets the full width */
+      .pr-row { grid-template-columns: 1fr auto !important; gap: 0.35rem 1rem !important; }
       .pr-date { grid-row: 1; grid-column: 1; }
       .pr-arrow { grid-row: 1; grid-column: 2; }
-      .pr-tag { grid-row: 2; grid-column: 1; justify-self: start; }
-      .pr-title { grid-row: 3; grid-column: 1 / -1; }
+      .pr-tag { display: none; }
+      .pr-title { grid-row: 2; grid-column: 1 / -1; }
       /* newsroom podcast callout: stack copy above the artwork */
       .nr-podcast-callout { grid-template-columns: 1fr !important; padding: 2rem !important; }
     }
