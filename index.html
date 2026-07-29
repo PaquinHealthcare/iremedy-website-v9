@@ -923,6 +923,21 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
       .pharmacy-cat-grid { grid-template-columns: 1fr 1fr; }
       .hero-cross-img { width: 70px !important; height: 70px !important; }
       .masthead-logo-img { height: 40px; }
+      /* inner-page / press-release footer row: wrap instead of forcing the page wider */
+      .inner-page > footer > div {
+        flex-wrap: wrap !important;
+        row-gap: 0.6rem;
+        column-gap: 1.25rem;
+        justify-content: flex-start !important;
+      }
+      /* press list rows: date + arrow on one line, tag and headline stacked below */
+      .pr-row { grid-template-columns: 1fr auto !important; gap: 0.4rem 1rem !important; }
+      .pr-date { grid-row: 1; grid-column: 1; }
+      .pr-arrow { grid-row: 1; grid-column: 2; }
+      .pr-tag { grid-row: 2; grid-column: 1; justify-self: start; }
+      .pr-title { grid-row: 3; grid-column: 1 / -1; }
+      /* newsroom podcast callout: stack copy above the artwork */
+      .nr-podcast-callout { grid-template-columns: 1fr !important; padding: 2rem !important; }
     }
 
     /* ===== 480px - Large Mobile / Landscape Phone ===== */
@@ -3801,7 +3816,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <!-- SUPPLY SIDE PODCAST CALLOUT -->
-      <div style="background:var(--ink);padding:3rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;margin-bottom:4rem;flex-wrap:wrap;">
+      <div class="nr-podcast-callout" style="background:var(--ink);padding:3rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;margin-bottom:4rem;flex-wrap:wrap;">
         <div>
           <div class="eyebrow" style="color:var(--cerulean);margin-bottom:1rem;"><span aria-hidden="true">//</span> The Supply Side Podcast</div>
           <h3 style="font-family:var(--serif);font-size:1.75rem;font-weight:700;color:var(--cream);margin-bottom:0.75rem;">The Supply Side - with Tony Paquin</h3>
