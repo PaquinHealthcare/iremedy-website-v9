@@ -82,6 +82,8 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
       transition: color 0.15s; text-decoration: none;
     }
     .nav-item > a:hover, .nav-item > button:hover { color: var(--teal); }
+    .nav-item > a, .nav-item > button { white-space: nowrap; }
+    @media (min-width: 1101px) and (max-width: 1399px) { .nav-item > a, .nav-item > button { padding: 8px 8px; letter-spacing: 0.08em; } }
     .nav-item > a.nav-engage, .nav-item > button.nav-engage { background: var(--teal); color: #fff; border: 1px solid var(--teal); }
     .nav-item > a.nav-engage:hover, .nav-item > button.nav-engage:hover { background: var(--teal-dk); border-color: var(--teal-dk); color: #fff; }
     .nav-chevron { width: 9px; height: 9px; opacity: 0.45; transition: transform 0.2s; }
@@ -469,11 +471,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </button>
         <ul class="nav-links">
           <li class="nav-item"><a href="/manufacturers">Manufacturers</a></li>
-          <li class="nav-item"><a href="/providers">Providers</a></li>
           <li class="nav-item"><a href="/pharmacies">Pharmacies</a></li>
           <li class="nav-item"><a href="/government">Government</a></li>
-          <li class="nav-item"><a href="/platform">Platform</a></li>
-          <li class="nav-item"><a href="/tradespy">TheTradeSpy.ai</a></li>
+          <li class="nav-item"><a href="/platform">Technology</a></li>
+          <li class="nav-item"><a href="/peptides/">Peptides / API</a></li>
           <li class="nav-item"><a href="/company">Company</a></li>
           <li class="nav-item"><a href="/newsroom">Newsroom</a></li>
           <li class="nav-item">
@@ -483,7 +484,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <a href="https://app.thetradespy.ai" target="_blank" rel="noopener">TheTradeSpy.ai</a>
             </div>
           </li>
-          <li class="nav-item"><a class="nav-engage" href="/essential-medicines">Essential Medicines</a></li>
           <li class="nav-item"><a class="nav-engage" href="/contact">Get Started</a></li>
         </ul>
       </div>
@@ -509,15 +509,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&#10005;</button>
   <nav class="mobile-nav-links">
     <a href="/manufacturers">Manufacturers</a>
-    <a href="/providers">Providers</a>
     <a href="/pharmacies">Pharmacies</a>
     <a href="/government">Government</a>
-    <a href="/platform">Platform</a>
-    <a href="/tradespy">TheTradeSpy.ai</a>
+    <a href="/platform">Technology</a>
+    <a href="/peptides/">Peptides / API</a>
     <a href="/company">Company</a>
     <a href="/newsroom">Newsroom</a>
     <a class="mobile-nav-engage" href="/contact">Get Started</a>
-    <a class="mobile-nav-engage" href="/essential-medicines">Essential Medicines</a>
   </nav>
 </div>
 
