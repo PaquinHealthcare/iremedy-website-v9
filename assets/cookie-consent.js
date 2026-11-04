@@ -8,8 +8,12 @@
   var MAX_AGE_DAYS = 365;
 
   // Microsoft Clarity (heatmaps/recordings) loads only after acceptance, and only on these hosts.
-  var CLARITY_ID = 'z7wlodfhy3';
-  var CLARITY_HOSTS = ['iremedy.com', 'www.iremedy.com', 'iremedy-demo.iremedy-website-v9.workers.dev'];
+  // Production and the demo report to separate Clarity projects.
+  var CLARITY_PROJECTS = {
+    'iremedy.com': 'z8g9djr125',
+    'www.iremedy.com': 'z8g9djr125',
+    'iremedy-demo.iremedy-website-v9.workers.dev': 'z7wlodfhy3'
+  };
 
   function read() {
     try {
@@ -46,11 +50,12 @@
   }
 
   function loadClarity() {
-    if (window.clarity || CLARITY_HOSTS.indexOf(location.hostname) === -1) return;
+    var id = CLARITY_PROJECTS.hasOwnProperty(location.hostname) && CLARITY_PROJECTS[location.hostname];
+    if (window.clarity || !id) return;
     window.clarity = function () { (window.clarity.q = window.clarity.q || []).push(arguments); };
     var s = document.createElement('script');
     s.async = true;
-    s.src = 'https://www.clarity.ms/tag/' + CLARITY_ID;
+    s.src = 'https://www.clarity.ms/tag/' + id;
     document.head.appendChild(s);
   }
 
