@@ -211,6 +211,8 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
       transition: color 0.15s;
     }
     .nav-item > button:hover { color: var(--teal); }
+    .nav-item > button { white-space: nowrap; }
+    @media (min-width: 1101px) and (max-width: 1399px) { .nav-item > button { padding: 8px 8px; letter-spacing: 0.08em; } }
     .nav-item > button.nav-engage { background: var(--cta); color: #fff; border: 1px solid var(--cta); }
     .nav-item > button.nav-engage:hover { background: var(--cta-dk); border-color: var(--cta-dk); color: #fff; }
     .nav-chevron { width: 9px; height: 9px; opacity: 0.45; transition: transform 0.2s; }
@@ -367,6 +369,8 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
     .scroll-hint span { font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--bg); }
     .scroll-line { width: 1px; height: 40px; background: var(--bg); animation: sp 2s ease-in-out infinite; }
     @keyframes sp { 0%,100%{opacity:.3} 50%{opacity:1} }
+    .em-loading-spinner { position: absolute; top: 50%; left: 50%; width: 40px; height: 40px; margin: -20px 0 0 -20px; border: 3px solid #d6d2c7; border-top-color: #1a2740; border-radius: 50%; animation: em-spin 0.8s linear infinite; }
+    @keyframes em-spin { to { transform: rotate(360deg); } }
 
     /* ══ CREDIBILITY STRIP ══ */
     .cred-strip {
@@ -1128,12 +1132,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </button>
         <ul class="nav-links">
           <li class="nav-item"><button onclick="showPage('manufacturers')">Manufacturers</button></li>
-          <li class="nav-item"><button onclick="showPage('providers')">Providers</button></li>
           <li class="nav-item"><button onclick="showPage('pharmacies')">Pharmacies</button></li>
-          <li class="nav-item" style="display:none"><button onclick="showPage('peptides')">Peptides</button></li>
           <li class="nav-item"><button onclick="showPage('government')">Government</button></li>
-          <li class="nav-item"><button onclick="showPage('platform')">Platform</button></li>
-          <li class="nav-item"><button onclick="showPage('tradespy')">TheTradeSpy.ai</button></li>
+          <li class="nav-item"><button onclick="showPage('platform')">Technology</button></li>
+          <li class="nav-item"><button onclick="location.href='/peptides/'">Peptides / API</button></li>
           <li class="nav-item"><button onclick="showPage('about')">Company</button></li>
           <li class="nav-item"><button onclick="showPage('newsroom')">Newsroom</button></li>
           <li class="nav-item">
@@ -1143,7 +1145,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <a href="https://app.thetradespy.ai" target="_blank" rel="noopener">TheTradeSpy.ai</a>
             </div>
           </li>
-          <li class="nav-item"><button class="nav-engage" onclick="showPage('essential-medicines')">Essential Medicines</button></li>
           <li class="nav-item"><button class="nav-engage" onclick="showPage('contact')">Get Started</button></li>
         </ul>
       </div>
@@ -1156,16 +1157,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">✕</button>
   <nav class="mobile-nav-links">
     <button onclick="mobileNav('manufacturers')">Manufacturers</button>
-    <button onclick="mobileNav('providers')">Providers</button>
     <button onclick="mobileNav('pharmacies')">Pharmacies</button>
-    <button onclick="mobileNav('peptides')" style="display:none">Peptides</button>
     <button onclick="mobileNav('government')">Government</button>
-    <button onclick="mobileNav('platform')">Platform</button>
-    <button onclick="mobileNav('tradespy')">TheTradeSpy.ai</button>
+    <button onclick="mobileNav('platform')">Technology</button>
+    <button onclick="location.href='/peptides/'">Peptides / API</button>
     <button onclick="mobileNav('about')">Company</button>
     <button onclick="mobileNav('newsroom')">Newsroom</button>
     <button class="mobile-nav-engage" onclick="mobileNav('contact')">Get Started</button>
-    <button class="mobile-nav-engage" onclick="mobileNav('essential-medicines')">Essential Medicines</button>
   </nav>
 </div>
 
@@ -1191,8 +1189,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p style="font-size:1rem;color:rgba(242,237,228,0.7);line-height:1.6;margin-bottom:1rem;font-weight:300;">Enter the U.S. market with licensing, logistics, technology, and compliance - handled.</p>
           <div class="routing-cta-link" style="font-family:var(--mono);font-size:0.875rem;letter-spacing:0.1em;">See Manufacturer Services →</div>
         </div>
-        <div style="background:rgba(242,237,228,0.06);border:1px solid rgba(242,237,228,0.15);padding:1.5rem;cursor:pointer;transition:background 0.2s;" onmouseenter="this.style.background='rgba(242,237,228,0.11)'" onmouseleave="this.style.background='rgba(242,237,228,0.06)'" onclick="showPage('providers')">
-          <div style="font-family:var(--mono);font-size:0.8rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--cerulean);margin-bottom:0.6rem;">Providers &amp; Pharmacies</div>
+        <div style="background:rgba(242,237,228,0.06);border:1px solid rgba(242,237,228,0.15);padding:1.5rem;cursor:pointer;transition:background 0.2s;" onmouseenter="this.style.background='rgba(242,237,228,0.11)'" onmouseleave="this.style.background='rgba(242,237,228,0.06)'" onclick="showPage('pharmacies')">
+          <div style="font-family:var(--mono);font-size:0.8rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--cerulean);margin-bottom:0.6rem;">Pharmacies</div>
           <p style="font-size:1rem;color:rgba(242,237,228,0.7);line-height:1.6;margin-bottom:1rem;font-weight:300;">Buy direct from the manufacturer. Transparent pricing. No GPO required.</p>
           <div class="routing-cta-link" style="font-family:var(--mono);font-size:0.875rem;letter-spacing:0.1em;">See Buyer Services →</div>
         </div>
@@ -1290,7 +1288,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- SECTION 03A - METACOMMERCERX -->
   <div class="panel panel-2">
     <div class="grid-lt"></div>
-    <div class="p2-grid">
+    <div class="p2-grid" style="grid-template-columns:minmax(0,760px);">
       <div>
         <div class="panel-eyebrow"><span aria-hidden="true">//</span> 03 - The Technology</div>
         <h2 class="panel-headline">Patent-protected AI.<br><em>Running in production.</em></h2>
@@ -1307,120 +1305,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <button class="btn btn-ink" onclick="showPage('platform')">Explore the Platform →</button>
       </div>
-      <div>
-        <div class="terminal">
-          <div class="t-bar">
-            <div class="t-dot r"></div><div class="t-dot y"></div><div class="t-dot g"></div>
-            <div class="t-title">metacommerce - procurement-os · TheTradeSpy.ai - coo-intelligence</div>
-          </div>
-          <div class="t-body">
-            <div class="tl"><span class="tp">$</span>&nbsp;<span class="tc">platform status --all</span></div>
-            <div class="ts"></div>
-            <div class="tl"><span class="to i">● MetaCommerce &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ONLINE</span></div>
-            <div class="tl"><span class="to i">● TheTradeSpy.ai &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ONLINE</span></div>
-            <div class="tl"><span class="to i">● iRemedy Direct &nbsp;&nbsp;&nbsp;&nbsp; ACTIVE - 50 states</span></div>
-            <div class="tl"><span class="to i">● DSCSA Engine &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COMPLIANT</span></div>
-            <div class="ts"></div>
-            <div class="tl"><span class="tp">$</span>&nbsp;<span class="tc">tradespy scan --drug "semaglutide"</span></div>
-            <div class="tl"><span class="to">→ FDA Labeler: <span class="t-redact" aria-hidden="true">Novo Nordisk A/S</span> (US)</span></div>
-            <div class="tl"><span class="to w">⚠ Actual API: <span class="t-redact" aria-hidden="true">Zhejiang Huahai</span>, CN (68%)</span></div>
-            <div class="tl"><span class="to d">✗ COO conflict - foreign origin ≥80%</span></div>
-            <div class="ts"></div>
-            <div class="tl"><span class="tp">$</span>&nbsp;<span class="tc">run --batch national_formulary --n 2009</span></div>
-            <div class="tl"><span class="to s">✓ 1,847 resolved &nbsp;[25-agent network]</span></div>
-            <div class="tl"><span class="to w">⚠ 510 flagged - CCP-connected manufacturers</span></div>
-            <div class="tl"><span class="to d">✗ 89 critical - Hormuz disruption risk: HIGH</span></div>
-            <div class="ts"></div>
-            <div class="tl"><span class="tp">$</span>&nbsp;<span class="tc">_<span class="t-cur"></span></span></div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 
   <div class="rule"></div>
 
-  <!-- SECTION 03B - TRADESPY DARK CALLOUT -->
-  <div style="background:var(--hero-bg);padding:4rem 6vw;position:relative;overflow:hidden;">
-    <div class="grid-dk"></div>
-    <div class="ts-callout-grid" style="position:relative;z-index:1;align-items:center;max-width:1400px;">
-      <div>
-        <div style="font-family:var(--mono);font-size:0.875rem;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--cerulean);margin-bottom:1.25rem;">// TheTradeSpy.ai - Supply Chain Intelligence</div>
-        <h2 style="font-family:var(--serif);font-size:clamp(2rem,4vw,3.5rem);font-weight:900;line-height:1.05;letter-spacing:-0.02em;color:rgba(242,237,228,0.95);margin-bottom:1.25rem;">The label says who markets it.<br><em style="font-style:italic;color:var(--teal);">TheTradeSpy.ai says who makes it.</em></h2>
-        <p style="font-size:1rem;line-height:1.8;font-weight:300;color:rgba(242,237,228,0.62);max-width:480px;margin-bottom:2rem;">Real-time country-of-origin verification, foreign adversary exposure mapping, and domestic alternative sourcing for every NDC in your formulary. Stat set as of July 2026: <span data-ts-stat="ndcs">129,140</span> drugs under autonomous surveillance.</p>
-        <button class="btn btn-teal" onclick="showPage('tradespy')">Enter TheTradeSpy.ai →</button>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:1rem;">
-        <div style="background:rgba(242,237,228,0.05);border:1px solid rgba(242,237,228,0.1);padding:1.25rem 1.5rem;">
-          <div style="font-family:var(--mono);font-size:0.8rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--cerulean);margin-bottom:0.5rem;">Coverage</div>
-          <div style="font-family:var(--mono);font-size:1.5rem;font-weight:600;color:rgba(242,237,228,0.9);"><span data-ts-stat="ndcs">129,140</span></div>
-          <div style="font-family:var(--mono);font-size:0.8rem;color:rgba(242,237,228,0.4);letter-spacing:0.08em;">NDCs under continuous surveillance</div>
-        </div>
-        <div style="background:rgba(242,237,228,0.05);border:1px solid rgba(242,237,228,0.1);padding:1.25rem 1.5rem;">
-          <div style="font-family:var(--mono);font-size:0.8rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--cerulean);margin-bottom:0.5rem;">Risk Detection</div>
-          <div style="font-family:var(--mono);font-size:1.5rem;font-weight:600;color:rgba(242,237,228,0.9);"><span data-ts-stat="ccpProducts">510</span></div>
-          <div style="font-family:var(--mono);font-size:0.8rem;color:rgba(242,237,228,0.4);letter-spacing:0.08em;">CCP-connected products in the national formulary</div>
-        </div>
-        <div style="background:rgba(242,237,228,0.05);border:1px solid rgba(242,237,228,0.1);padding:1.25rem 1.5rem;">
-          <div style="font-family:var(--mono);font-size:0.8rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--cerulean);margin-bottom:0.5rem;">Critical Risk</div>
-          <div style="font-family:var(--mono);font-size:1.5rem;font-weight:600;color:rgba(200,22,10,0.9);">89</div>
-          <div style="font-family:var(--mono);font-size:0.8rem;color:rgba(242,237,228,0.4);letter-spacing:0.08em;">Hormuz disruption risk: HIGH</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="rule"></div>
-
-  <!-- SECTION 04 - TRUSTED BY -->
-  <div style="background:var(--bg-2);padding:5rem 6vw;border-bottom:1px solid var(--border);">
-    <div class="eyebrow" style="text-align:center;margin-bottom:2.5rem;"><span aria-hidden="true">//</span> 04 - Trusted By</div>
-
-    <!-- Logo bar -->
-    <div style="display:flex;align-items:center;justify-content:center;gap:4rem;flex-wrap:wrap;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border);">
-      <img src="/assets/logos/ups-healthcare.png" alt="UPS Healthcare" style="height:54px;width:auto;object-fit:contain;">
-      <img src="/assets/logos/mayo-clinic.png" alt="Mayo Clinic" style="height:144px;width:auto;object-fit:contain;">
-      <img src="/assets/logos/paho.png" alt="PAHO" style="height:72px;width:auto;object-fit:contain;">
-      <img src="/assets/logos/disney.png" alt="Disney" style="height:144px;width:auto;object-fit:contain;">
-    </div>
-
-    <!-- Credential line -->
-    <p style="font-family:var(--mono);font-size:0.8rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3);text-align:center;margin-bottom:3.5rem;">Operation Warp Speed · 500M+ units delivered · Senate testimony on supply chain resilience</p>
-
-    <!-- Testimonials removed (D-10): pending named, client-approved attribution. -->
-  </div>
-
-  <div class="rule"></div>
-
-  <!-- SECTION 05 - STATS BAR -->
-  <div class="stats-strip">
-    <div class="stat-block">
-      <div class="stat-big teal">500M+</div>
-      <div class="stat-lbl">Units Delivered</div>
-      <div class="stat-sub">Under federal contract including Operation Warp Speed.</div>
-    </div>
-    <div class="stat-block">
-      <div class="stat-big">1M+</div>
-      <div class="stat-lbl">Products Cataloged</div>
-      <div class="stat-sub">In the Universal Medical Products Catalog via MetaCommerce.</div>
-    </div>
-    <div class="stat-block">
-      <div class="stat-big teal"><span data-ts-stat="ndcs">129,140</span></div>
-      <div class="stat-lbl">NDCs Monitored</div>
-      <div class="stat-sub">Under continuous autonomous surveillance by TheTradeSpy.ai.</div>
-    </div>
-    <div class="stat-block">
-      <div class="stat-big">50</div>
-      <div class="stat-lbl">States Licensed</div>
-      <div class="stat-sub">50-state wholesale drug distribution. DSCSA-compliant.</div>
-    </div>
-  </div>
-
-  <div class="rule"></div>
-
-  <!-- SECTION 06 - FAQ -->
+  <!-- SECTION 04 - FAQ -->
   <div style="background:var(--bg);padding:5rem 6vw;">
-    <div class="eyebrow" style="margin-bottom:2.5rem;"><span aria-hidden="true">//</span> 06 - Common Questions</div>
+    <div class="eyebrow" style="margin-bottom:2.5rem;"><span aria-hidden="true">//</span> 04 - Common Questions</div>
     <div>
 
       <details style="border-bottom:1px solid var(--border);padding:1.5rem 0;" open>
@@ -1894,11 +1786,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- TRADESPY -->
 <div id="page-essential-medicines" class="inner-page">
-  <div style="padding-top:0;height:calc(100vh - 150px);display:flex;flex-direction:column;">
+  <div style="padding-top:0;height:calc(100vh - 150px);display:flex;flex-direction:column;position:relative;background:#f6f2e8;">
+    <div class="em-loading-spinner" role="status" aria-label="Loading report"></div>
     <iframe
       id="em-iframe"
       src="/essential-medicines.html"
-      style="flex:1;width:100%;border:none;display:block;opacity:0;transition:opacity 0.4s ease;"
+      style="flex:1;width:100%;border:none;display:block;opacity:0;transition:opacity 0.4s ease;position:relative;z-index:1;"
       title="Essential Medicines — Phase 1 Pilot Briefing"
       loading="lazy"
     ></iframe>
@@ -3392,7 +3285,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p style="font-size:0.9375rem;color:var(--ink-2);line-height:1.65;margin-bottom:1rem;">A single procurement destination where every product is genuinely American-made:</p>
           <ul class="blist">
             <li>iRemedy identifies and certifies domestic manufacturing status for every product</li>
-            <li>Buyers browse one portfolio across dozens of U.S. manufacturers</li>
+            <li>Buyers browse one portfolio across multiple U.S. manufacturers</li>
             <li>One contract, one onboarding, one invoicing relationship with iRemedy</li>
             <li>Procurement shifts from many-to-many to one-to-many - dramatically easier to adopt</li>
           </ul>
@@ -3424,25 +3317,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
 
-      <!-- Domestic manufacturer cards -->
-      <div class="eyebrow" style="margin-bottom:1.5rem;">Domestic Manufacturers On Platform</div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;">
-        <div style="background:var(--bg-2);padding:1.75rem;border-left:3px solid var(--teal);">
-          <div style="font-family:var(--serif);font-size:1.125rem;font-weight:700;color:var(--ink);margin-bottom:0.25rem;">Oxford Pharmaceuticals</div>
-          <div style="font-family:var(--mono);font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:0.75rem;">Alabama</div>
-          <p style="font-size:0.9rem;color:var(--ink-2);font-weight:300;line-height:1.6;margin:0;">U.S.-based generic drug manufacturer. 120-180M solid oral dosage units/month. iRemedy provides government market advisory for VA, DLA, DoD, and federal procurement channels.</p>
-        </div>
-        <div style="background:var(--bg-2);padding:1.75rem;border-left:3px solid var(--teal);">
-          <div style="font-family:var(--serif);font-size:1.125rem;font-weight:700;color:var(--ink);margin-bottom:0.25rem;">GLVUS</div>
-          <div style="font-family:var(--mono);font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:0.75rem;">Kentucky</div>
-          <p style="font-size:0.9rem;color:var(--ink-2);font-weight:300;line-height:1.6;margin:0;">First U.S.-based sterile surgical glove manufacturer. Positioned for government procurement. On the iRemedy platform for commercial launch and go-to-market.</p>
-        </div>
-        <div style="background:var(--bg-2);padding:1.75rem;border-left:3px solid var(--teal);">
-          <div style="font-family:var(--serif);font-size:1.125rem;font-weight:700;color:var(--ink);margin-bottom:0.25rem;">Assure Infusions</div>
-          <div style="font-family:var(--mono);font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:0.75rem;">Florida</div>
-          <p style="font-size:0.9rem;color:var(--ink-2);font-weight:300;line-height:1.6;margin:0;">Florida-based IV and saline bag manufacturer. Domestic production of critical infusion products. Entering federal and commercial distribution through the iRemedy Incubator.</p>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -3807,6 +3681,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div style="max-width:1100px;margin:0 auto;">
       <div class="eyebrow" style="margin-bottom:2rem;"><span aria-hidden="true">//</span> Latest</div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-bottom:4rem;">
+        <a href="/essential-medicines" onclick="showPage('essential-medicines');return false;" style="display:block;text-decoration:none;"><div style="background:var(--bg-2);padding:2rem;border-top:3px solid var(--teal);cursor:pointer;height:100%;"><div style="font-family:var(--mono);font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:0.5rem;">Intel</div><div style="font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--ink);line-height:1.3;margin-bottom:0.75rem;">Foreign Dependency Assessment of America&rsquo;s Essential Medicines</div><p style="font-size:0.875rem;color:var(--ink-2);font-weight:300;line-height:1.65;margin:0 0 1.25rem;">A finalized &amp; validated calibration of methodology across all four supply-chain archetypes plus advanced cephalosporin and classic penicillin &beta;-lactams, prepared for inter-agency review.</p><span style="font-family:var(--mono);font-size:0.875rem;color:var(--teal);">Read More →</span></div></a>
         <div style="background:var(--bg-2);padding:2rem;border-top:3px solid var(--teal);cursor:pointer;" onclick="showPage('pr-perna-advisory-board')"><div style="font-family:var(--mono);font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:0.5rem;">Press Release</div><div style="font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--ink);line-height:1.3;margin-bottom:0.75rem;">iRemedy Healthcare Names General Gustave F. Perna to Strategic Advisory Board</div><p style="font-size:0.875rem;color:var(--ink-2);font-weight:300;line-height:1.65;margin:0 0 1.25rem;">Retired four-star general and former Chief Operating Officer of Operation Warp Speed joins iRemedy&rsquo;s advisory bench.</p><span style="font-family:var(--mono);font-size:0.875rem;color:var(--teal);">Aug 27, 2026 → Read More ↗</span></div>
         <div style="background:var(--bg-2);padding:2rem;border-top:3px solid var(--teal);cursor:pointer;" onclick="showPage('pr-saul-factor-board')"><div style="font-family:var(--mono);font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:0.5rem;">Press Release</div><div style="font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--ink);line-height:1.3;margin-bottom:0.75rem;">iRemedy Appoints Former McKesson Global Sourcing President to Its Board</div><p style="font-size:0.875rem;color:var(--ink-2);font-weight:300;line-height:1.65;margin:0 0 1.25rem;">Saul Factor, who scaled McKesson&rsquo;s North Star generics platform from $500M to a $1.5B company, joins iRemedy&rsquo;s Board as the company approaches a NASDAQ listing.</p><span style="font-family:var(--mono);font-size:0.875rem;color:var(--teal);">May 28, 2026 → Read More ↗</span></div>
         <a href="https://www.aging.senate.gov/hearings/bad-medicine-closing-loopholes-that-kill-american-patients" target="_blank" rel="noopener noreferrer" style="display:block;text-decoration:none;"><div style="background:var(--bg-2);padding:2rem;border-top:3px solid var(--teal);cursor:pointer;"><div style="font-family:var(--mono);font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:0.5rem;">Senate Testimony</div><div style="font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--ink);line-height:1.3;margin-bottom:0.75rem;">"Bad Medicine: Closing Loopholes That Kill American Patients"</div><p style="font-size:0.875rem;color:var(--ink-2);font-weight:300;line-height:1.65;margin:0 0 1.25rem;">CEO Tony Paquin's testimony before the U.S. Senate on pharmaceutical supply chain vulnerabilities, foreign dependency, and reshoring strategy.</p><span style="font-family:var(--mono);font-size:0.875rem;color:var(--teal);">Oct 13, 2025 → View Testimony ↗</span></div></a>

@@ -7,6 +7,14 @@
   var KEY = 'iremedy_cookie_consent';
   var MAX_AGE_DAYS = 365;
 
+  // Microsoft Clarity (heatmaps/recordings) loads only after acceptance, and only on these hosts.
+  // Production and the demo report to separate Clarity projects.
+  var CLARITY_PROJECTS = {
+    'iremedy.com': 'z8g9djr125',
+    'www.iremedy.com': 'z8g9djr125',
+    'iremedy-demo.iremedy-website-v9.workers.dev': 'z7wlodfhy3'
+  };
+
   function read() {
     try {
       var raw = localStorage.getItem(KEY);
@@ -37,6 +45,18 @@
     }
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({ event: 'cookie_consent_' + status });
+    if (status === 'accepted') loadClarity();
+    else if (typeof window.clarity === 'function') window.clarity('consent', false);
+  }
+
+  function loadClarity() {
+    var id = CLARITY_PROJECTS.hasOwnProperty(location.hostname) && CLARITY_PROJECTS[location.hostname];
+    if (window.clarity || !id) return;
+    window.clarity = function () { (window.clarity.q = window.clarity.q || []).push(arguments); };
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.clarity.ms/tag/' + id;
+    document.head.appendChild(s);
   }
 
   function globalPrivacyControl() {
