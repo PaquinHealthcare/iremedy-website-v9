@@ -1135,7 +1135,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li class="nav-item"><button onclick="showPage('pharmacies')">Pharmacies</button></li>
           <li class="nav-item"><button onclick="showPage('government')">Government</button></li>
           <li class="nav-item"><button onclick="showPage('platform')">Technology</button></li>
-          <li class="nav-item"><button onclick="location.href='/peptides/'">Peptides / API</button></li>
+          <li class="nav-item" style="display:none;"><button onclick="location.href='/peptides/'">Peptides / API</button></li>
           <li class="nav-item"><button onclick="showPage('about')">Company</button></li>
           <li class="nav-item"><button onclick="showPage('newsroom')">Newsroom</button></li>
           <li class="nav-item">
@@ -1160,7 +1160,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <button onclick="mobileNav('pharmacies')">Pharmacies</button>
     <button onclick="mobileNav('government')">Government</button>
     <button onclick="mobileNav('platform')">Technology</button>
-    <button onclick="location.href='/peptides/'">Peptides / API</button>
+    <button style="display:none;" onclick="location.href='/peptides/'">Peptides / API</button>
     <button onclick="mobileNav('about')">Company</button>
     <button onclick="mobileNav('newsroom')">Newsroom</button>
     <button class="mobile-nav-engage" onclick="mobileNav('contact')">Get Started</button>
@@ -1401,7 +1401,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h4>Platform</h4>
         <a href="/platform" onclick="showPage('platform');return false;">MetaCommerce</a>
         <a href="/tradespy" onclick="showPage('tradespy');return false;">TheTradeSpy.ai</a>
-        <a href="/peptides/">Peptide Intelligence Hub</a>
+        <a href="/peptides/" style="display:none;">Peptide Intelligence Hub</a>
       </div>
       <div class="f-col">
         <h4>Markets</h4>
@@ -2645,7 +2645,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div style="display:flex;gap:1rem;flex-wrap:wrap;">
         <button class="btn btn-teal" onclick="showPage('contact')">Request Pricing →</button>
         <button class="btn btn-ghost-lt" onclick="document.getElementById('pharm-products').scrollIntoView({behavior:'smooth'})">Products and Services ↓</button>
-        <button class="btn btn-ghost-lt" onclick="document.getElementById('pharm-catalog').scrollIntoView({behavior:'smooth'})">See Our API Catalog ↓</button>
+        <button class="btn btn-ghost-lt" style="display:none;" onclick="document.getElementById('pharm-catalog').scrollIntoView({behavior:'smooth'})">See Our API Catalog ↓</button>
       </div>
     </div>
   </div>
@@ -2656,7 +2656,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;">
 
       <!-- Card 1 — Peptides & GLP-1 APIs -->
-      <a href="/peptides/" style="background:var(--bg);border:0.5px solid var(--border);border-radius:8px;padding:1.25rem;cursor:pointer;text-decoration:none;color:inherit;transition:border-color 0.15s,background 0.15s;position:relative;display:block;" onmouseenter="this.style.borderColor='rgba(28,31,36,0.28)';this.style.background='var(--bg-2)'" onmouseleave="this.style.borderColor='';this.style.background='var(--bg)'">
+      <a style="background:var(--bg);border:0.5px solid var(--border);border-radius:8px;padding:1.25rem;cursor:default;text-decoration:none;color:inherit;transition:border-color 0.15s,background 0.15s;position:relative;display:block;">
         <span style="position:absolute;top:0.75rem;right:0.75rem;font-family:var(--mono);font-size:0.6875rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;background:#E53E3E;color:#fff;padding:0.2rem 0.5rem;border-radius:3px;">HIGH DEMAND</span>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:0.75rem;display:block;"><path d="M9 3v11"/><path d="M15 3v11"/><path d="M9 14a3 3 0 1 0 6 0"/><path d="M7 3h4"/><path d="M13 3h4"/><path d="M9 7h6"/></svg>
         <div style="font-family:var(--sans);font-size:1rem;font-weight:600;color:var(--ink);margin-bottom:0.35rem;line-height:1.3;">Peptides &amp; GLP-1 APIs</div>
@@ -2680,7 +2680,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </a>
 
       <!-- Card 4 — Wholesale Pharmaceuticals -->
-      <a onclick="document.getElementById('pharm-catalog').scrollIntoView({behavior:'smooth'})" style="background:var(--bg);border:0.5px solid var(--border);border-radius:8px;padding:1.25rem;cursor:pointer;text-decoration:none;color:inherit;transition:border-color 0.15s,background 0.15s;display:block;" onmouseenter="this.style.borderColor='rgba(28,31,36,0.28)';this.style.background='var(--bg-2)'" onmouseleave="this.style.borderColor='';this.style.background='var(--bg)'">
+      <a style="background:var(--bg);border:0.5px solid var(--border);border-radius:8px;padding:1.25rem;cursor:default;text-decoration:none;color:inherit;transition:border-color 0.15s,background 0.15s;display:block;">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:0.75rem;display:block;"><path d="M10.5 20H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v5"/><path d="M3 10h18"/><path d="M16 16l2 2 4-4"/><path d="M8 14h2"/><path d="M8 17h1"/></svg>
         <div style="font-family:var(--sans);font-size:1rem;font-weight:600;color:var(--ink);margin-bottom:0.35rem;line-height:1.3;">Wholesale pharmaceuticals</div>
         <div style="font-family:var(--sans);font-size:0.8125rem;color:var(--ink-3);line-height:1.5;">Finished drugs, biologics, and supplies</div>
@@ -2705,7 +2705,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <!-- SECTION 03 - PRODUCT CATEGORIES -->
-  <div id="pharm-catalog" style="background:var(--bg-2);padding:5rem 6vw;border-bottom:1px solid var(--rule);">
+  <div id="pharm-catalog" style="display:none;background:var(--bg-2);padding:5rem 6vw;border-bottom:1px solid var(--rule);">
     <div class="eyebrow"><span aria-hidden="true">//</span> 03 - Product Categories</div>
     <h2 style="font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;line-height:1.1;letter-spacing:-0.02em;color:var(--ink);margin-bottom:3rem;">From GLP-1 APIs to finished pharmaceuticals. One credentialed source.</h2>
     <div class="pharmacy-cat-grid" style="background:var(--border);margin-bottom:2rem;">
@@ -2754,7 +2754,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div style="background:var(--hero-bg);padding:5rem 6vw;position:relative;overflow:hidden;">
     <div class="grid-dk"></div>
     <div style="position:relative;z-index:1;">
-      <div style="font-family:var(--mono);font-size:0.8rem;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:rgba(242,237,228,0.35);margin-bottom:1.75rem;">// 04 - FDA-Credentialed Supply</div>
+      <div style="font-family:var(--mono);font-size:0.8rem;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:rgba(242,237,228,0.35);margin-bottom:1.75rem;">// 03 - FDA-Credentialed Supply</div>
       <h2 style="font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,3rem);font-weight:900;line-height:1.1;letter-spacing:-0.02em;color:#FFFFFF;max-width:760px;margin-bottom:1.5rem;">Green List sourced. Import documented. Every node verified.</h2>
       <div class="two-col" style="margin-bottom:3rem;">
         <p style="font-size:1rem;line-height:1.8;font-weight:300;color:#C8CDD3;">For GLP-1 and peptide APIs, FDA Import Alert 66-80 has become the line between credible supply and regulatory risk. Green List status for an API manufacturer is now a binary purchase criterion for any serious compounding pharmacy.</p>
@@ -2783,7 +2783,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <!-- SECTION 05 - COLD CHAIN -->
-  <div style="background:var(--bg-3);padding:5rem 6vw;border-bottom:1px solid var(--rule);">
+  <div style="display:none;background:var(--bg-3);padding:5rem 6vw;border-bottom:1px solid var(--rule);">
     <div class="eyebrow"><span aria-hidden="true">//</span> 05 - Pharma-Grade Cold Chain</div>
     <div class="two-col">
       <div>
@@ -2801,7 +2801,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- SECTION 06 - BUILT FOR -->
   <div style="background:var(--bg);padding:5rem 6vw;border-bottom:1px solid var(--rule);">
-    <div class="eyebrow"><span aria-hidden="true">//</span> 06 - Built For</div>
+    <div class="eyebrow"><span aria-hidden="true">//</span> 04 - Built For</div>
     <h2 style="font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;line-height:1.1;letter-spacing:-0.02em;color:var(--ink);margin-bottom:3rem;">From single-location compounders to multi-site specialty operations.</h2>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);">
       <div style="background:var(--bg-2);padding:2rem;"><div style="font-family:var(--serif);font-size:1.1rem;font-weight:700;color:var(--ink);margin-bottom:0.6rem;">503A Compounding Pharmacies</div><div style="font-size:1rem;color:var(--ink-2);font-weight:300;line-height:1.6;">Bulk APIs, peptides, GLP-1 agonists, BHRT, and specialty compounding ingredients with full chain-of-custody documentation. FDA-credentialed sourcing. Cold chain logistics.</div></div>
@@ -2815,7 +2815,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- SECTION 07 - METACOMMERCERX -->
   <div style="background:var(--bg-2);padding:5rem 6vw;border-bottom:1px solid var(--rule);">
-    <div class="eyebrow"><span aria-hidden="true">//</span> 07 - MetaCommerce</div>
+    <div class="eyebrow"><span aria-hidden="true">//</span> 05 - MetaCommerce</div>
     <div class="two-col">
       <div>
         <h2 style="font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;line-height:1.1;letter-spacing:-0.02em;color:var(--ink);margin-bottom:1.25rem;">Order, track, and reorder - one platform.</h2>
@@ -2833,7 +2833,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <!-- SECTION 08 - PEPTIDE DISTRIBUTION (teaser / visually distinct) -->
-  <div style="background:var(--bg);padding:5rem 6vw;border-bottom:1px solid var(--rule);border-left:4px solid var(--teal);">
+  <div style="display:none;background:var(--bg);padding:5rem 6vw;border-bottom:1px solid var(--rule);border-left:4px solid var(--teal);">
     <div style="font-family:var(--mono);font-size:0.8rem;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--teal);margin-bottom:1.75rem;">// Peptide Distribution</div>
     <div class="two-col">
       <div>
@@ -2857,7 +2857,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- SECTION 09 - TRANSPARENT PRICING -->
   <div style="background:var(--bg-2);padding:5rem 6vw;border-bottom:1px solid var(--rule);">
-    <div class="eyebrow"><span aria-hidden="true">//</span> 09 - Transparent Pricing</div>
+    <div class="eyebrow"><span aria-hidden="true">//</span> 06 - Transparent Pricing</div>
     <div class="two-col">
       <div>
         <h2 style="font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;line-height:1.1;letter-spacing:-0.02em;color:var(--ink);margin-bottom:1.25rem;">No volume minimums. No lock-in contracts. Pricing you can see.</h2>
@@ -2872,7 +2872,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- SECTION 10 - FAQ -->
   <div style="background:var(--bg);padding:5rem 6vw;border-bottom:1px solid var(--rule);">
-    <div class="eyebrow"><span aria-hidden="true">//</span> 10 - Common Questions</div>
+    <div class="eyebrow"><span aria-hidden="true">//</span> 07 - Common Questions</div>
     <details style="border-bottom:1px solid var(--border);padding:1.5rem 0;" open>
       <summary style="font-family:var(--serif);font-size:1.125rem;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">Does iRemedy supply GLP-1 APIs for compounding?<span style="font-family:var(--mono);font-size:0.7rem;color:var(--teal);flex-shrink:0;margin-left:1rem;">+</span></summary>
       <p style="font-size:1rem;line-height:1.8;color:var(--ink-2);font-weight:300;margin-top:1rem;padding-right:2rem;">Yes. iRemedy supplies Tirzepatide, Semaglutide, and other GLP-1 agonist APIs for compounding under 503A and 503B. All GLP-1 APIs are sourced from FDA-registered, Green List manufacturers, and iRemedy coordinates U.S. import and customs clearance. Full certificate of analysis, lot documentation, and import records are provided with every order.</p>
@@ -2897,7 +2897,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <summary style="font-family:var(--serif);font-size:1.125rem;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">What regulatory credentials does iRemedy hold?<span style="font-family:var(--mono);font-size:0.7rem;color:var(--teal);flex-shrink:0;margin-left:1rem;">+</span></summary>
       <p style="font-size:1rem;line-height:1.8;color:var(--ink-2);font-weight:300;margin-top:1rem;padding-right:2rem;">iRemedy holds 50-state wholesale drug distribution licensure and is DSCSA-compliant. Every order ships with full DSCSA serialization and chain-of-custody documentation.</p>
     </details>
-    <details style="padding:1.5rem 0;">
+    <details style="display:none;padding:1.5rem 0;">
       <summary style="font-family:var(--serif);font-size:1.125rem;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">What is the Peptide Intelligence Hub?<span style="font-family:var(--mono);font-size:0.7rem;color:var(--teal);flex-shrink:0;margin-left:1rem;">+</span></summary>
       <p style="font-size:1rem;line-height:1.8;color:var(--ink-2);font-weight:300;margin-top:1rem;padding-right:2rem;">The Peptide Intelligence Hub is live at <a href="/peptides/" style="color:var(--teal);">iremedy.com/peptides</a> - 38 evidence-graded peptide profiles with published clinical citations, regulatory guidance, and direct ordering for compounding pharmacies. Contact our compounding team to set up an account.</p>
     </details>
@@ -3641,7 +3641,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h4>Platform</h4>
         <a href="/platform" onclick="showPage('platform');return false;">MetaCommerce</a>
         <a href="/tradespy" onclick="showPage('tradespy');return false;">TheTradeSpy.ai</a>
-        <a href="/peptides/">Peptide Intelligence Hub</a>
+        <a href="/peptides/" style="display:none;">Peptide Intelligence Hub</a>
       </div>
       <div class="f-col">
         <h4>Markets</h4>
